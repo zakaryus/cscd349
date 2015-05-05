@@ -46,8 +46,8 @@ public class PlayerController : MonoBehaviour {
 		
 		if (!anim)
 			return;
-		
-		if (v > 0 && v > h)
+
+		if (v > 0 && v > h) 
 			anim.SetInteger ("direction", (int)Direction.Up);
 		if (v < 0 && v < h)
 			anim.SetInteger ("direction", (int)Direction.Down);
@@ -61,5 +61,12 @@ public class PlayerController : MonoBehaviour {
 	{
 		print ("anim collided with something");
 		//gameManager.BroadcastMessage ("SetBattleState");
+	}
+
+	void OnTriggerEnter2D(Collider2D collider)
+	{
+		print ("anim triggered something");
+		//Application.LoadLevel ("BattleScene");
+		//Destroy (GameObject.Find ("enemy1"));
 	}
 }
