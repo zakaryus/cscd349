@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 		
 		float v = Input.GetAxis ("Vertical"); 
 		float h = Input.GetAxis ("Horizontal"); 
@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collider)
 	{
 		print ("anim triggered something");
-		//Application.LoadLevel ("BattleScene");
+		//GameManager.Instance.SetGameState (GameManager.GameState.BattleScene);
 		//Destroy (GameObject.Find ("enemy1"));
 	}
 }
