@@ -76,3 +76,6 @@ C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Deb
 C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Scenes\ControlMain.g.cs
 C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Scenes\ControlWin.g.cs
 C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Windows\MainWindow.g.cs
+C:\Users\Steve\Documents\GitHub\cscd349\cscd349-battle_scene\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.exe.config
+C:\Users\Steve\Documents\GitHub\cscd349\cscd349-battle_scene\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.exe
+C:\Users\Steve\Documents\GitHub\cscd349\cscd349-battle_scene\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.pdb
