@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace cscd349FinalProject
 {
@@ -14,7 +15,8 @@ namespace cscd349FinalProject
         HitPoint HitPoints { get; set; }
         IWeapon Weapon { get; set; }
         List<IEquipment> Equipment { get; set; }
-        List<IInventory> Inventory { get; set; } 
+        List<IInventory> Inventory { get; set; }
+        Image Face { get; }
 
         //Methods
         HitPoint Attack();

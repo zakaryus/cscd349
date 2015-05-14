@@ -53,31 +53,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="ControlBattle.xaml">
+    <Page Include="Scenes\ControlBattle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ControlCharacter.xaml">
+    <Page Include="Scenes\ControlCharacter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ControlGamePlay.xaml">
+    <Page Include="Scenes\ControlGamePlay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ControlLose.xaml">
+    <Page Include="Scenes\ControlLose.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ControlMain.xaml">
+    <Page Include="Scenes\ControlMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ControlWin.xaml">
+    <Page Include="Scenes\ControlWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -85,32 +85,45 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CharacterNinja.cs" />
-    <Compile Include="ControlBattle.xaml.cs">
+    <Compile Include="Characters\BadCharacters\CharacterElfDark.cs" />
+    <Compile Include="Characters\BadCharacters\CharacterElfEarth.cs" />
+    <Compile Include="Characters\BadCharacters\CharacterElfFire.cs" />
+    <Compile Include="Characters\BadCharacters\CharacterElfLight.cs" />
+    <Compile Include="Characters\BadCharacters\CharacterElfWater.cs" />
+    <Compile Include="Characters\BadCharacters\CharacterElfWind.cs" />
+    <Compile Include="Characters\GoodCharacters\CharacterKnightFemale.cs" />
+    <Compile Include="Characters\GoodCharacters\CharacterKnightMale.cs" />
+    <Compile Include="Characters\GoodCharacters\CharacterMagicianFemale.cs" />
+    <Compile Include="Characters\GoodCharacters\CharacterMagicianMale.cs" />
+    <Compile Include="Characters\GoodCharacters\CharacterNinjaFemale.cs" />
+    <Compile Include="Characters\GoodCharacters\CharacterNinjaMale.cs" />
+    <Compile Include="Characters\GoodCharacters\CharacterSoldierFemale.cs" />
+    <Compile Include="Characters\GoodCharacters\CharacterSoldierMale.cs" />
+    <Compile Include="Scenes\ControlBattle.xaml.cs">
       <DependentUpon>ControlBattle.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ControlCharacter.xaml.cs">
+    <Compile Include="Scenes\ControlCharacter.xaml.cs">
       <DependentUpon>ControlCharacter.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ControlGamePlay.xaml.cs">
+    <Compile Include="Scenes\ControlGamePlay.xaml.cs">
       <DependentUpon>ControlGamePlay.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ControlLose.xaml.cs">
+    <Compile Include="Scenes\ControlLose.xaml.cs">
       <DependentUpon>ControlLose.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ControlMain.xaml.cs">
+    <Compile Include="Scenes\ControlMain.xaml.cs">
       <DependentUpon>ControlMain.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ControlWin.xaml.cs">
+    <Compile Include="Scenes\ControlWin.xaml.cs">
       <DependentUpon>ControlWin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HitPoint.cs" />
-    <Compile Include="ICharacter.cs" />
-    <Compile Include="IEquipment.cs" />
-    <Compile Include="IInventory.cs" />
-    <Compile Include="IItem.cs" />
-    <Compile Include="IWeapon.cs" />
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Models\HitPoint.cs" />
+    <Compile Include="Interfaces\ICharacter.cs" />
+    <Compile Include="Interfaces\IEquipment.cs" />
+    <Compile Include="Interfaces\IInventory.cs" />
+    <Compile Include="Interfaces\IItem.cs" />
+    <Compile Include="Interfaces\IWeapon.cs" />
+    <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>

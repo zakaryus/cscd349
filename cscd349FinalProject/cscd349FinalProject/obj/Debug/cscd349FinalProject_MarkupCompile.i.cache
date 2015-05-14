@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\
+C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\
 cscd349FinalProject
 none
 false
 DEBUG;TRACE
-\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\App.xaml
-7-449611384
+C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\App.xaml
+71505311871
 
-22-1804648933
+35525311652
 12-1401562060
-ControlBattle.xaml;ControlCharacter.xaml;ControlGamePlay.xaml;ControlLose.xaml;ControlMain.xaml;ControlWin.xaml;MainWindow.xaml;
+Scenes\ControlBattle.xaml;Scenes\ControlCharacter.xaml;Scenes\ControlGamePlay.xaml;Scenes\ControlLose.xaml;Scenes\ControlMain.xaml;Scenes\ControlWin.xaml;Windows\MainWindow.xaml;
 
 False
 

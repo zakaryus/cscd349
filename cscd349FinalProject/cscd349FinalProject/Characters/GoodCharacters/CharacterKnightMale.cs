@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace cscd349FinalProject
 {
-    class CharacterNinja: ICharacter
+    class CharacterKnightMale: ICharacter
     {
         #region Fields
         private string _name;
@@ -15,6 +16,7 @@ namespace cscd349FinalProject
         private IWeapon _weapon;
         private List<IEquipment> _equipment;
         private List<IInventory> _inventory;
+        private Image _face;
         #endregion Fields
 
         #region Properties
@@ -53,18 +55,25 @@ namespace cscd349FinalProject
             get { return _inventory; }
             set { _inventory = value; }
         }
+
+        public System.Windows.Controls.Image Face
+        {
+            get { return _face; }
+            private set { _face = value; }
+        }
         #endregion Properties
 
         #region Constructor
 
-        public CharacterNinja()
+        public CharacterKnightMale()
         {
-            Name = "Ninja";
-            Description = "A sly, agile character.";
+            Name = "Male Knight";
+            Description = "A strong, armored character.";
             HitPoints = new HitPoint(100);
             Weapon = null;
             Equipment = null;
             Inventory = null;
+            Face = null;
         }
         #endregion Constructor
 
