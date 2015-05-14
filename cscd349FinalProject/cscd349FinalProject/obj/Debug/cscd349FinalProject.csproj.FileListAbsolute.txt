@@ -1,0 +1,53 @@
+\\netstorage.eastern.ewu.edu\zsteele\visual studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.exe.config
+\\netstorage.eastern.ewu.edu\zsteele\visual studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.exe
+\\netstorage.eastern.ewu.edu\zsteele\visual studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.pdb
+\\netstorage.eastern.ewu.edu\zsteele\visual studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.csprojResolveAssemblyReference.cache
+\\netstorage.eastern.ewu.edu\zsteele\visual studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlMain.baml
+\\netstorage.eastern.ewu.edu\zsteele\visual studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\MainWindow.baml
+\\netstorage.eastern.ewu.edu\zsteele\visual studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlMain.g.cs
+\\netstorage.eastern.ewu.edu\zsteele\visual studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\MainWindow.g.cs
+\\netstorage.eastern.ewu.edu\zsteele\visual studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\App.g.cs
+\\netstorage.eastern.ewu.edu\zsteele\visual studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject_MarkupCompile.cache
+\\netstorage.eastern.ewu.edu\zsteele\visual studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.g.resources
+\\netstorage.eastern.ewu.edu\zsteele\visual studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.Properties.Resources.resources
+\\netstorage.eastern.ewu.edu\zsteele\visual studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.csproj.GenerateResource.Cache
+\\netstorage.eastern.ewu.edu\zsteele\visual studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.exe
+\\netstorage.eastern.ewu.edu\zsteele\visual studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.pdb
+\\netstorage.eastern.ewu.edu\zsteele\visual studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlCharacter.baml
+\\netstorage.eastern.ewu.edu\zsteele\visual studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlCharacter.g.cs
+\\netstorage.eastern.ewu.edu\zsteele\Visual Studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlGamePlay.baml
+\\netstorage.eastern.ewu.edu\zsteele\Visual Studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlGamePlay.g.cs
+\\netstorage.eastern.ewu.edu\zsteele\Visual Studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlBattle.baml
+\\netstorage.eastern.ewu.edu\zsteele\Visual Studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlLose.baml
+\\netstorage.eastern.ewu.edu\zsteele\Visual Studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlWin.baml
+\\netstorage.eastern.ewu.edu\zsteele\Visual Studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlBattle.g.cs
+\\netstorage.eastern.ewu.edu\zsteele\Visual Studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlLose.g.cs
+\\netstorage.eastern.ewu.edu\zsteele\Visual Studio 2013\Projects\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlWin.g.cs
+N:\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.exe.config
+N:\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.exe
+N:\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.pdb
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.exe.config
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.exe
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.pdb
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.exe
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.pdb
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.csprojResolveAssemblyReference.cache
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlBattle.baml
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlCharacter.baml
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlGamePlay.baml
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlLose.baml
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlMain.baml
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlWin.baml
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\MainWindow.baml
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlBattle.g.cs
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlCharacter.g.cs
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlGamePlay.g.cs
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlLose.g.cs
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlMain.g.cs
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlWin.g.cs
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\MainWindow.g.cs
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\App.g.cs
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject_MarkupCompile.cache
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.g.resources
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.Properties.Resources.resources
+\\netstorage.eastern.ewu.edu\zsteele\spring15\cscd349\finalproject\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.csproj.GenerateResource.Cache
