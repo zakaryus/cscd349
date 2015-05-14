@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="cscd349FinalProject.ControlWin"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Height="600" Width="800">
+        <Label Content="Win" Margin="384,46,385,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnMainMenu" Content="Main Menu" Margin="362,129,363,0" VerticalAlignment="Top" Click="btnMainMenu_Click" HorizontalContentAlignment="Center"/>
+
+    </Grid>
+</UserControl>
