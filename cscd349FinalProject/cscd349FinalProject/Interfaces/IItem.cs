@@ -9,8 +9,8 @@ namespace cscd349FinalProject
     interface IItem
     {
         //Properties
-        string Name { get; set; }
-        string Description { get; set; }
+        string Name { get; }
+        string Description { get; }
         HitPoint HitPoints { get; set; }
 
     }
