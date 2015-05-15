@@ -99,6 +99,9 @@
     <Compile Include="Characters\GoodCharacters\CharacterNinjaMale.cs" />
     <Compile Include="Characters\GoodCharacters\CharacterSoldierFemale.cs" />
     <Compile Include="Characters\GoodCharacters\CharacterSoldierMale.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Utilities\CharacterFactory.cs" />
+    <Compile Include="Utilities\HelperImages.cs" />
     <Compile Include="Scenes\ControlBattle.xaml.cs">
       <DependentUpon>ControlBattle.xaml</DependentUpon>
     </Compile>
@@ -157,7 +160,25 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Resource Include="images\backgrounds\bg1.jpg" />
+    <Resource Include="Images\Backgrounds\bg1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\BadFaces\CharacterElfDarkFace.png" />
+    <Resource Include="Images\Faces\BadFaces\CharacterElfEarthFace.png" />
+    <Resource Include="Images\Faces\BadFaces\CharacterElfFireFace.png" />
+    <Resource Include="Images\Faces\BadFaces\CharacterElfLightFace.png" />
+    <Resource Include="Images\Faces\BadFaces\CharacterElfWaterFace.png" />
+    <Resource Include="Images\Faces\BadFaces\CharacterElfWindFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\GoodFaces\CharacterKnightFemaleFace.png" />
+    <Resource Include="Images\Faces\GoodFaces\CharacterKnightMaleFace.png" />
+    <Resource Include="Images\Faces\GoodFaces\CharacterMagicianFemaleFace.png" />
+    <Resource Include="Images\Faces\GoodFaces\CharacterMagicianMaleFace.png" />
+    <Resource Include="Images\Faces\GoodFaces\CharacterNinjaFemaleFace.png" />
+    <Resource Include="Images\Faces\GoodFaces\CharacterNinjaMaleFace.png" />
+    <Resource Include="Images\Faces\GoodFaces\CharacterSoldierFemaleFace.png" />
+    <Resource Include="Images\Faces\GoodFaces\CharacterSoldierMaleFace.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

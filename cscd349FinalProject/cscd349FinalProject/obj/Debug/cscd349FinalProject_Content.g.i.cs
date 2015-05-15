@@ -8,6 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/backgrounds/radt_desertsamplelighterwalls.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/faces/goodfaces/characterknightfemaleface.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/faces/goodfaces/characterknightmaleface.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/faces/goodfaces/charactermagicianfemaleface.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/faces/goodfaces/charactermagicianmaleface.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/faces/goodfaces/characterninjafemaleface.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/faces/goodfaces/characterninjamaleface.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/faces/goodfaces/charactersoldierfemaleface.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/faces/goodfaces/charactersoldiermaleface.png")]
 
 

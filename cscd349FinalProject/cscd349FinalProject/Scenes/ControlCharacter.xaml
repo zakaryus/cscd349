@@ -5,16 +5,26 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
-    <Grid>
-        <Label Content="Choose Three Characters&#xD;&#xA;" Margin="79,10,79,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="cbEngineer" Content="Engineer" HorizontalAlignment="Left" Margin="117,70,0,0" VerticalAlignment="Top" Checked="cb_Checked" Unchecked="cb_Unchecked"/>
-        <CheckBox x:Name="cbMage" Content="Mage" HorizontalAlignment="Left" Margin="117,91,0,0" VerticalAlignment="Top" Unchecked="cb_Unchecked" Checked="cb_Checked"/>
-        <CheckBox x:Name="cbPaladin" Content="Paladin" HorizontalAlignment="Left" Margin="117,112,0,0" VerticalAlignment="Top" Unchecked="cb_Unchecked" Checked="cb_Checked"/>
-        <CheckBox x:Name="cbRogue" Content="Rogue" HorizontalAlignment="Left" Margin="117,133,0,0" VerticalAlignment="Top" Unchecked="cb_Unchecked" Checked="cb_Checked"/>
-        <CheckBox x:Name="cbWanderer" Content="Wanderer" HorizontalAlignment="Left" Margin="117,154,0,0" VerticalAlignment="Top" Unchecked="cb_Unchecked" Checked="cb_Checked"/>
-        <CheckBox x:Name="cbWarrior" Content="Warrior" HorizontalAlignment="Left" Margin="117,175,0,0" VerticalAlignment="Top" Unchecked="cb_Unchecked" Checked="cb_Checked"/>
-        <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="39,238,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="btnPlay_Click"/>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="187,238,0,0" VerticalAlignment="Top" Width="75" Click="btnBack_Click"/>
+    <Grid x:Name="grdChooseCharacters">
+        <Label Content="Choose Three Characters&#xD;&#xA;" Margin="81,15,77,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <CheckBox x:Name="cbKnightFemale" Content="Knight Female" HorizontalAlignment="Left" Margin="70,230,0,0" VerticalAlignment="Top" Unchecked="cb_Unchecked" Checked="cb_Checked"/>
+        <CheckBox x:Name="cbMagicianFemale" Content="Magician Female" HorizontalAlignment="Left" Margin="203,227,0,0" VerticalAlignment="Top" Unchecked="cb_Unchecked" Checked="cb_Checked"/>
+        <CheckBox x:Name="cbNinjaMale" Content="Ninja Male" HorizontalAlignment="Left" Margin="410,126,0,0" VerticalAlignment="Top" Unchecked="cb_Unchecked" Checked="cb_Checked"/>
+        <CheckBox x:Name="cbNinjaFemale" Content="Ninja Female" HorizontalAlignment="Left" Margin="407,224,0,0" VerticalAlignment="Top" Unchecked="cb_Unchecked" Checked="cb_Checked"/>
+        <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="261,349,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="btnPlay_Click" RenderTransformOrigin="2.72,5.455"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="442,349,0,0" VerticalAlignment="Top" Width="75" Click="btnBack_Click"/>
+        <CheckBox x:Name="cbSoldierMale" Content="Soldier Male" HorizontalAlignment="Left" Margin="628,135,0,0" VerticalAlignment="Top" Unchecked="cb_Unchecked" Checked="cb_Checked"/>
+        <CheckBox x:Name="cbSoldierFemale" Content="Soldier Female" HorizontalAlignment="Left" Margin="627,219,0,0" VerticalAlignment="Top" Unchecked="cb_Unchecked" Checked="cb_Checked"/>
+        <Image x:Name="imgNinjaMale" HorizontalAlignment="Left" Height="48" Margin="423,79,0,0" VerticalAlignment="Top" Width="48" Source="/cscd349FinalProject;component/images/Faces/GoodFaces/CharacterNinjaMaleFace.png"/>
+        <Image x:Name="imgSoldierMale" HorizontalAlignment="Left" Height="48" Margin="647,79,0,0" VerticalAlignment="Top" Width="48" Source="/cscd349FinalProject;component/images/Faces/GoodFaces/CharacterSoldierMaleFace.png"/>
+        <Image x:Name="imgKnightFemale" HorizontalAlignment="Left" Height="48" Margin="88,173,0,0" VerticalAlignment="Top" Width="48" Source="/cscd349FinalProject;component/images/Faces/GoodFaces/CharacterKnightFemaleFace.png"/>
+        <Image x:Name="imgMagicianFemale" HorizontalAlignment="Left" Height="48" Margin="232,167,0,0" VerticalAlignment="Top" Width="48" Source="/cscd349FinalProject;component/images/Faces/GoodFaces/CharacterMagicianFemaleFace.png"/>
+        <Image x:Name="imgNinjaFemale" HorizontalAlignment="Left" Height="48" Margin="429,170,0,0" VerticalAlignment="Top" Width="48" Source="/cscd349FinalProject;component/images/Faces/GoodFaces/CharacterNinjaFemaleFace.png"/>
+        <Image x:Name="imgSoldierFemale" HorizontalAlignment="Left" Height="48" Margin="648,164,0,0" VerticalAlignment="Top" Width="48" Source="/cscd349FinalProject;component/images/Faces/GoodFaces/CharacterSoldierFemaleFace.png"/>
+        <Image x:Name="imgMagicianMale" HorizontalAlignment="Left" Height="48" Margin="239,74,0,0" VerticalAlignment="Top" Width="48" Source="/cscd349FinalProject;component/images/Faces/GoodFaces/CharacterMagicianMaleFace.png"/>
+        <CheckBox x:Name="cbMagicianMale" Content="Magician Male" HorizontalAlignment="Left" Margin="218,132,0,0" VerticalAlignment="Top" Unchecked="cb_Unchecked" Checked="cb_Checked"/>
+        <Image x:Name="imgKnightMale" HorizontalAlignment="Left" Height="48" Margin="91,76,0,0" VerticalAlignment="Top" Width="48" Source="/cscd349FinalProject;component/images/Faces/GoodFaces/CharacterKnightMaleFace.png"/>
+        <CheckBox x:Name="cbKnightMale" Content="Knight Male" HorizontalAlignment="Left" Margin="77,130,0,0" VerticalAlignment="Top" Checked="cb_Checked" Unchecked="cb_Unchecked"/>
 
     </Grid>
 </UserControl>

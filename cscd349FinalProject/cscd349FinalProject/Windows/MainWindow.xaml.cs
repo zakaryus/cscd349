@@ -30,6 +30,7 @@ namespace cscd349FinalProject
         private static MainWindow _instance = null;
         private static Dictionary<Scene, Control> _scenes = null;
 
+        //Singleton
         public static MainWindow GetInstance()
         {
             if (_instance == null)

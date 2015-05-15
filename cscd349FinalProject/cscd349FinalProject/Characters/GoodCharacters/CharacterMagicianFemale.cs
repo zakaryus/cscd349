@@ -73,7 +73,8 @@ namespace cscd349FinalProject
             Weapon = null;
             Equipment = null;
             Inventory = null;
-            Face = null;
+            Face = new Image();
+            Face.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Images/Faces/GoodFaces/CharacterMagicianFemaleFace.png");
         }
         #endregion Constructor
 
