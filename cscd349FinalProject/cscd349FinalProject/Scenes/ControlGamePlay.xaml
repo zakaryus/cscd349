@@ -5,10 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" Height="600" Width="800">
     <Grid>
-        <Label Content="Gameplay&#xD;&#xA;" Margin="119,57,618,0" VerticalAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
         <Button x:Name="btnBattle" Content="Battle" HorizontalAlignment="Left" Margin="10,183,0,0" VerticalAlignment="Top" Width="75" Click="btnBattle_Click"/>
         <Button x:Name="btnWin" Content="Win" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Width="75" Click="btnWin_Click"/>
         <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="10,237,0,0" VerticalAlignment="Top" Width="75" Click="btnBack_Click"/>
+        <Grid x:Name="battleGround" HorizontalAlignment="Left" Height="526" Margin="121,23,0,0" VerticalAlignment="Top" Width="646"/>
 
     </Grid>
 </UserControl>
