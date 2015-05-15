@@ -6,13 +6,45 @@ using System.Threading.Tasks;
 
 namespace cscd349FinalProject.Weapons
 {
-    class WeaponStaff : IWeapon
+    class WeaponElfBow : IWeapon
     {
-        public WeaponStaff(int minDamage, int maxDamage, string name)
+        private int _minDamage;
+        private int _maxDamage;
+        private string _name;
+        private string _description;
+        private HitPoint _hitpoints;
+
+        public WeaponElfBow()
         {
-            minDamage = 20;
-            maxDamage = 85;
-            name = "Bow and Arrow";
+            _minDamage = 20;
+            _maxDamage = 85;
+            _name = "Bow and Arrow";
+        }
+
+        public string Name
+        {
+            get { return _name; }
+            private set { _name = value; }
+        }
+
+        public string Description
+        {
+            get { return _description; }
+            private set { _description = value; }
+        }
+
+        public HitPoint HitPoints
+        {
+            get { return _hitpoints; }
+            set { _hitpoints = value; }
+        }
+
+        public HitPoint UseWeapon()
+        {
+            Random rand = new Random();
+            int val = rand.Next(_minDamage, _maxDamage + 1);
+
+            return new HitPoint(val);
         }
     }
 }

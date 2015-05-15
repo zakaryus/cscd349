@@ -4,23 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cscd349FinalProject.Weapons
+namespace cscd349FinalProject.Items
 {
-    class WeaponStaff: IWeapon
+    class ItemHealthPotionSmall : IInventory
     {
-
-        private int _minDamage;
-        private int _maxDamage;
-        private string _name;
         private string _description;
+        private string _name;
         private HitPoint _hitpoints;
-
-        public WeaponStaff()
-        {
-            _minDamage = 20;
-            _maxDamage = 55;
-            _name = "Staff";
-        }
+        private int _addHitPoints = 50;
 
         public string Name
         {
@@ -40,12 +31,9 @@ namespace cscd349FinalProject.Weapons
             set { _hitpoints = value; }
         }
 
-        public HitPoint UseWeapon()
+        public HitPoint UseInventory()
         {
-            Random rand = new Random();
-            int val = rand.Next(_minDamage, _maxDamage + 1);
-
-            return new HitPoint(val);
+            return new HitPoint(_addHitPoints);
         }
     }
 }
