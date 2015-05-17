@@ -53,7 +53,7 @@ namespace cscd349FinalProject
             Control main = new ControlMain();
             Control character = new ControlCharacter();
             Control gameplay = new ControlGamePlay();
-            Control battle = new ControlBattle();
+            //Control battle = new ControlBattle();
             Control win = new ControlWin();
             Control lose = new ControlLose();
 
@@ -62,7 +62,7 @@ namespace cscd349FinalProject
                        {Scene.Main, main},
                        {Scene.Character, character},
                        {Scene.GamePlay, gameplay},
-                       {Scene.Battle, battle},
+                       {Scene.Battle, null},
                        {Scene.Win, win},
                        {Scene.Lose, lose}
                    };
@@ -74,7 +74,12 @@ namespace cscd349FinalProject
                 return;
 
             if (_scenes.ContainsKey(scene))
-                _instance.cctrlMain.Content = _scenes[scene];
+            {
+                if (scene == Scene.Battle)
+                    _instance.cctrlMain.Content = new ControlBattle();
+                else
+                    _instance.cctrlMain.Content = _scenes[scene];
+            }
         }
     }
 }

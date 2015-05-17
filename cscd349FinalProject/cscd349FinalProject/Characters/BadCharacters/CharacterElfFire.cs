@@ -13,6 +13,7 @@ namespace cscd349FinalProject
         private string _name;
         private string _description;
         private HitPoint _hitpoints;
+        private HitPoint _maxHitpoints;
         private IWeapon _weapon;
         private List<IEquipment> _equipment;
         private List<IInventory> _inventory;
@@ -36,6 +37,12 @@ namespace cscd349FinalProject
         {
             get { return _hitpoints; }
             set { _hitpoints = value; }
+        }
+
+        public HitPoint MaxHitPoints
+        {
+            get { return _maxHitpoints; }
+            set { _maxHitpoints = value; }
         }
 
         public IWeapon Weapon
@@ -69,7 +76,7 @@ namespace cscd349FinalProject
         {
             Name = "Fire Elf";
             Description = "A fire breathing elf character.";
-            HitPoints = new HitPoint(100);
+            MaxHitPoints = HitPoints = new HitPoint(100);
             Weapon = null;
             Equipment = null;
             Inventory = null;

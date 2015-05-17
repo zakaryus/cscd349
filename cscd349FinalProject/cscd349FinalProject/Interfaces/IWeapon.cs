@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cscd349FinalProject
 {
-    interface IWeapon: IItem
+    public interface IWeapon: IItem
     {
         HitPoint UseWeapon();
     }

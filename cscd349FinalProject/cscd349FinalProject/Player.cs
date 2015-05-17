@@ -19,6 +19,9 @@ namespace cscd349FinalProject
                 if(value.Count > 3)
                     throw new Exception("Too many characters for player's allies!");
 
+                if(value.Count < 1)
+                    throw new Exception("Too few characters for player's allies!");
+
                 _allies = value;
             }
         }

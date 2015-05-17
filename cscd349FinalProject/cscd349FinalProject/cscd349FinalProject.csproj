@@ -53,6 +53,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ControlCharacterBattleDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Scenes\ControlBattle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -99,6 +103,10 @@
     <Compile Include="Characters\GoodCharacters\CharacterNinjaMale.cs" />
     <Compile Include="Characters\GoodCharacters\CharacterSoldierFemale.cs" />
     <Compile Include="Characters\GoodCharacters\CharacterSoldierMale.cs" />
+    <Compile Include="Computer.cs" />
+    <Compile Include="ControlCharacterBattleDisplay.xaml.cs">
+      <DependentUpon>ControlCharacterBattleDisplay.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Items\ItemHealthPotionBig.cs" />
     <Compile Include="Items\ItemHealthPotionSmall.cs" />
     <Compile Include="Player.cs" />

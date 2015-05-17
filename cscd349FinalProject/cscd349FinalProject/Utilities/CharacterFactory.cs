@@ -11,7 +11,9 @@ namespace cscd349FinalProject.Utilities
         KnightFemale, KnightMale,
         MagicianFemale, MagicianMale,
         NinjaFemale, NinjaMale,
-        SoldierFemale, SoldierMale
+        SoldierFemale, SoldierMale,
+        ElfDark, ElfEarth, ElfFire,
+        ElfLight, ElfWater, ElfWind
     }
 
     static class CharacterFactory
@@ -44,6 +46,24 @@ namespace cscd349FinalProject.Utilities
 
             else if (ct == CharacterType.SoldierMale)
                 character = new CharacterSoldierMale();
+
+            else if (ct == CharacterType.ElfDark)
+                character = new CharacterElfDark();
+
+            else if (ct == CharacterType.ElfEarth)
+                character = new CharacterElfEarth();
+
+            else if (ct == CharacterType.ElfFire)
+                character = new CharacterElfFire();
+
+            else if (ct == CharacterType.ElfLight)
+                character = new CharacterElfLight();
+
+            else if (ct == CharacterType.ElfWater)
+                character = new CharacterElfWater();
+
+            else if (ct == CharacterType.ElfWind)
+                character = new CharacterElfWind();
             
             return character;
         }

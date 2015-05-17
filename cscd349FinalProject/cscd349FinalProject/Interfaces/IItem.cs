@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cscd349FinalProject
 {
-    interface IItem
+    public interface IItem
     {
         //Properties
         string Name { get; }

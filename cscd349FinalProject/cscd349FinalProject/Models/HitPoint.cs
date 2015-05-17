@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cscd349FinalProject
 {
-    class HitPoint
+    public class HitPoint
     {
         public int Value { get; set; }
 

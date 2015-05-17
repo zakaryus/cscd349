@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cscd349FinalProject
 {
-    interface IInventory : IItem
+    public interface IInventory : IItem
     {
         HitPoint UseInventory();
     }
