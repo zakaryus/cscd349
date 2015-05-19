@@ -11,7 +11,6 @@ namespace cscd349FinalProject
         //Properties
         string Name { get; }
         string Description { get; }
-        HitPoint HitPoints { get; set; }
-
+        HitPoint HitPoints { get; }
     }
 }

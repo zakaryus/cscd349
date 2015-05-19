@@ -57,11 +57,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ControlIWeaponCharacterSelectionDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Scenes\ControlBattle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Scenes\ControlCharacter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\ControlCharacterSetup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -107,6 +115,9 @@
     <Compile Include="ControlCharacterBattleDisplay.xaml.cs">
       <DependentUpon>ControlCharacterBattleDisplay.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ControlIWeaponCharacterSelectionDisplay.xaml.cs">
+      <DependentUpon>ControlIWeaponCharacterSelectionDisplay.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Items\ItemHealthPotionBig.cs" />
     <Compile Include="Items\ItemHealthPotionSmall.cs" />
     <Compile Include="Player.cs" />
@@ -115,6 +126,9 @@
     </Compile>
     <Compile Include="Scenes\ControlCharacter.xaml.cs">
       <DependentUpon>ControlCharacter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\ControlCharacterSetup.xaml.cs">
+      <DependentUpon>ControlCharacterSetup.xaml</DependentUpon>
     </Compile>
     <Compile Include="Scenes\ControlGamePlay.xaml.cs">
       <DependentUpon>ControlGamePlay.xaml</DependentUpon>
@@ -136,6 +150,7 @@
     <Compile Include="Interfaces\IWeapon.cs" />
     <Compile Include="Utilities\CharacterFactory.cs" />
     <Compile Include="Utilities\HelperImages.cs" />
+    <Compile Include="WeaponManager.cs" />
     <Compile Include="Weapons\WeaponElfBow.cs" />
     <Compile Include="Weapons\WeaponHeavySword.cs" />
     <Compile Include="Weapons\WeaponNunchucks.cs" />

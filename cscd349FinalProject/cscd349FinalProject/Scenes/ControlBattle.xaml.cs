@@ -37,10 +37,10 @@ namespace cscd349FinalProject
             if (Player.GetInstance().Allies.Count == 0)
                 throw new Exception("Battle cannot begin, player has no allies!");
 
-            AddAlliesToGrid(Player.GetInstance());
+            AddPlayerAlliesToScene(Player.GetInstance());
 
             _computer = new Computer();
-            AddEnemiesToGrid(_computer);
+            AddComputerEnemiesToScene(_computer);
 
             _battleState = BattleState.PlayerTurn;
         }
@@ -55,7 +55,7 @@ namespace cscd349FinalProject
             MainWindow.GetInstance().ChangeScene(Scene.Lose);
         }
 
-        private void AddAlliesToGrid(Player play)
+        private void AddPlayerAlliesToScene(Player play)
         {
             for (int i = 0; i < play.Allies.Count; i++)
             {
@@ -67,7 +67,7 @@ namespace cscd349FinalProject
             }
         }
 
-        private void AddEnemiesToGrid(Computer comp)
+        private void AddComputerEnemiesToScene(Computer comp)
         {
             for (int i = 0; i < comp.Enemies.Count; i++)
             {

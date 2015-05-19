@@ -87,7 +87,7 @@ namespace cscd349FinalProject
         {
             Player.GetInstance().Allies = GetSelectedCharacters();
 
-            MainWindow.GetInstance().ChangeScene(Scene.GamePlay);
+            MainWindow.GetInstance().ChangeScene(Scene.CharacterSetup);
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)

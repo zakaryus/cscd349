@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace cscd349FinalProject.Weapons
 {
@@ -12,13 +13,17 @@ namespace cscd349FinalProject.Weapons
         private int _maxDamage;
         private string _name;
         private string _description;
+        private Image _icon;
         private HitPoint _hitpoints;
 
         public WeaponSword()
         {
             _minDamage = 55;
             _maxDamage = 75;
-            _name = "Sword";
+            Name = "Sword";
+            Description = "A fast weapon, excellent in close combat.";
+            Icon = new Image();
+            HitPoints = new HitPoint((_maxDamage + _minDamage) / 2);
         }
 
         public string Name
@@ -33,10 +38,16 @@ namespace cscd349FinalProject.Weapons
             private set { _description = value; }
         }
 
+        public Image Icon
+        {
+            get { return _icon; }
+            private set { _icon = value; }
+        }
+
         public HitPoint HitPoints
         {
             get { return _hitpoints; }
-            set { _hitpoints = value; }
+            private set { _hitpoints = value; }
         }
 
         public HitPoint UseWeapon()
