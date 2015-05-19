@@ -128,3 +128,5 @@ C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.csproj.GenerateResource.Cache
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlCharacterBattleDisplay.baml
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlCharacterBattleDisplay.g.cs
+C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlCharacterBattleDisplay.baml
+C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlCharacterBattleDisplay.g.cs

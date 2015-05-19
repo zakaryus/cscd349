@@ -10,6 +10,7 @@ namespace cscd349FinalProject
     {
         private static Player _instance = null;
         private static List<ICharacter> _allies;
+        private static List<IInventory> _inventory; 
 
         public List<ICharacter> Allies
         {
@@ -26,12 +27,22 @@ namespace cscd349FinalProject
             }
         }
 
+        public List<IInventory> Inventory
+        {
+            get { return _inventory; }
+        }
+
         public static Player GetInstance()
         {
             if(_instance == null)
                 _instance = new Player();
 
             return _instance;
+        }
+
+        public void AddInventoryItem(IInventory item)
+        {
+            _inventory.Add(item);
         }
     }
 }

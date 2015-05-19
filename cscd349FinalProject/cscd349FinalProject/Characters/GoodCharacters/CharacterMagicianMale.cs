@@ -16,7 +16,6 @@ namespace cscd349FinalProject
         private HitPoint _maxHitpoints;
         private IWeapon _weapon;
         private List<IEquipment> _equipment;
-        private List<IInventory> _inventory;
         private Image _face;
         #endregion Fields
 
@@ -57,12 +56,6 @@ namespace cscd349FinalProject
             set { _equipment = value; }
         }
 
-        public List<IInventory> Inventory
-        {
-            get { return _inventory; }
-            set { _inventory = value; }
-        }
-
         public System.Windows.Controls.Image Face
         {
             get { return _face; }
@@ -79,7 +72,6 @@ namespace cscd349FinalProject
             MaxHitPoints = HitPoints = new HitPoint(100);
             Weapon = null;
             Equipment = null;
-            Inventory = null;
             Face = new Image();
             Face.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Images/Faces/GoodFaces/CharacterMagicianMaleFace.png");
         }
