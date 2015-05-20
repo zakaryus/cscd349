@@ -6,11 +6,15 @@
              mc:Ignorable="d" 
              d:DesignHeight="110" d:DesignWidth="280" GiveFeedback="UserControl_GiveFeedback">
     <Grid>
-        <Border x:Name="brdControl" BorderBrush="Black" BorderThickness="0 0 0 1"  HorizontalAlignment="Left" Height="110" VerticalAlignment="Bottom" Width="280"/>
-        <Label x:Name="lblName" Content="&lt;WeaponName&gt;" HorizontalAlignment="Left" Margin="58,10,0,0" VerticalAlignment="Top" Width="123"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="169*"/>
+            <ColumnDefinition Width="111*"/>
+        </Grid.ColumnDefinitions>
+        <Border x:Name="brdControl" BorderBrush="Black" BorderThickness="0 0 0 1"  HorizontalAlignment="Left" Height="110" VerticalAlignment="Bottom" Width="280" Grid.ColumnSpan="2" Margin="0,0,0,0.4"/>
+        <Label x:Name="lblName" Content="&lt;WeaponName&gt;" HorizontalAlignment="Left" Margin="58,10,0,0" VerticalAlignment="Top" Width="123" Grid.ColumnSpan="2"/>
         <Label x:Name="lblHitPointsDefinition" Content="Hitpoints:" HorizontalAlignment="Left" Margin="58,36,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblHitPoints" Content="&lt;Hitpoints&gt;" HorizontalAlignment="Left" Margin="124,36,0,0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="tblkDescription" Margin="10,67,10,10" TextWrapping="Wrap" Text="&lt;WeaponDescription&gt;"/>
+        <Label x:Name="lblHitPoints" Content="&lt;Hitpoints&gt;" HorizontalAlignment="Left" Margin="124,36,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="tblkDescription" Margin="10,67,10,9.4" TextWrapping="Wrap" Text="&lt;WeaponDescription&gt;" Grid.ColumnSpan="2"/>
         <Image x:Name="weaponIcon" HorizontalAlignment="Left" Height="48" Margin="10,10,0,0" VerticalAlignment="Top" Width="48"/>
 
     </Grid>
