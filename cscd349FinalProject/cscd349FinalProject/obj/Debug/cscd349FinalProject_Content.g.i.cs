@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/cscd349finalproject.vshost.exe")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("weapon%20icons/w_sword008.png")]
 
 

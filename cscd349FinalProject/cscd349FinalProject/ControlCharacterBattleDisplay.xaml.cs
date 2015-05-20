@@ -49,6 +49,8 @@ namespace cscd349FinalProject
             SetPbHitPoints(_character.HitPoints);
         }
 
+
+
         public void SetPbHitPoints(HitPoint hitpoints)
         {
             pbHitPoints.Value = hitpoints.Value;

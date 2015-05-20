@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
-
+using System.Windows.Media;
 namespace cscd349FinalProject.Weapons
 {
     class WeaponNunchucks : IWeapon
@@ -24,6 +24,8 @@ namespace cscd349FinalProject.Weapons
             Name = "Nunchucks";
             Description = "A fast, light weapon. Requires much skill to be used efficiently.";
             Icon = new Image();
+            ImageBrush myBrush = HelperImages.UriStringToImageBrush("pack://application:,,,/Weapon Icons/S_Sword09.png");
+            Icon.Source = myBrush.ImageSource;
             HitPoints = new HitPoint((_maxDamage + _minDamage) / 2);
         }
 

@@ -11,7 +11,7 @@
         <Label x:Name="lblHitPointsDefinition" Content="Hitpoints:" HorizontalAlignment="Left" Margin="58,36,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblHitPoints" Content="&lt;Hitpoints&gt;" HorizontalAlignment="Left" Margin="124,36,0,0" VerticalAlignment="Top"/>
         <TextBlock x:Name="tblkDescription" Margin="10,67,10,10" TextWrapping="Wrap" Text="&lt;WeaponDescription&gt;"/>
-        <Image HorizontalAlignment="Left" Height="48" Margin="10,10,0,0" VerticalAlignment="Top" Width="48"/>
+        <Image x:Name="weaponIcon" HorizontalAlignment="Left" Height="48" Margin="10,10,0,0" VerticalAlignment="Top" Width="48"/>
 
     </Grid>
 </UserControl>

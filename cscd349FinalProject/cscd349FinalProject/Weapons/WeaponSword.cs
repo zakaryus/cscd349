@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace cscd349FinalProject.Weapons
 {
@@ -23,6 +24,8 @@ namespace cscd349FinalProject.Weapons
             Name = "Sword";
             Description = "A fast weapon, excellent in close combat.";
             Icon = new Image();
+            ImageBrush myBrush = HelperImages.UriStringToImageBrush("pack://application:,,,/Weapon Icons/W_Sword008.png");
+            Icon.Source = myBrush.ImageSource;
             HitPoints = new HitPoint((_maxDamage + _minDamage) / 2);
         }
 

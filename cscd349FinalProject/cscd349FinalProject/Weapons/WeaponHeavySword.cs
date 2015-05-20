@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace cscd349FinalProject.Weapons
 {
@@ -24,6 +25,9 @@ namespace cscd349FinalProject.Weapons
             Name = "Heavy Sword";
             Description = "A heavy, powerful weapon. Does much damage, but is slow to wield.";
             Icon = new Image();
+            ImageBrush myBrush =  HelperImages.UriStringToImageBrush("pack://application:,,,/Weapon Icons/S_Sword09.png");
+            Icon.Source = myBrush.ImageSource;
+            
             HitPoints = new HitPoint((_maxDamage + _minDamage) / 2);
         }
 

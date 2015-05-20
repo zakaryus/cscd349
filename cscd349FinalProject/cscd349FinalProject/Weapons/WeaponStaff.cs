@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace cscd349FinalProject.Weapons
 {
@@ -24,6 +25,8 @@ namespace cscd349FinalProject.Weapons
             Name = "Staff";
             Description = "Good in close combat, but can prove unreliable against metal weapons.";
             Icon = new Image();
+            ImageBrush myBrush = HelperImages.UriStringToImageBrush("pack://application:,,,/Weapon Icons/W_Mace008.png");
+            Icon.Source = myBrush.ImageSource;
             HitPoints = new HitPoint((_maxDamage + _minDamage) / 2);
         }
 

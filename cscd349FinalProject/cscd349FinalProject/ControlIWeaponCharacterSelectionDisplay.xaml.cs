@@ -36,6 +36,7 @@ namespace cscd349FinalProject
             lblName.Content = Weapon.Name;
             lblHitPoints.Content = Weapon.HitPoints.Value.ToString();
             tblkDescription.Text = Weapon.Description;
+            weaponIcon.Source = weapon.Icon.Source;
         }
 
         private void UserControl_GiveFeedback(object sender, GiveFeedbackEventArgs e)

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace cscd349FinalProject.Weapons
 {
@@ -24,6 +24,8 @@ namespace cscd349FinalProject.Weapons
             Name = "Bow and Arrow";
             Description = "An excellent long range weapon. Mostly uneffective in close combat. This weapon requires a decent amout of skill to be used accurately.";
             Icon = new Image();
+            ImageBrush myBrush = HelperImages.UriStringToImageBrush("pack://application:,,,/Weapon Icons/S_Bow13.png");
+            Icon.Source = myBrush.ImageSource;
             HitPoints = new HitPoint((_maxDamage + _minDamage) / 2);
         }
 

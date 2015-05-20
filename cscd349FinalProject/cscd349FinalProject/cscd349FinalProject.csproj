@@ -222,6 +222,15 @@
     <Resource Include="Faces\waterElf.png" />
     <Resource Include="Faces\windElf.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Weapon Icons\S_Bow13.png" />
+    <Resource Include="Weapon Icons\S_Sword09.png" />
+    <Resource Include="Weapon Icons\W_Axe012.png" />
+    <Resource Include="Weapon Icons\W_Mace008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Weapon Icons\W_Sword008.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
