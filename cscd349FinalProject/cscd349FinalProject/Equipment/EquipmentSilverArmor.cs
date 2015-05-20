@@ -51,7 +51,7 @@ namespace cscd349FinalProject.Items
             set { _hitpoints = value; }
         }
 
-        public HitPoint UseInventory()
+        public HitPoint UseEquipment()
         {
             return new HitPoint(_addHitPoints);
         }

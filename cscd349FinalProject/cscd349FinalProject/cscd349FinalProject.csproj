@@ -118,6 +118,7 @@
     <Compile Include="ControlIWeaponCharacterSelectionDisplay.xaml.cs">
       <DependentUpon>ControlIWeaponCharacterSelectionDisplay.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Equipment\EquipmentSilverArmor.cs" />
     <Compile Include="Items\ItemHealthPotionBig.cs" />
     <Compile Include="Items\ItemHealthPotionSmall.cs" />
     <Compile Include="Player.cs" />
@@ -237,6 +238,13 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Item Icons\P_Green02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Equipment Icons\A_Armor04.png" />
+    <Resource Include="Equipment Icons\A_Armor05.png" />
+    <Resource Include="Equipment Icons\A_Armour01.png" />
+    <Resource Include="Equipment Icons\A_Armour02.png" />
+    <Resource Include="Equipment Icons\A_Armour03.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
