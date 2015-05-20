@@ -9,7 +9,7 @@ namespace cscd349FinalProject.Weapons
 {
     class WeaponNull: IWeapon
     {
-        private int _minDamage;
+         private int _minDamage;
         private int _maxDamage;
         private string _name;
         private string _description;
