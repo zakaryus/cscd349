@@ -207,6 +207,17 @@
     <Resource Include="Faces\waterElf.png" />
     <Resource Include="Faces\windElf.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Backgrounds\tileBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\darkMaleKnight\back\0.png" />
+    <Resource Include="Sprites\darkMaleKnight\back\1.png" />
+    <Resource Include="Sprites\darkMaleKnight\back\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Faces\Sprites\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

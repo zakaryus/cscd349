@@ -27,8 +27,16 @@ namespace cscd349FinalProject
             //battleGround.Background = new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "cscd349FinalProject/images/backgrounds/bg1.png")));
            // ImageSource 
            
-            battleGround.Background = HelperImages.UriStringToImageBrush("pack://application:,,,/Images/Backgrounds/bg1.jpg");
-
+            battleGround.Background = HelperImages.UriStringToImageBrush("pack://application:,,,/Images/Backgrounds/tileBackground.png");
+            ImageBrush image = new ImageBrush();
+            
+            for (int count = 0; count < 3; count++)
+            {
+                string file = Convert.ToString(count);
+                image = HelperImages.UriStringToImageBrush("pack://application:,,,/Sprites/darkMaleKnight/back/"+file+".png");
+            }
+          //  battleGround.Background = image;
+       
         }
 
         private void btnBattle_Click(object sender, RoutedEventArgs e)

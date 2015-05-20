@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/cscd349finalproject.vshost.exe")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sprites/darkmaleknight/back/0.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sprites/darkmaleknight/back/1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sprites/darkmaleknight/back/2.png")]
 
 
