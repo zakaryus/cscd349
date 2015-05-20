@@ -134,3 +134,6 @@ C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Deb
 C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Scenes\ControlCharacterSetup.baml
 C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlIWeaponCharacterSelectionDisplay.g.cs
 C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Scenes\ControlCharacterSetup.g.cs
+C:\Users\gbui_000\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.exe.config
+C:\Users\gbui_000\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.exe
+C:\Users\gbui_000\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.pdb
