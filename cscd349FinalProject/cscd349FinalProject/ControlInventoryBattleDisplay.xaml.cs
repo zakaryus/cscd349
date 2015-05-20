@@ -35,7 +35,27 @@ namespace cscd349FinalProject
 
             lblName.Content = Item.Name;
             tblkDescription.Text = Item.Description;
-            ItemIcon.Source = Item.Icon.Source;
+            //ItemIcon.Source = Item.Icon.Source;
+        }
+        
+        private void UserControl_GiveFeedback(object sender, GiveFeedbackEventArgs e)
+        {
+            base.OnGiveFeedback(e);
+            // These Effects values are set in the drop target's 
+            // DragOver event handler. 
+            if (e.Effects.HasFlag(DragDropEffects.Copy))
+            {
+                Mouse.SetCursor(Cursors.Cross);
+            }
+            else if (e.Effects.HasFlag(DragDropEffects.Move))
+            {
+                Mouse.SetCursor(Cursors.Pen);
+            }
+            else
+            {
+                Mouse.SetCursor(Cursors.No);
+            }
+            e.Handled = true;
         }
     }
 }

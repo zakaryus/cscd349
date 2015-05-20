@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using cscd349FinalProject.Items;
 
 namespace cscd349FinalProject
 {
@@ -23,6 +24,15 @@ namespace cscd349FinalProject
                 _instance = new InventoryManager();
 
             return _instance;
+        }
+
+        private InventoryManager()
+        {
+            AllInventory = new List<IInventory>
+                            {
+                                new ItemHealthPotionBig(),
+                                new ItemHealthPotionSmall()
+                            };
         }
     }
 }

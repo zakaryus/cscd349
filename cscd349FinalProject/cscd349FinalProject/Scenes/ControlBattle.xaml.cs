@@ -42,6 +42,8 @@ namespace cscd349FinalProject
             _computer = new Computer();
             AddComputerEnemiesToScene(_computer);
 
+            AddInventoryToScene(InventoryManager.getInstance());
+
             _battleState = BattleState.PlayerTurn;
 
         }
@@ -84,7 +86,8 @@ namespace cscd349FinalProject
         {
             foreach(IInventory inventory in im.AllInventory)
             {
-                //var ccbd = new ControlInventoryBattleDisplay(im.);
+                var ccbd = new ControlInventoryBattleDisplay(inventory);
+                lbInventoryList.Items.Add(ccbd);
             }
         }
 
