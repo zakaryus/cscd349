@@ -57,6 +57,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ControlInventoryBattleDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ControlIWeaponCharacterSelectionDisplay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -115,10 +119,14 @@
     <Compile Include="ControlCharacterBattleDisplay.xaml.cs">
       <DependentUpon>ControlCharacterBattleDisplay.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ControlInventoryBattleDisplay.xaml.cs">
+      <DependentUpon>ControlInventoryBattleDisplay.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ControlIWeaponCharacterSelectionDisplay.xaml.cs">
       <DependentUpon>ControlIWeaponCharacterSelectionDisplay.xaml</DependentUpon>
     </Compile>
     <Compile Include="Equipment\EquipmentNull.cs" />
+    <Compile Include="InventoryManager.cs" />
     <Compile Include="Items\ItemHealthPotionBig.cs" />
     <Compile Include="Items\ItemHealthPotionSmall.cs" />
     <Compile Include="Player.cs" />

@@ -168,3 +168,11 @@ C:\Users\gbui\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\
 C:\Users\gbui\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.g.resources
 C:\Users\gbui\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.Properties.Resources.resources
 C:\Users\gbui\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.csproj.GenerateResource.Cache
+C:\Users\Steve\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlCharacterBattleDisplay.baml
+C:\Users\Steve\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlInventoryBattleDisplay.baml
+C:\Users\Steve\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlIWeaponCharacterSelectionDisplay.baml
+C:\Users\Steve\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Scenes\ControlCharacterSetup.baml
+C:\Users\Steve\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlCharacterBattleDisplay.g.cs
+C:\Users\Steve\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlInventoryBattleDisplay.g.cs
+C:\Users\Steve\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlIWeaponCharacterSelectionDisplay.g.cs
+C:\Users\Steve\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Scenes\ControlCharacterSetup.g.cs

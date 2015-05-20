@@ -84,7 +84,7 @@ namespace cscd349FinalProject
         {
             foreach(IInventory inventory in im.AllInventory)
             {
-                var ccbd = new ControlInventory
+                //var ccbd = new ControlInventoryBattleDisplay(im.);
             }
         }
 
