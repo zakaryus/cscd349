@@ -26,6 +26,7 @@ namespace cscd349FinalProject.Scenes
 
             AddPlayerAlliesToScene(Player.GetInstance());
             AddIWeaponsToScene(WeaponManager.GetInstance());
+            
         }
 
         private void AddPlayerAlliesToScene(Player play)

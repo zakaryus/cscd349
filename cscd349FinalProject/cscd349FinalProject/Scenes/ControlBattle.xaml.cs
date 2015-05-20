@@ -43,6 +43,7 @@ namespace cscd349FinalProject
             AddComputerEnemiesToScene(_computer);
 
             _battleState = BattleState.PlayerTurn;
+
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -76,6 +77,14 @@ namespace cscd349FinalProject
                 Grid.SetRow(ccbd, i + 1);
                 this.grdControlBattle.Children.Add(ccbd);
                 
+            }
+        }
+
+        private void AddInventoryToScene(InventoryManager inventory)
+        {
+            foreach(IInventory inventory in inventory.AllInventory)
+            {
+
             }
         }
 
