@@ -65,5 +65,15 @@ namespace cscd349FinalProject
             grdBattleDisplay.Background = Highlighted ? _unhighlightedColor : _highlightedColor;
             Highlighted = !Highlighted;
         }
+
+        private void UserControl_Drop(object sender, DragEventArgs e)
+        {
+            base.OnDrop(e);
+
+            _character.Weapon = e.Data.GetData("Object") as IWeapon;
+            lblWeaponName.Content = _character.Weapon.Name;
+            e.Effects = DragDropEffects.Move;
+            e.Handled = true;
+        }
     }
 }

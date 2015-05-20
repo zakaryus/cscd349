@@ -58,6 +58,26 @@ namespace cscd349FinalProject.Scenes
             MainWindow.GetInstance().ChangeScene(Scene.Character);
         }
 
+        private void lbWeaponList_MouseMove(object sender, MouseEventArgs e)
+        {
+            base.OnMouseMove(e);
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                // Package the data.
+                //DataObject data = new DataObject();
+                //data.SetData(DataFormats.StringFormat, circleUI.Fill.ToString());
+                //data.SetData("Double", circleUI.Height);
+                //data.SetData("Object", this);
+
+                var source = sender as ListBox;
+                var sourceControl = source.SelectedItem as ControlIWeaponCharacterSelectionDisplay;
+                IWeapon sourceItem = sourceControl.Weapon;
+
+                // Inititate the drag-and-drop operation.
+                DragDrop.DoDragDrop(this, sourceItem, DragDropEffects.Move);
+            }
+        }
+
 
     }
 }

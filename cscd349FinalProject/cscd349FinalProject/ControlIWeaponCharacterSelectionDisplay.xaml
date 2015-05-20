@@ -4,13 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="110" d:DesignWidth="280">
+             d:DesignHeight="110" d:DesignWidth="280" GiveFeedback="UserControl_GiveFeedback">
     <Grid>
         <Border x:Name="brdControl" BorderBrush="Black" BorderThickness="0 0 0 1"  HorizontalAlignment="Left" Height="110" VerticalAlignment="Bottom" Width="280"/>
-        <Label x:Name="lblName" Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="123"/>
-        <Label x:Name="lblHitPointsDefinition" Content="Hitpoints:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblHitPoints" Content="Label" HorizontalAlignment="Left" Margin="71,41,0,0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="tblkDescription" Margin="10,72,10,10" TextWrapping="Wrap" Text="TextBlock"/>
+        <Label x:Name="lblName" Content="&lt;WeaponName&gt;" HorizontalAlignment="Left" Margin="58,10,0,0" VerticalAlignment="Top" Width="123"/>
+        <Label x:Name="lblHitPointsDefinition" Content="Hitpoints:" HorizontalAlignment="Left" Margin="58,36,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblHitPoints" Content="&lt;Hitpoints&gt;" HorizontalAlignment="Left" Margin="124,36,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tblkDescription" Margin="10,67,10,10" TextWrapping="Wrap" Text="&lt;WeaponDescription&gt;"/>
+        <Image HorizontalAlignment="Left" Height="48" Margin="10,10,0,0" VerticalAlignment="Top" Width="48"/>
 
     </Grid>
 </UserControl>
