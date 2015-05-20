@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace cscd349FinalProject.Items
 {
@@ -12,6 +14,23 @@ namespace cscd349FinalProject.Items
         private string _name;
         private HitPoint _hitpoints;
         private int _addHitPoints = 50;
+        private Image _icon;
+
+        public ItemHealthPotionSmall()
+        {
+           
+            Name = "Health Potion";
+            Description = "A potion that will increase your strength";
+            Icon = new Image();
+            ImageBrush myBrush = HelperImages.UriStringToImageBrush("pack://application:,,,/Item Icons/P_Green02.png");
+            Icon.Source = myBrush.ImageSource;
+   
+        }
+        public Image Icon
+        {
+            get { return _icon; }
+            private set { _icon = value; }
+        }
 
         public string Name
         {

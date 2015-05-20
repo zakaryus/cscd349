@@ -5,10 +5,25 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
-    <Grid>
-        <Label Content="Battle" HorizontalAlignment="Left" Margin="122,44,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="101,273,0,0" VerticalAlignment="Top" Width="75" Click="btnBack_Click"/>
-        <Button x:Name="btnLose" Content="Lose" HorizontalAlignment="Left" Margin="101,300,0,0" VerticalAlignment="Top" Width="75" Click="btnLose_Click"/>
-        <Button x:Name="btnAttack" Content="Attack" HorizontalAlignment="Left" Margin="101,152,0,0" VerticalAlignment="Top" Width="75"/>
+    <Grid x:Name="grdControlBattle">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="110" />
+            <RowDefinition Height="110" />
+            <RowDefinition Height="110" />
+            <RowDefinition Height="110" />
+            <RowDefinition Height="110" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="300" />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnBack" Grid.Row="5" Grid.Column="1" Content="Back" HorizontalAlignment="Left" Margin="63,0,0,78" VerticalAlignment="Bottom" Width="75" Click="btnBack_Click"/>
+        <Button x:Name="btnLose" Grid.Row="5" Grid.Column="1" Content="Lose" HorizontalAlignment="Left" Margin="63,0,0,51" VerticalAlignment="Bottom" Width="75" Click="btnLose_Click"/>
+        <Button x:Name="btnAttack" Grid.Row="5" Grid.Column="1" Content="Attack" HorizontalAlignment="Left" Margin="63,0,0,24" VerticalAlignment="Bottom" Width="75" Click="btnAttack_Click"/>
+        <Label x:Name="lblBattle" Content="BATTLE" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="180" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+        <Label x:Name="lblComputerTurn" Content="" Grid.Column="2" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="280" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Red"/>
+        <Label x:Name="lblPlayerTurn" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="280" FontSize="16" HorizontalContentAlignment="Center" Foreground="Lime"/>
     </Grid>
 </UserControl>

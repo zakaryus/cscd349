@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using cscd349FinalProject.Scenes;
 
 namespace cscd349FinalProject
 {
@@ -22,7 +23,7 @@ namespace cscd349FinalProject
 
     public enum Scene
     {
-        Main, Character, GamePlay, Battle, Win, Lose
+        Main, Character, CharacterSetup, GamePlay, Battle, Win, Lose
     }
 
     public partial class MainWindow : Window
@@ -30,6 +31,7 @@ namespace cscd349FinalProject
         private static MainWindow _instance = null;
         private static Dictionary<Scene, Control> _scenes = null;
 
+        //Singleton
         public static MainWindow GetInstance()
         {
             if (_instance == null)
@@ -51,8 +53,9 @@ namespace cscd349FinalProject
         {
             Control main = new ControlMain();
             Control character = new ControlCharacter();
+            //Control characterSetup = new ControlCharacterSetup();
             Control gameplay = new ControlGamePlay();
-            Control battle = new ControlBattle();
+            //Control battle = new ControlBattle();
             Control win = new ControlWin();
             Control lose = new ControlLose();
 
@@ -60,8 +63,9 @@ namespace cscd349FinalProject
                    {
                        {Scene.Main, main},
                        {Scene.Character, character},
+                       {Scene.CharacterSetup, null},
                        {Scene.GamePlay, gameplay},
-                       {Scene.Battle, battle},
+                       {Scene.Battle, null},
                        {Scene.Win, win},
                        {Scene.Lose, lose}
                    };
@@ -73,7 +77,14 @@ namespace cscd349FinalProject
                 return;
 
             if (_scenes.ContainsKey(scene))
-                _instance.cctrlMain.Content = _scenes[scene];
+            {
+                if (scene == Scene.CharacterSetup)
+                    _instance.cctrlMain.Content = new ControlCharacterSetup();
+                else if (scene == Scene.Battle)
+                    _instance.cctrlMain.Content = new ControlBattle();
+                else
+                    _instance.cctrlMain.Content = _scenes[scene];
+            }
         }
     }
 }

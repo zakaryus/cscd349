@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using cscd349FinalProject.Weapons;
 
 namespace cscd349FinalProject
 {
@@ -13,9 +14,9 @@ namespace cscd349FinalProject
         private string _name;
         private string _description;
         private HitPoint _hitpoints;
+        private HitPoint _maxHitpoints;
         private IWeapon _weapon;
         private List<IEquipment> _equipment;
-        private List<IInventory> _inventory;
         private Image _face;
         #endregion Fields
 
@@ -38,6 +39,12 @@ namespace cscd349FinalProject
             set { _hitpoints = value; }
         }
 
+        public HitPoint MaxHitPoints
+        {
+            get { return _maxHitpoints; }
+            set { _maxHitpoints = value; }
+        }
+
         public IWeapon Weapon
         {
             get { return _weapon; }
@@ -48,12 +55,6 @@ namespace cscd349FinalProject
         {
             get { return _equipment; }
             set { _equipment = value; }
-        }
-
-        public List<IInventory> Inventory
-        {
-            get { return _inventory; }
-            set { _inventory = value; }
         }
 
         public System.Windows.Controls.Image Face
@@ -69,11 +70,11 @@ namespace cscd349FinalProject
         {
             Name = "Male Soldier";
             Description = "A battle-tested character.";
-            HitPoints = new HitPoint(100);
-            Weapon = null;
+            MaxHitPoints = HitPoints = new HitPoint(100);
+            Weapon = new WeaponNull();
             Equipment = null;
-            Inventory = null;
-            Face = null;
+            Face = new Image();
+            Face.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Images/Faces/GoodFaces/CharacterSoldierMaleFace.png");
         }
         #endregion Constructor
 

@@ -23,6 +23,12 @@ namespace cscd349FinalProject
         public ControlGamePlay()
         {
             InitializeComponent();
+
+            //battleGround.Background = new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "cscd349FinalProject/images/backgrounds/bg1.png")));
+           // ImageSource 
+           
+            battleGround.Background = HelperImages.UriStringToImageBrush("pack://application:,,,/Images/Backgrounds/bg1.jpg");
+
         }
 
         private void btnBattle_Click(object sender, RoutedEventArgs e)

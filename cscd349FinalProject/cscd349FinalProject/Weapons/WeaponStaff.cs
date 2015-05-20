@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace cscd349FinalProject.Weapons
 {
@@ -13,13 +15,19 @@ namespace cscd349FinalProject.Weapons
         private int _maxDamage;
         private string _name;
         private string _description;
+        private Image _icon;
         private HitPoint _hitpoints;
 
         public WeaponStaff()
         {
             _minDamage = 20;
             _maxDamage = 55;
-            _name = "Staff";
+            Name = "Staff";
+            Description = "Good in close combat, but can prove unreliable against metal weapons.";
+            Icon = new Image();
+            ImageBrush myBrush = HelperImages.UriStringToImageBrush("pack://application:,,,/Weapon Icons/W_Mace008.png");
+            Icon.Source = myBrush.ImageSource;
+            HitPoints = new HitPoint((_maxDamage + _minDamage) / 2);
         }
 
         public string Name
@@ -34,10 +42,16 @@ namespace cscd349FinalProject.Weapons
             private set { _description = value; }
         }
 
+        public Image Icon
+        {
+            get { return _icon; }
+            private set { _icon = value; }
+        }
+
         public HitPoint HitPoints
         {
             get { return _hitpoints; }
-            set { _hitpoints = value; }
+            private set { _hitpoints = value; }
         }
 
         public HitPoint UseWeapon()

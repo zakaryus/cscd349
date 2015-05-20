@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace cscd349FinalProject
 {
-    interface IItem
+    public interface IItem
     {
         //Properties
         string Name { get; }
         string Description { get; }
-        HitPoint HitPoints { get; set; }
-
+        HitPoint HitPoints { get; }
     }
 }
