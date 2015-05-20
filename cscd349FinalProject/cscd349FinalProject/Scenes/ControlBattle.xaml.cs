@@ -80,11 +80,11 @@ namespace cscd349FinalProject
             }
         }
 
-        private void AddInventoryToScene(InventoryManager inventory)
+        private void AddInventoryToScene(InventoryManager im)
         {
-            foreach(IInventory inventory in inventory.AllInventory)
+            foreach(IInventory inventory in im.AllInventory)
             {
-
+                var ccbd = new ControlInventory
             }
         }
 
