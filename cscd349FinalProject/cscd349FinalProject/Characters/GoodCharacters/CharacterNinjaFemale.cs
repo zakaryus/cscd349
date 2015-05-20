@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using cscd349FinalProject.Weapons;
 
 namespace cscd349FinalProject
 {
@@ -70,7 +71,7 @@ namespace cscd349FinalProject
             Name = "Female Ninja";
             Description = "A sly, agile character.";
             MaxHitPoints = HitPoints = new HitPoint(100);
-            Weapon = null;
+            Weapon = new WeaponNull();
             Equipment = null;
             Face = new Image();
             Face.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Images/Faces/GoodFaces/CharacterNinjaFemaleFace.png");

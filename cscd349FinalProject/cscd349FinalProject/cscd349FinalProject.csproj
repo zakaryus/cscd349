@@ -153,6 +153,7 @@
     <Compile Include="WeaponManager.cs" />
     <Compile Include="Weapons\WeaponElfBow.cs" />
     <Compile Include="Weapons\WeaponHeavySword.cs" />
+    <Compile Include="Weapons\WeaponNull.cs" />
     <Compile Include="Weapons\WeaponNunchucks.cs" />
     <Compile Include="Weapons\WeaponStaff.cs" />
     <Compile Include="Weapons\WeaponSword.cs" />

@@ -4,14 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="110" d:DesignWidth="300" MouseDown="UserControl_MouseDown" AllowDrop="True" Drop="UserControl_Drop">
+             d:DesignHeight="110" d:DesignWidth="300" MouseDown="UserControl_MouseDown" AllowDrop="True" Drop="UserControl_Drop" >
     <Grid x:Name="grdBattleDisplay">
         <Image x:Name="imgFace" HorizontalAlignment="Left" Height="48" Margin="10,10,0,0" VerticalAlignment="Top" Width="48"/>
         <Label x:Name="lblName" Content="&lt;CharacterName&gt;" HorizontalAlignment="Left" Margin="63,10,0,0" VerticalAlignment="Top"/>
         <ProgressBar x:Name="pbHitPoints" HorizontalAlignment="Left" Height="16" Margin="63,41,0,0" VerticalAlignment="Top" Width="227" Foreground="Lime"/>
         <Label x:Name="lblHitPointFraction" Content="&lt;HealthFraction&gt;" Margin="0,57,10,0" VerticalAlignment="Top" Width="102" HorizontalAlignment="Right"/>
         <Label x:Name="lblDamageTaken"  Content="&lt;Damage&gt;" HorizontalAlignment="Left" Margin="219,10,0,0" VerticalAlignment="Top" Foreground="Red"/>
-        <Label x:Name="lblWeaponName" Content="&lt;WeaponName&gt;" HorizontalAlignment="Left" Margin="10,63,0,0" VerticalAlignment="Top" Width="101"/>
+        <Label x:Name="lblWeaponName" Content="&lt;WeaponName&gt;" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" Width="101"/>
 
     </Grid>
 </UserControl>

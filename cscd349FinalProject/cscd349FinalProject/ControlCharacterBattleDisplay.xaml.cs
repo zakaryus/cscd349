@@ -42,6 +42,7 @@ namespace cscd349FinalProject
             imgFace.Source = _character.Face.Source;
 
             lblName.Content = _character.Name;
+            lblWeaponName.Content = _character.Weapon.Name;
             lblDamageTaken.Content = String.Empty;
 
             pbHitPoints.Maximum = _character.MaxHitPoints.Value;
@@ -72,10 +73,19 @@ namespace cscd349FinalProject
         {
             base.OnDrop(e);
 
-            _character.Weapon = e.Data.GetData("Object") as IWeapon;
-            lblWeaponName.Content = _character.Weapon.Name;
-            e.Effects = DragDropEffects.Move;
-            e.Handled = true;
+            if (e.Handled == false)
+            {
+                var character = sender as ControlCharacterBattleDisplay;
+                var data = e.Data as DataObject;
+                var weapon = data.GetData(typeof (IWeapon)) as IWeapon;
+
+                if (character != null && weapon != null)
+                {
+                    _character.Weapon = weapon;
+                    lblWeaponName.Content = weapon.Name;
+                }
+            }
+
         }
     }
 }
