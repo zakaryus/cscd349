@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using cscd349FinalProject.Equipment;
 using cscd349FinalProject.Weapons;
 
 namespace cscd349FinalProject
@@ -16,7 +17,7 @@ namespace cscd349FinalProject
         private HitPoint _hitpoints;
         private HitPoint _maxHitpoints;
         private IWeapon _weapon;
-        private List<IEquipment> _equipment;
+        private IEquipment _equipment;
         private Image _face;
         #endregion Fields
 
@@ -51,7 +52,7 @@ namespace cscd349FinalProject
             set { _weapon = value; }
         }
 
-        public List<IEquipment> Equipment
+        public IEquipment Equipment
         {
             get { return _equipment; }
             set { _equipment = value; }
@@ -72,7 +73,7 @@ namespace cscd349FinalProject
             Description = "A sly, agile character.";
             MaxHitPoints = HitPoints = new HitPoint(100);
             Weapon = new WeaponNull();
-            Equipment = null;
+            Equipment = new EquipmentNull();
             Face = new Image();
             Face.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Images/Faces/GoodFaces/CharacterNinjaMaleFace.png");
         }

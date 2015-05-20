@@ -20,23 +20,23 @@ namespace cscd349FinalProject
     /// </summary>
     public partial class ControlIWeaponCharacterSelectionDisplay : UserControl
     {
-        private IWeapon _weapon;
+        private IItem _item;
 
-        public IWeapon Weapon
+        public IItem Item
         {
-            get { return _weapon; }
-            private set { _weapon = value; }
+            get { return _item; }
+            private set { _item = value; }
         }
 
-        public ControlIWeaponCharacterSelectionDisplay(IWeapon weapon)
+        public ControlIWeaponCharacterSelectionDisplay(IItem item)
         {
             InitializeComponent();
-            Weapon = weapon;
+            Item = item;
 
-            lblName.Content = Weapon.Name;
-            lblHitPoints.Content = Weapon.HitPoints.Value.ToString();
-            tblkDescription.Text = Weapon.Description;
-            weaponIcon.Source = weapon.Icon.Source;
+            lblName.Content = Item.Name;
+            lblHitPoints.Content = Item.HitPoints.Value.ToString();
+            tblkDescription.Text = Item.Description;
+            weaponIcon.Source = Item.Icon.Source;
         }
 
         private void UserControl_GiveFeedback(object sender, GiveFeedbackEventArgs e)

@@ -42,7 +42,7 @@ namespace cscd349FinalProject
             imgFace.Source = _character.Face.Source;
 
             lblName.Content = _character.Name;
-            lblWeaponName.Content = _character.Weapon.Name;
+            imgWeapon.Source = _character.Weapon.Icon.Source;
             lblDamageTaken.Content = String.Empty;
 
             pbHitPoints.Maximum = _character.MaxHitPoints.Value;
@@ -82,7 +82,7 @@ namespace cscd349FinalProject
                 if (character != null && weapon != null)
                 {
                     _character.Weapon = weapon;
-                    lblWeaponName.Content = weapon.Name;
+                    imgWeapon.Source = weapon.Icon.Source;
                 }
             }
 

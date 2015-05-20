@@ -71,7 +71,7 @@ namespace cscd349FinalProject.Scenes
 
                     if (sourceControl != null)
                     {
-                        IWeapon sourceItem = sourceControl.Weapon;
+                        IWeapon sourceItem = sourceControl.Item as IWeapon;
                         var data = new DataObject(typeof (IWeapon), sourceItem);
 
                         // Inititate the drag-and-drop operation.

@@ -9,7 +9,6 @@ namespace cscd349FinalProject
 {
     public interface IWeapon: IItem
     {
-        Image Icon { get; }
         HitPoint UseWeapon();
     }
 }

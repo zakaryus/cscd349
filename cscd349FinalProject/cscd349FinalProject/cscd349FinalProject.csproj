@@ -118,6 +118,7 @@
     <Compile Include="ControlIWeaponCharacterSelectionDisplay.xaml.cs">
       <DependentUpon>ControlIWeaponCharacterSelectionDisplay.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Equipment\EquipmentNull.cs" />
     <Compile Include="Items\ItemHealthPotionBig.cs" />
     <Compile Include="Items\ItemHealthPotionSmall.cs" />
     <Compile Include="Player.cs" />
@@ -232,6 +233,7 @@
   <ItemGroup>
     <Resource Include="Weapon Icons\W_Sword008.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

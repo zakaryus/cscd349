@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace cscd349FinalProject.Weapons
+namespace cscd349FinalProject.Equipment
 {
-    class WeaponNull: IWeapon
+    class EquipmentNull: IEquipment
     {
         private int _minDamage;
         private int _maxDamage;
@@ -16,7 +16,7 @@ namespace cscd349FinalProject.Weapons
         private Image _icon;
         private HitPoint _hitpoints;
 
-        public WeaponNull()
+        public EquipmentNull()
         {
             _minDamage = 0;
             _maxDamage = 0;
@@ -50,7 +50,7 @@ namespace cscd349FinalProject.Weapons
             private set { _hitpoints = value; }
         }
 
-        public HitPoint UseWeapon()
+        public HitPoint UseEquipment()
         {
             Random rand = new Random();
             int val = rand.Next(_minDamage, _maxDamage + 1);

@@ -11,7 +11,7 @@
         <ProgressBar x:Name="pbHitPoints" HorizontalAlignment="Left" Height="16" Margin="63,41,0,0" VerticalAlignment="Top" Width="227" Foreground="Lime"/>
         <Label x:Name="lblHitPointFraction" Content="&lt;HealthFraction&gt;" Margin="0,57,10,0" VerticalAlignment="Top" Width="102" HorizontalAlignment="Right"/>
         <Label x:Name="lblDamageTaken"  Content="&lt;Damage&gt;" HorizontalAlignment="Left" Margin="219,10,0,0" VerticalAlignment="Top" Foreground="Red"/>
-        <Label x:Name="lblWeaponName" Content="&lt;WeaponName&gt;" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" Width="101"/>
+        <Image x:Name="imgWeapon" HorizontalAlignment="Left" Height="34" Margin="10,63,0,0" VerticalAlignment="Top" Width="34"/>
 
     </Grid>
 </UserControl>
