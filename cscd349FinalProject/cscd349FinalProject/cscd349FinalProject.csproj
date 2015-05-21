@@ -53,11 +53,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="ControlCharacterBattleDisplay.xaml">
+    <Page Include="Displays\ControlCharacterBattleDisplay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ControlIWeaponCharacterSelectionDisplay.xaml">
+    <Page Include="Displays\ControlIItemCharacterSelectionDisplay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -111,17 +111,18 @@
     <Compile Include="Characters\GoodCharacters\CharacterNinjaMale.cs" />
     <Compile Include="Characters\GoodCharacters\CharacterSoldierFemale.cs" />
     <Compile Include="Characters\GoodCharacters\CharacterSoldierMale.cs" />
-    <Compile Include="Computer.cs" />
-    <Compile Include="ControlCharacterBattleDisplay.xaml.cs">
+    <Compile Include="Competitors\Computer.cs" />
+    <Compile Include="Displays\ControlCharacterBattleDisplay.xaml.cs">
       <DependentUpon>ControlCharacterBattleDisplay.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ControlIWeaponCharacterSelectionDisplay.xaml.cs">
-      <DependentUpon>ControlIWeaponCharacterSelectionDisplay.xaml</DependentUpon>
+    <Compile Include="Displays\ControlIItemCharacterSelectionDisplay.xaml.cs">
+      <DependentUpon>ControlIItemCharacterSelectionDisplay.xaml</DependentUpon>
     </Compile>
     <Compile Include="Equipment\EquipmentNull.cs" />
+    <Compile Include="Equipment\EquipmentSilverArmor.cs" />
     <Compile Include="Items\ItemHealthPotionBig.cs" />
     <Compile Include="Items\ItemHealthPotionSmall.cs" />
-    <Compile Include="Player.cs" />
+    <Compile Include="Competitors\Player.cs" />
     <Compile Include="Scenes\ControlBattle.xaml.cs">
       <DependentUpon>ControlBattle.xaml</DependentUpon>
     </Compile>
@@ -192,23 +193,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Backgrounds\bg1.jpg" />
-    <Resource Include="Images\Faces\BadFaces\CharacterElfDarkFace.png" />
-    <Resource Include="Images\Faces\BadFaces\CharacterElfEarthFace.png" />
-    <Resource Include="Images\Faces\BadFaces\CharacterElfFireFace.png" />
-    <Resource Include="Images\Faces\BadFaces\CharacterElfLightFace.png" />
-    <Resource Include="Images\Faces\BadFaces\CharacterElfWaterFace.png" />
-    <Resource Include="Images\Faces\BadFaces\CharacterElfWindFace.png" />
-    <Resource Include="Images\Faces\GoodFaces\CharacterKnightFemaleFace.png" />
-    <Resource Include="Images\Faces\GoodFaces\CharacterKnightMaleFace.png" />
-    <Resource Include="Images\Faces\GoodFaces\CharacterMagicianFemaleFace.png" />
-    <Resource Include="Images\Faces\GoodFaces\CharacterMagicianMaleFace.png" />
-    <Resource Include="Images\Faces\GoodFaces\CharacterNinjaFemaleFace.png" />
-    <Resource Include="Images\Faces\GoodFaces\CharacterNinjaMaleFace.png" />
-    <Resource Include="Images\Faces\GoodFaces\CharacterSoldierFemaleFace.png" />
-    <Resource Include="Images\Faces\GoodFaces\CharacterSoldierMaleFace.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Faces\darkElf.png" />
     <Resource Include="Faces\earthElf.png" />
     <Resource Include="Faces\fireElf.png" />
@@ -233,7 +217,65 @@
   <ItemGroup>
     <Resource Include="Weapon Icons\W_Sword008.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Item Icons\P_Green01.png" />
+    <Resource Include="Item Icons\P_Green02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Equipment Icons\A_Armor04.png" />
+    <Resource Include="Equipment Icons\A_Armor05.png" />
+    <Resource Include="Equipment Icons\A_Armour01.png" />
+    <Resource Include="Equipment Icons\A_Armour02.png" />
+    <Resource Include="Equipment Icons\A_Armour03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Backgrounds\bg1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\BadFaces\CharacterElfDarkFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\BadFaces\CharacterElfEarthFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\BadFaces\CharacterElfFireFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\BadFaces\CharacterElfLightFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\BadFaces\CharacterElfWaterFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\BadFaces\CharacterElfWindFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\GoodFaces\CharacterKnightFemaleFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\GoodFaces\CharacterKnightMaleFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\GoodFaces\CharacterMagicianFemaleFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\GoodFaces\CharacterMagicianMaleFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\GoodFaces\CharacterNinjaFemaleFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\GoodFaces\CharacterNinjaMaleFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\GoodFaces\CharacterSoldierFemaleFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\GoodFaces\CharacterSoldierMaleFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Item Managers\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
