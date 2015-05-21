@@ -120,6 +120,7 @@
     </Compile>
     <Compile Include="Equipment\EquipmentNull.cs" />
     <Compile Include="Equipment\EquipmentSilverArmor.cs" />
+    <Compile Include="Item Managers\WeaponManager.cs" />
     <Compile Include="Items\ItemHealthPotionBig.cs" />
     <Compile Include="Items\ItemHealthPotionSmall.cs" />
     <Compile Include="Competitors\Player.cs" />
@@ -152,7 +153,6 @@
     <Compile Include="Interfaces\IWeapon.cs" />
     <Compile Include="Utilities\CharacterFactory.cs" />
     <Compile Include="Utilities\HelperImages.cs" />
-    <Compile Include="WeaponManager.cs" />
     <Compile Include="Weapons\WeaponElfBow.cs" />
     <Compile Include="Weapons\WeaponHeavySword.cs" />
     <Compile Include="Weapons\WeaponNull.cs" />
@@ -273,9 +273,7 @@
   <ItemGroup>
     <Resource Include="Images\Faces\GoodFaces\CharacterSoldierMaleFace.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Item Managers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

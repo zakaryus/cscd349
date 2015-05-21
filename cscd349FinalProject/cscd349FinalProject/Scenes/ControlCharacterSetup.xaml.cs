@@ -43,7 +43,7 @@ namespace cscd349FinalProject.Scenes
         {
             foreach (IWeapon weapon in wm.AllWeapons)
             {
-                var cwcsd = new ControlIWeaponCharacterSelectionDisplay(weapon);
+                var cwcsd = new ControlIItemCharacterSelectionDisplay(weapon);
                 lbWeaponList.Items.Add(cwcsd);
             }
         }
@@ -67,12 +67,11 @@ namespace cscd349FinalProject.Scenes
 
                 if (source != null)
                 {
-                    var sourceControl = source.SelectedItem as ControlIWeaponCharacterSelectionDisplay;
+                    var sourceControl = source.SelectedItem as UserControl;
 
                     if (sourceControl != null)
                     {
-                        IWeapon sourceItem = sourceControl.Item as IWeapon;
-                        var data = new DataObject(typeof (IWeapon), sourceItem);
+                        var data = new DataObject(typeof (UserControl), sourceControl);
 
                         // Inititate the drag-and-drop operation.
                         DragDrop.DoDragDrop(this, data, DragDropEffects.Move);
