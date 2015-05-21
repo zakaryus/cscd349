@@ -42,7 +42,10 @@ namespace cscd349FinalProject
             _computer = new Computer();
             AddComputerEnemiesToScene(_computer);
 
+            AddInventoryToScene(InventoryManager.getInstance());
+
             _battleState = BattleState.PlayerTurn;
+
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -76,6 +79,15 @@ namespace cscd349FinalProject
                 Grid.SetRow(ccbd, i + 1);
                 this.grdControlBattle.Children.Add(ccbd);
                 
+            }
+        }
+
+        private void AddInventoryToScene(InventoryManager im)
+        {
+            foreach(IInventory inventory in im.AllInventory)
+            {
+                var ccbd = new ControlInventoryBattleDisplay(inventory);
+                lbInventoryList.Items.Add(ccbd);
             }
         }
 
