@@ -8,10 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("equipment%20icons/a_armor04.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("equipment%20icons/a_armor05.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("equipment%20icons/a_armour01.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("equipment%20icons/a_armour02.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("equipment%20icons/a_armour03.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("item%20icons/p_green01.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("item%20icons/p_green02.png")]
 
 
