@@ -8,24 +8,25 @@ using System.Windows.Media;
 
 namespace cscd349FinalProject.Items
 {
-    class ItemHealthPotionSmall : IInventory
+    class EquipmentSilverArmor : IEquipment
     {
         private string _description;
         private string _name;
         private HitPoint _hitpoints;
-        private int _addHitPoints = 50;
+        private int _addHitPoints = 25;
         private Image _icon;
 
-        public ItemHealthPotionSmall()
+        public EquipmentSilverArmor()
         {
-           
-            Name = "Health Potion";
-            Description = "A potion that will increase your strength";
+
+            Name = "Silve Armor";
+            Description = "An armor that will protect you";
             Icon = new Image();
-            ImageBrush myBrush = HelperImages.UriStringToImageBrush("pack://application:,,,/Item Icons/P_Green02.png");
+            ImageBrush myBrush = HelperImages.UriStringToImageBrush("pack://application:,,,/Item Icons/P_Green01.png");
             Icon.Source = myBrush.ImageSource;
-   
+
         }
+
         public Image Icon
         {
             get { return _icon; }
@@ -50,7 +51,7 @@ namespace cscd349FinalProject.Items
             set { _hitpoints = value; }
         }
 
-        public HitPoint UseInventory()
+        public HitPoint UseEquipment()
         {
             return new HitPoint(_addHitPoints);
         }

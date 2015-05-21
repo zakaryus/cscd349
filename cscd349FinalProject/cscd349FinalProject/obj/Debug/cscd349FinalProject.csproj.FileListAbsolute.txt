@@ -138,11 +138,8 @@ C:\Users\gbui_000\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\bin\De
 C:\Users\gbui_000\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.exe
 C:\Users\gbui_000\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.pdb
 C:\Users\gbui\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.exe.config
-C:\Users\gbui\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.exe
-C:\Users\gbui\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.pdb
 C:\Users\gbui\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.exe
 C:\Users\gbui\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.pdb
-C:\Users\gbui\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.csprojResolveAssemblyReference.cache
 C:\Users\gbui\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlCharacterBattleDisplay.baml
 C:\Users\gbui\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlIWeaponCharacterSelectionDisplay.baml
 C:\Users\gbui\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Scenes\ControlBattle.baml
@@ -168,3 +165,5 @@ C:\Users\gbui\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\
 C:\Users\gbui\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.g.resources
 C:\Users\gbui\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.Properties.Resources.resources
 C:\Users\gbui\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.csproj.GenerateResource.Cache
+C:\Users\gbui\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.exe
+C:\Users\gbui\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.pdb
