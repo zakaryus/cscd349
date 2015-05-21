@@ -8,23 +8,23 @@ using System.Windows.Media;
 
 namespace cscd349FinalProject.Equipment
 {
-    class EquipmentSilverArmor : IEquipment
+    class EquipmentPlatinumArmor : IEquipment
     {
         private string _description;
         private string _name;
         private HitPoint _hitpoints;
-        private int _addHitPoints = 25;
+        private int _addHitPoints = 35;
         private Image _icon;
 
-        public EquipmentSilverArmor()
+        public EquipmentPlatinumArmor()
         {
 
-            Name = "Silver Armor";
+            Name = "Platinum Armor";
             Description = "An armor that will protect you";
             Icon = new Image();
-            ImageBrush myBrush = HelperImages.UriStringToImageBrush("pack://application:,,,/Equipment Icons/A_Armor04.png");
+            ImageBrush myBrush = HelperImages.UriStringToImageBrush("pack://application:,,,/Equipment Icons/A_Armour02.png");
             Icon.Source = myBrush.ImageSource;
-            HitPoints = new HitPoint(25);
+            HitPoints = new HitPoint(35);
 
         }
 
