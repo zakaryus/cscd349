@@ -68,7 +68,7 @@ namespace cscd349FinalProject.Scenes
             MainWindow.GetInstance().ChangeScene(Scene.Character);
         }
 
-        private void lbWeaponList_MouseMove(object sender, MouseEventArgs e)
+        private void lbItemList_MouseMove(object sender, MouseEventArgs e)
         {
             base.OnMouseMove(e);
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -82,7 +82,7 @@ namespace cscd349FinalProject.Scenes
                     if (sourceControl != null)
                     {
                        
-                        var data = new DataObject(typeof (IItem), sourceControl);
+                        var data = new DataObject(typeof (UserControl), sourceControl);
 
                         // Inititate the drag-and-drop operation.
                         DragDrop.DoDragDrop(this, data, DragDropEffects.Move);

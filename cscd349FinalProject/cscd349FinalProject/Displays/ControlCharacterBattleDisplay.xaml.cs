@@ -49,15 +49,35 @@ namespace cscd349FinalProject
 
             lblName.Content = Character.Name;
             imgWeapon.Source = Character.Weapon.Icon.Source;
-            imgEquipment.Source = Character.Weapon.Icon.Source;
+            imgEquipment.Source = Character.Equipment.Icon.Source;
+            lblDamageTaken.Content = String.Empty;
+
+            pbHitPoints.Maximum = Character.MaxHitPoints.Value;
+            pbHitPoints.Minimum = 0;
+            SetPbHitPoints(Character.HitPoints);
+
+            ToolTip tt = new ToolTip();
+            tt.Content = String.Format("Damage: {0}", Character.Weapon.HitPoints.Value.ToString());
+            imgWeapon.ToolTip = tt;
+
+            ToolTip tt2 = new ToolTip();
+            tt2.Content = String.Format("Protects: {0}", Character.Equipment.HitPoints.Value.ToString());
+            imgEquipment.ToolTip = tt2;
+        }
+
+        protected override void OnRender(System.Windows.Media.DrawingContext drawingContext)
+        {
+            imgFace.Source = Character.Face.Source;
+
+            lblName.Content = Character.Name;
+            imgWeapon.Source = Character.Weapon.Icon.Source;
+            imgEquipment.Source = Character.Equipment.Icon.Source;
             lblDamageTaken.Content = String.Empty;
 
             pbHitPoints.Maximum = Character.MaxHitPoints.Value;
             pbHitPoints.Minimum = 0;
             SetPbHitPoints(Character.HitPoints);
         }
-
-
 
         public void SetPbHitPoints(HitPoint hitpoints)
         {
@@ -74,6 +94,23 @@ namespace cscd349FinalProject
         {
             grdBattleDisplay.Background = Highlighted ? _unhighlightedColor : _highlightedColor;
             Highlighted = !Highlighted;
+        }
+
+        private void UserControl_MouseMove(object sender, MouseEventArgs e)
+        {
+            base.OnMouseMove(e);
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                var source = sender as UserControl;
+
+                if (source != null)
+                {
+                    var data = new DataObject(typeof(UserControl), source);
+
+                    // Inititate the drag-and-drop operation.
+                    DragDrop.DoDragDrop(this, data, DragDropEffects.Move);
+                }
+            }
         }
 
         private void UserControl_Drop(object sender, DragEventArgs e)
@@ -102,6 +139,11 @@ namespace cscd349FinalProject
                     else if (TryDataToCharacter(control))
                     {
                         //battle is happening
+                        var ally = DataToCharacter(control);
+                        var enemy = character.Character;
+
+                        enemy.HitPoints -= ally.Attack();
+                        character.InvalidateVisual();
                     }
                 }
             }
@@ -136,7 +178,7 @@ namespace cscd349FinalProject
         {
             try
             {
-                return DataToWeapon(control) != null;
+                return DataToEquipment(control) != null;
             }
             catch (InvalidCastException e)
             {
