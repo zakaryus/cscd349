@@ -167,3 +167,5 @@ C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Deb
 C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.pdb
 C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.pdb
 C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.csprojResolveAssemblyReference.cache
+C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlInventoryBattleDisplay.baml
+C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlInventoryBattleDisplay.g.cs

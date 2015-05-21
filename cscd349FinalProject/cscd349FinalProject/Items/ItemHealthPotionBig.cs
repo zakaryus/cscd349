@@ -13,7 +13,6 @@ namespace cscd349FinalProject.Items
         private string _description;
         private string _name;
         private HitPoint _hitpoints;
-        private int _addHitPoints = 100;
         private Image _icon;
 
         public ItemHealthPotionBig()
@@ -24,6 +23,7 @@ namespace cscd349FinalProject.Items
             Icon = new Image();
             ImageBrush myBrush = HelperImages.UriStringToImageBrush("pack://application:,,,/Item Icons/P_Green01.png");
             Icon.Source = myBrush.ImageSource;
+            HitPoints = new HitPoint(100);
    
         }
 
@@ -53,7 +53,7 @@ namespace cscd349FinalProject.Items
 
         public HitPoint UseInventory()
         {
-            return new HitPoint(_addHitPoints);
+            return HitPoints;
         }
     }
 }

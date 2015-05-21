@@ -53,6 +53,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ControlInventoryBattleDisplay.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Displays\ControlCharacterBattleDisplay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -112,6 +116,9 @@
     <Compile Include="Characters\GoodCharacters\CharacterSoldierFemale.cs" />
     <Compile Include="Characters\GoodCharacters\CharacterSoldierMale.cs" />
     <Compile Include="Competitors\Computer.cs" />
+    <Compile Include="ControlInventoryBattleDisplay.xaml.cs">
+      <DependentUpon>ControlInventoryBattleDisplay.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Displays\ControlCharacterBattleDisplay.xaml.cs">
       <DependentUpon>ControlCharacterBattleDisplay.xaml</DependentUpon>
     </Compile>
@@ -124,6 +131,7 @@
     <Compile Include="Equipment\EquipmentNull.cs" />
     <Compile Include="Equipment\EquipmentPlatinumArmor.cs" />
     <Compile Include="Equipment\EquipmentSilverArmor.cs" />
+    <Compile Include="InventoryManager.cs" />
     <Compile Include="Item Managers\EquipmentManager.cs" />
     <Compile Include="Items\ItemHealthPotionBig.cs" />
     <Compile Include="Items\ItemHealthPotionSmall.cs" />
