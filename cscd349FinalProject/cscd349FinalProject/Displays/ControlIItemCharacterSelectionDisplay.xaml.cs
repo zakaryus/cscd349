@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace cscd349FinalProject
 {
     /// <summary>
-    /// Interaction logic for ControlIWeaponCharacterSelectionDisplay.xaml
+    /// Interaction logic for ControlIItemCharacterSelectionDisplay.xaml
     /// </summary>
     public partial class ControlIItemCharacterSelectionDisplay : UserControl
     {

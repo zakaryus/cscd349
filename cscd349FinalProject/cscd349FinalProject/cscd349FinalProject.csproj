@@ -118,9 +118,13 @@
     <Compile Include="Displays\ControlIItemCharacterSelectionDisplay.xaml.cs">
       <DependentUpon>ControlIItemCharacterSelectionDisplay.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Equipment\EquipmentGoldArmor.cs" />
+    <Compile Include="Equipment\EquipmentLeatherArmor.cs" />
+    <Compile Include="Equipment\EquipmentBrownArmor.cs" />
     <Compile Include="Equipment\EquipmentNull.cs" />
+    <Compile Include="Equipment\EquipmentPlatinumArmor.cs" />
     <Compile Include="Equipment\EquipmentSilverArmor.cs" />
-    <Compile Include="Item Managers\WeaponManager.cs" />
+    <Compile Include="Item Managers\EquipmentManager.cs" />
     <Compile Include="Items\ItemHealthPotionBig.cs" />
     <Compile Include="Items\ItemHealthPotionSmall.cs" />
     <Compile Include="Competitors\Player.cs" />
@@ -153,6 +157,7 @@
     <Compile Include="Interfaces\IWeapon.cs" />
     <Compile Include="Utilities\CharacterFactory.cs" />
     <Compile Include="Utilities\HelperImages.cs" />
+    <Compile Include="Item Managers\WeaponManager.cs" />
     <Compile Include="Weapons\WeaponElfBow.cs" />
     <Compile Include="Weapons\WeaponHeavySword.cs" />
     <Compile Include="Weapons\WeaponNull.cs" />

@@ -26,6 +26,7 @@ namespace cscd349FinalProject.Scenes
 
             AddPlayerAlliesToScene(Player.GetInstance());
             AddIWeaponsToScene(WeaponManager.GetInstance());
+            AddIEquipmentToScene(EquipmentManager.GetInstance());
         }
 
         private void AddPlayerAlliesToScene(Player play)
@@ -45,6 +46,15 @@ namespace cscd349FinalProject.Scenes
             {
                 var cwcsd = new ControlIItemCharacterSelectionDisplay(weapon);
                 lbWeaponList.Items.Add(cwcsd);
+            }
+        }
+
+        private void AddIEquipmentToScene(EquipmentManager em)
+        {
+            foreach (IEquipment equipment in em.AllEquipments)
+            {
+                var cicsd = new ControlIItemCharacterSelectionDisplay(equipment);
+                lbEquipmentList.Items.Add(cicsd);
             }
         }
 
@@ -71,7 +81,8 @@ namespace cscd349FinalProject.Scenes
 
                     if (sourceControl != null)
                     {
-                        var data = new DataObject(typeof (UserControl), sourceControl);
+                       
+                        var data = new DataObject(typeof (IItem), sourceControl);
 
                         // Inititate the drag-and-drop operation.
                         DragDrop.DoDragDrop(this, data, DragDropEffects.Move);

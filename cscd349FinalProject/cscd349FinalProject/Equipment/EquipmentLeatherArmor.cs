@@ -6,25 +6,26 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Media;
 
+
 namespace cscd349FinalProject.Equipment
 {
-    class EquipmentSilverArmor : IEquipment
+    class EquipmentLeatherArmor : IEquipment
     {
         private string _description;
         private string _name;
         private HitPoint _hitpoints;
-        private int _addHitPoints = 25;
+        private int _addHitPoints = 23;
         private Image _icon;
 
-        public EquipmentSilverArmor()
+        public EquipmentLeatherArmor()
         {
 
-            Name = "Silver Armor";
+            Name = "Leather Armor";
             Description = "An armor that will protect you";
             Icon = new Image();
-            ImageBrush myBrush = HelperImages.UriStringToImageBrush("pack://application:,,,/Equipment Icons/A_Armor04.png");
+            ImageBrush myBrush = HelperImages.UriStringToImageBrush("pack://application:,,,/Equipment Icons/A_Armour01.png");
             Icon.Source = myBrush.ImageSource;
-            HitPoints = new HitPoint(25);
+            HitPoints = new HitPoint(30);
 
         }
 
