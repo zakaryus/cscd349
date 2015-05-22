@@ -16,6 +16,7 @@ namespace cscd349FinalProject
         HitPoint MaxHitPoints { get; set; }
         IWeapon Weapon { get; set; }
         IEquipment Equipment { get; set; }
+
         Image Face { get; }
 
         //Methods

@@ -145,6 +145,11 @@ namespace cscd349FinalProject
                         display.InvalidateVisual();
 
                     }
+                    else if (TryDataToInventory(control))
+                    {
+                        Character.HitPoints += DataToInventory(control).UseInventory();
+                        character.InvalidateVisual();
+                    }
                     else if (TryDataToCharacter(control))
                     {
                         //battle is happening
@@ -211,6 +216,17 @@ namespace cscd349FinalProject
                 return false;
             }
         }
+        private bool TryDataToInventory(UserControl control)
+        {
+            try
+            {
+                return DataToInventory(control) != null;
+            }
+            catch (InvalidCastException e)
+            {
+                return false;
+            }
+        }
 
         private IEquipment DataToEquipment(UserControl control)
         {
@@ -220,6 +236,19 @@ namespace cscd349FinalProject
             {
                 var equipment = display.Item as IEquipment;
                 return equipment;
+            }
+
+            return null;
+        }
+
+        private IInventory DataToInventory(UserControl control)
+        {
+            var display = control as ControlIItemCharacterSelectionDisplay;
+
+            if (display != null)
+            {
+                var inventory = display.Item as IInventory;
+                return inventory;
             }
 
             return null;
