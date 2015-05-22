@@ -39,7 +39,8 @@ namespace cscd349FinalProject
 
             AddPlayerAlliesToScene(Player.GetInstance());
 
-            _computer = new Computer();
+            _computer = Computer.GetInstance();
+            _computer.UpdateEnemies();
             AddComputerEnemiesToScene(_computer);
 
             AddInventoryToScene(InventoryManager.getInstance());

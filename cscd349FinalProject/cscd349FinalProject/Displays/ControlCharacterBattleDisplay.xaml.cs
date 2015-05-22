@@ -27,6 +27,7 @@ namespace cscd349FinalProject
         private ICharacter _character;
         private bool _highlighted;
         Brush _highlightedColor, _unhighlightedColor;
+        private HitPoint _tmpMaxHitPoints;
 
         public bool Highlighted
         {
@@ -56,6 +57,7 @@ namespace cscd349FinalProject
             imgEquipment.Source = Character.Equipment.Icon.Source;
             lblDamageTaken.Content = String.Empty;
 
+            _tmpMaxHitPoints = Character.MaxHitPoints;
             pbHitPoints.Maximum = Character.MaxHitPoints.Value;
             pbHitPoints.Minimum = 0;
             SetPbHitPoints();
@@ -110,10 +112,20 @@ namespace cscd349FinalProject
 
                 if (source != null)
                 {
-                    var data = new DataObject(typeof(UserControl), source);
+                    var display = source as ControlCharacterBattleDisplay;
 
-                    // Inititate the drag-and-drop operation.
-                    DragDrop.DoDragDrop(this, data, DragDropEffects.Move);
+                    if (display != null)
+                    {
+                        var character = display.Character;
+
+                        if (Computer.GetInstance().Enemies.Contains(character))
+                            return;
+
+                        var data = new DataObject(typeof (UserControl), source);
+
+                        // Inititate the drag-and-drop operation.
+                        DragDrop.DoDragDrop(this, data, DragDropEffects.Move);
+                    }
                 }
             }
         }
@@ -140,21 +152,31 @@ namespace cscd349FinalProject
                     {
                         Character.Equipment = DataToEquipment(control);
                         imgEquipment.Source = Character.Equipment.Icon.Source;
-                        Character.HitPoints += Character.Equipment.HitPoints;
-                        Character.MaxHitPoints += Character.Equipment.HitPoints;
-                        display.InvalidateVisual();
 
+                        Character.HitPoints = _tmpMaxHitPoints + Character.Equipment.HitPoints;
+                        Character.MaxHitPoints = _tmpMaxHitPoints + Character.Equipment.HitPoints;
+
+                        display.InvalidateVisual();
                     }
                     else if (TryDataToInventory(control))
                     {
                         Character.HitPoints += DataToInventory(control).UseInventory();
-                        character.InvalidateVisual();
+                        display.InvalidateVisual();
                     }
                     else if (TryDataToCharacter(control))
                     {
                         //battle is happening
                         var attacker = DataToCharacter(control);
                         var victim = display.Character;
+
+                        //no suicide
+                        if(attacker == victim)
+                            return;
+
+                        //no backstabbing
+                        if (Player.GetInstance().Allies.Contains(attacker) &&
+                            Player.GetInstance().Allies.Contains(victim))
+                            return;
 
                         HitPoint hit = attacker.Attack();
                         victim.HitPoints -= hit;

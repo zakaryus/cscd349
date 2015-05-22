@@ -9,6 +9,7 @@ namespace cscd349FinalProject
 {
     class Computer
     {
+        private static Computer _instance;
         private const int _minEnemies = 1, _maxEnemies = 5;
         private static List<ICharacter> _enemies;
 
@@ -27,12 +28,22 @@ namespace cscd349FinalProject
             }
         }
 
-        public Computer()
+        public static Computer GetInstance()
+        {
+            if(_instance == null)
+                _instance = new Computer();
+
+            //_instance.Enemies = GetEnemies();
+
+            return _instance;
+        }
+
+        private Computer()
         {
             Enemies = GetEnemies();
         }
 
-        private List<ICharacter> GetEnemies()
+        private static List<ICharacter> GetEnemies()
         {
             Random rand = new Random();
             int numEnemies = rand.Next(_minEnemies, _maxEnemies + 1);
@@ -53,6 +64,11 @@ namespace cscd349FinalProject
             }
 
             return rtn;
+        }
+
+        public void UpdateEnemies()
+        {
+            _instance.Enemies = GetEnemies();
         }
     }
 }
