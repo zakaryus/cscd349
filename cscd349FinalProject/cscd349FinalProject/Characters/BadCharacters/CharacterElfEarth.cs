@@ -19,6 +19,8 @@ namespace cscd349FinalProject
         private IWeapon _weapon;
         private IEquipment _equipment;
         private Image _face;
+        private int _minDamage;
+        private int _maxDamage;
         #endregion Fields
 
         #region Properties
@@ -75,6 +77,8 @@ namespace cscd349FinalProject
             Weapon = new WeaponNull();
             Equipment = new EquipmentNull();
             Face = new Image();
+            _minDamage = 20;
+            _maxDamage = 45;
             Face.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Images/Faces/BadFaces/CharacterElfEarthFace.png");
         }
         #endregion Constructor
@@ -82,7 +86,10 @@ namespace cscd349FinalProject
         #region Methods
         public HitPoint Attack()
         {
-            return _weapon.UseWeapon();
+            Random rand = new Random();
+            int val = rand.Next(_minDamage, _maxDamage + 1);
+
+            return new HitPoint(val);
         }
 
         public void Die()

@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\
+C:\Users\gbui.EASTERN\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\
 cscd349FinalProject
 none
 false
 DEBUG;TRACE
-C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\App.xaml
+C:\Users\gbui.EASTERN\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\App.xaml
 11312337092
 
-56985485461
+561978722767
 12-1401562060
 ControlInventoryBattleDisplay.xaml;Displays\ControlCharacterBattleDisplay.xaml;Displays\ControlIItemCharacterSelectionDisplay.xaml;Scenes\ControlBattle.xaml;Scenes\ControlCharacter.xaml;Scenes\ControlCharacterSetup.xaml;Scenes\ControlGamePlay.xaml;Scenes\ControlLose.xaml;Scenes\ControlMain.xaml;Scenes\ControlWin.xaml;Windows\MainWindow.xaml;
 

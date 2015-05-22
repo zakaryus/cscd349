@@ -121,5 +121,30 @@ namespace cscd349FinalProject
         {
             DoBattle();
         }
+
+
+        private void lbItemList_MouseMove(object sender, MouseEventArgs e)
+        {
+            base.OnMouseMove(e);
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                var source = sender as ListBox;
+
+                if (source != null)
+                {
+                    var sourceControl = source.SelectedItem as UserControl;
+
+                    if (sourceControl != null)
+                    {
+
+                        var data = new DataObject(typeof(UserControl), sourceControl);
+
+                        // Inititate the drag-and-drop operation.
+                        DragDrop.DoDragDrop(this, data, DragDropEffects.Move);
+                    }
+                }
+            }
+        }
+
     }
 }

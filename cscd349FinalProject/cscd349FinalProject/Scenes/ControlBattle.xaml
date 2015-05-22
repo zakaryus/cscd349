@@ -25,6 +25,6 @@
         <Label x:Name="lblBattle" Content="BATTLE" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="180" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center"/>
         <Label x:Name="lblComputerTurn" Content="" Grid.Column="2" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="280" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Red"/>
         <Label x:Name="lblPlayerTurn" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="280" FontSize="16" HorizontalContentAlignment="Center" Foreground="Lime"/>
-        <ListBox x:Name="lbInventoryList" Grid.Column="0" HorizontalAlignment="Left" Height="220" Grid.Row="4" Grid.RowSpan="2" VerticalAlignment="Top" Width="310" Margin="-10,0,0,0"/>
+        <ListBox x:Name="lbInventoryList" Grid.Column="0" HorizontalAlignment="Left" Height="220" Grid.Row="4" Grid.RowSpan="2" VerticalAlignment="Top" Width="310" Margin="-10,0,0,0" MouseMove="lbItemList_MouseMove"/>
     </Grid>
 </UserControl>

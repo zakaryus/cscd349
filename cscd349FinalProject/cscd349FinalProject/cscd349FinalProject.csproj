@@ -131,7 +131,7 @@
     <Compile Include="Equipment\EquipmentNull.cs" />
     <Compile Include="Equipment\EquipmentPlatinumArmor.cs" />
     <Compile Include="Equipment\EquipmentSilverArmor.cs" />
-    <Compile Include="InventoryManager.cs" />
+    <Compile Include="Item Managers\InventoryManager.cs" />
     <Compile Include="Item Managers\EquipmentManager.cs" />
     <Compile Include="Items\ItemHealthPotionBig.cs" />
     <Compile Include="Items\ItemHealthPotionSmall.cs" />
