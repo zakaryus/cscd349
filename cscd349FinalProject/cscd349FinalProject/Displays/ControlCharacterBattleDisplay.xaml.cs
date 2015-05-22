@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -9,9 +10,12 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
+using cscd349FinalProject.Utilities;
 
 namespace cscd349FinalProject
 {
@@ -54,7 +58,7 @@ namespace cscd349FinalProject
 
             pbHitPoints.Maximum = Character.MaxHitPoints.Value;
             pbHitPoints.Minimum = 0;
-            SetPbHitPoints(Character.HitPoints);
+            SetPbHitPoints();
 
             ToolTip tt = new ToolTip();
             tt.Content = String.Format("Damage: {0}", Character.Weapon.HitPoints.Value.ToString());
@@ -72,22 +76,23 @@ namespace cscd349FinalProject
             lblName.Content = Character.Name;
             imgWeapon.Source = Character.Weapon.Icon.Source;
             imgEquipment.Source = Character.Equipment.Icon.Source;
-            lblDamageTaken.Content = String.Empty;
 
             pbHitPoints.Maximum = Character.MaxHitPoints.Value;
             pbHitPoints.Minimum = 0;
-            SetPbHitPoints(Character.HitPoints);
+            SetPbHitPoints();
         }
 
-        public void SetPbHitPoints(HitPoint hitpoints)
+        public void SetPbHitPoints()
         {
-            pbHitPoints.Value = hitpoints.Value;
+            Duration duration = new Duration(TimeSpan.FromSeconds(1.5));
+            DoubleAnimation doubleanimation = new DoubleAnimation(Character.HitPoints.Value, duration);
+            pbHitPoints.BeginAnimation(ProgressBar.ValueProperty, doubleanimation);
             lblHitPointFraction.Content = GetFormattedHitPointFraction();
         }
 
         private string GetFormattedHitPointFraction()
         {
-            return String.Format("{0} / {1}", pbHitPoints.Value, pbHitPoints.Maximum);
+            return String.Format("{0} / {1}", Character.HitPoints.Value, Character.MaxHitPoints.Value);
         }
 
         private void UserControl_MouseDown(object sender, MouseButtonEventArgs e)
@@ -119,10 +124,10 @@ namespace cscd349FinalProject
 
             if (e.Handled == false)
             {
-                var character = sender as ControlCharacterBattleDisplay;
+                var display = sender as ControlCharacterBattleDisplay;
                 var data = e.Data as DataObject;
 
-                if (character != null)
+                if (display != null)
                 {
                     var control = data.GetData(typeof(UserControl)) as UserControl;
 
@@ -135,17 +140,38 @@ namespace cscd349FinalProject
                     {
                         Character.Equipment = DataToEquipment(control);
                         imgEquipment.Source = Character.Equipment.Icon.Source;
+                        Character.HitPoints += Character.Equipment.HitPoints;
+                        Character.MaxHitPoints += Character.Equipment.HitPoints;
+                        display.InvalidateVisual();
+
                     }
                     else if (TryDataToCharacter(control))
                     {
                         //battle is happening
-                        var ally = DataToCharacter(control);
-                        var enemy = character.Character;
+                        var attacker = DataToCharacter(control);
+                        var victim = display.Character;
 
-                        enemy.HitPoints -= ally.Attack();
-                        character.InvalidateVisual();
+                        HitPoint hit = attacker.Attack();
+                        victim.HitPoints -= hit;
+
+                        Timer t = new Timer(ClearLabel, lblDamageTaken, 2000, 0);
+                        lblDamageTaken.Content = String.Format("- {0}", hit.Value.ToString());
+                        
+                        display.InvalidateVisual();
                     }
                 }
+            }
+        }
+
+        private void ClearLabel(Object o)
+        {
+            var lbl = o as Label;
+            if (lbl != null)
+            {
+                if (!Dispatcher.CheckAccess())
+                    Dispatcher.Invoke(() => lbl.Content = String.Empty, DispatcherPriority.Normal);
+                else
+                    lbl.Content = String.Empty;
             }
         }
 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Automation.Peers;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -93,6 +94,22 @@ namespace cscd349FinalProject
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.GetInstance().ChangeScene(Scene.Main);
+        }
+
+        //very hackish, but it works
+        private void img_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Image img = sender as Image;
+            List<CheckBox> boxes = this.grdChooseCharacters.Children.OfType<CheckBox>().ToList();
+
+            foreach (CheckBox box in boxes)
+            {
+                var cbText = box.Content.ToString().Replace(" ", "").ToLower();
+                var imgText = img.Source.ToString().ToLower();
+
+                if (imgText.Contains(cbText))
+                    box.IsChecked = !box.IsChecked;
+            }
         }
     }
 }
