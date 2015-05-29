@@ -23,8 +23,10 @@ namespace cscd349FinalProject
     {
         private enum BattleState
         {
-            PlayerTurn, ComputerTurn,
-            Won, Lost
+            PlayerTurn,
+            ComputerTurn,
+            Won,
+            Lost
         }
 
         private BattleState _battleState;
@@ -79,13 +81,13 @@ namespace cscd349FinalProject
                 Grid.SetColumn(ccbd, 2);
                 Grid.SetRow(ccbd, i + 1);
                 this.grdControlBattle.Children.Add(ccbd);
-                
+
             }
         }
 
         private void AddInventoryToScene(InventoryManager im)
         {
-            foreach(IInventory inventory in im.AllInventory)
+            foreach (IInventory inventory in im.AllInventory)
             {
                 var ccbd = new ControlIItemCharacterSelectionDisplay(inventory);
                 lbInventoryList.Items.Add(ccbd);
@@ -138,14 +140,17 @@ namespace cscd349FinalProject
                     if (sourceControl != null)
                     {
 
-                        var data = new DataObject(typeof(UserControl), sourceControl);
+                        var data = new DataObject(typeof (UserControl), sourceControl);
 
                         // Inititate the drag-and-drop operation.
-                        DragDrop.DoDragDrop(this, data, DragDropEffects.Move);
+                        DragDropEffects res = DragDrop.DoDragDrop(this, data, DragDropEffects.Move);
+
+                        //if the drag was successful
+                        if (res == DragDropEffects.Move)
+                            source.Items.Remove(source.SelectedItem);
                     }
                 }
             }
         }
-
     }
 }

@@ -24,5 +24,15 @@ namespace cscd349FinalProject
         {
             return new HitPoint(a.Value - b.Value);
         }
+
+        public static bool operator >(HitPoint a, HitPoint b)
+        {
+            return a.Value > b.Value;
+        }
+
+        public static bool operator <(HitPoint a, HitPoint b)
+        {
+            return a.Value < b.Value;
+        }
     }
 }

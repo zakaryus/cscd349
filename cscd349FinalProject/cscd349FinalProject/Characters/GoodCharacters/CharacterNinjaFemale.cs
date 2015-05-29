@@ -37,7 +37,15 @@ namespace cscd349FinalProject
         public HitPoint HitPoints
         {
             get { return _hitpoints; }
-            set { _hitpoints = value; }
+            set
+            {
+                if (_maxHitpoints == null)
+                    _hitpoints = value;
+                else if (value > _maxHitpoints)
+                    _hitpoints = _maxHitpoints;
+                else
+                    _hitpoints = value;
+            }
         }
 
         public HitPoint MaxHitPoints

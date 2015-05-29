@@ -153,8 +153,8 @@ namespace cscd349FinalProject
                         Character.Equipment = DataToEquipment(control);
                         imgEquipment.Source = Character.Equipment.Icon.Source;
 
-                        Character.HitPoints = _tmpMaxHitPoints + Character.Equipment.HitPoints;
                         Character.MaxHitPoints = _tmpMaxHitPoints + Character.Equipment.HitPoints;
+                        Character.HitPoints = _tmpMaxHitPoints + Character.Equipment.HitPoints;
 
                         display.InvalidateVisual();
                     }
