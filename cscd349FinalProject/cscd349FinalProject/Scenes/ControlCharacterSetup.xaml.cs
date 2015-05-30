@@ -25,7 +25,7 @@ namespace cscd349FinalProject.Scenes
         {
             InitializeComponent();
 
-            btnPlay.IsEnabled = false;
+            btnPlay.IsEnabled = true;   //this should be false, currently set to true for faster testing
             AddPlayerAlliesToScene(Player.GetInstance());
             AddIWeaponsToScene(WeaponManager.GetInstance());
             AddIEquipmentToScene(EquipmentManager.GetInstance());

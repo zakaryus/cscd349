@@ -15,24 +15,64 @@ namespace cscd349FinalProject
             Value = v;
         }
 
+        public static bool operator ==(HitPoint a, HitPoint b)
+        {
+            if (a as Object == null && b as Object == null)
+                return true;
+            if (a as Object == null || b as Object == null)
+                return false;
+            return a.Value == b.Value;
+        }
+
+        public static bool operator !=(HitPoint a, HitPoint b)
+        {
+            if (a as Object == null && b as Object == null)
+                return false;
+            if (a as Object == null || b as Object == null)
+                return false;
+            return a.Value != b.Value;
+        }
+
         public static HitPoint operator +(HitPoint a, HitPoint b)
         {
+            if(a as Object == null || b as Object == null)
+                throw new NullReferenceException();
             return new HitPoint(a.Value + b.Value);
         }
 
         public static HitPoint operator -(HitPoint a, HitPoint b)
         {
+            if(a as Object == null || b as Object == null)
+                throw new NullReferenceException();
             return new HitPoint(a.Value - b.Value);
         }
 
         public static bool operator >(HitPoint a, HitPoint b)
         {
+            if(a as Object == null || b as Object == null)
+                throw new NullReferenceException();
             return a.Value > b.Value;
         }
 
         public static bool operator <(HitPoint a, HitPoint b)
         {
+            if(a as Object == null || b as Object == null)
+                throw new NullReferenceException();
             return a.Value < b.Value;
+        }
+
+        public static bool operator >=(HitPoint a, HitPoint b)
+        {
+            if(a as Object == null || b as Object == null)
+                throw new NullReferenceException();
+            return a.Value >= b.Value;
+        }
+
+        public static bool operator <=(HitPoint a, HitPoint b)
+        {
+            if(a as Object == null || b as Object == null)
+                throw new NullReferenceException();
+            return a.Value <= b.Value;
         }
     }
 }
