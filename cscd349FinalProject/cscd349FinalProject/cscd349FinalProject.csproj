@@ -36,6 +36,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -58,6 +60,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Displays\ControlCharacterBattleDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Displays\ControlGridTile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -121,6 +127,9 @@
     </Compile>
     <Compile Include="Displays\ControlCharacterBattleDisplay.xaml.cs">
       <DependentUpon>ControlCharacterBattleDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Displays\ControlGridTile.xaml.cs">
+      <DependentUpon>ControlGridTile.xaml</DependentUpon>
     </Compile>
     <Compile Include="Displays\ControlIItemCharacterSelectionDisplay.xaml.cs">
       <DependentUpon>ControlIItemCharacterSelectionDisplay.xaml</DependentUpon>
@@ -289,6 +298,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Backgrounds\grass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Backgrounds\brick.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

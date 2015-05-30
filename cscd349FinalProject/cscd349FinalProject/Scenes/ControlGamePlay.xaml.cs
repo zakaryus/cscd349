@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using cscd349FinalProject.Displays;
 
 namespace cscd349FinalProject
 {
@@ -33,15 +34,32 @@ namespace cscd349FinalProject
             {
                 for (int j = 0; j < grdBattleGround.ColumnDefinitions.Count; j++)
                 {
-                    Image img = new Image();
-                    img.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Images/Backgrounds/grass.png");
-                    img.SetValue(Grid.ColumnProperty, j);
-                    img.SetValue(Grid.RowProperty, i);
-                    img.Stretch = Stretch.UniformToFill;
-                    grdBattleGround.Children.Add(img);
+                    //Image img = new Image();
+                    //img.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Images/Backgrounds/grass.png");
+                    //img.SetValue(Grid.ColumnProperty, j);
+                    //img.SetValue(Grid.RowProperty, i);
+                    //img.Stretch = Stretch.UniformToFill;
+                    //grdBattleGround.Children.Add(img);
                     
                     int n = r.Next();
-                    Console.WriteLine(n);
+
+                    if(i != 0 && j != 0)
+                    {
+                        TileType type = n % 2 == 0 ? TileType.Floor : TileType.Wall;
+                        ControlGridTile gt = new ControlGridTile(type);
+                        Grid.SetColumn(gt, j);
+                        Grid.SetRow(gt, i);
+                        grdBattleGround.Children.Add(gt);
+                    }
+                    else
+                    {
+                        TileType type = TileType.Floor;
+                        ControlGridTile gt = new ControlGridTile(type);
+                        Grid.SetColumn(gt, j);
+                        Grid.SetRow(gt, i);
+                        grdBattleGround.Children.Add(gt);
+                    }
+
                     if (n % 43 == 0)
                     {
                         UserControl uc = new UserControl();
@@ -79,38 +97,44 @@ namespace cscd349FinalProject
 
         private void grdBattleGround_KeyDown(object sender, KeyEventArgs e)
         {
+            int tmpX = (int)allyPosition.X;
+            int tmpY = (int)allyPosition.Y;
+
             if (e.Key == Key.Up || e.Key == Key.W)
             {
-                allyPosition.Y -= allyPosition.Y == 0 ? 0 : 1;
-                Grid.SetColumn(ally, (int)allyPosition.X);
-                Grid.SetRow(ally, (int)allyPosition.Y);
+                tmpY -= allyPosition.Y == 0 ? 0 : 1;
             }
             else if (e.Key == Key.Down || e.Key == Key.S)
             {
-                allyPosition.Y += allyPosition.Y == grdBattleGround.RowDefinitions.Count - 1 ? 0 : 1;
-                Grid.SetColumn(ally, (int)allyPosition.X);
-                Grid.SetRow(ally, (int)allyPosition.Y);
+                tmpY += allyPosition.Y == grdBattleGround.RowDefinitions.Count - 1 ? 0 : 1;
             }
             else if (e.Key == Key.Left || e.Key == Key.A)
             {
-                allyPosition.X -= allyPosition.X == 0 ? 0 : 1;
-                Grid.SetColumn(ally, (int)allyPosition.X);
-                Grid.SetRow(ally, (int)allyPosition.Y);
+                tmpX -= allyPosition.X == 0 ? 0 : 1;
             }
             else if (e.Key == Key.Right || e.Key == Key.D)
             {
-                allyPosition.X += allyPosition.X == grdBattleGround.ColumnDefinitions.Count - 1 ? 0 : 1;
-                Grid.SetColumn(ally, (int)allyPosition.X);
-                Grid.SetRow(ally, (int)allyPosition.Y);
+                tmpX += allyPosition.X == grdBattleGround.ColumnDefinitions.Count - 1 ? 0 : 1;
             }
 
             var children = grdBattleGround.Children.Cast<UIElement>().ToList();
             UserControl enemy = null;
+            ControlGridTile tile = null;
 
             foreach(var child in children)
             {
-                if(Grid.GetRow(child) == allyPosition.Y && Grid.GetColumn(child) == allyPosition.X && child != ally)
+                if(Grid.GetRow(child) == tmpY && Grid.GetColumn(child) == tmpX && child != ally)
                 {
+                    try
+                    {
+                        tile = child as ControlGridTile;
+                    }
+                    catch (InvalidCastException ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        tile = null;
+                    }
+
                     try
                     {
                         enemy = child as UserControl;
@@ -123,7 +147,17 @@ namespace cscd349FinalProject
                 }
             }
 
-            if(enemy != null && enemy != ally)
+            //if tile is occupiable, move
+            if (tile != null && tile.Occupiable)
+            {
+                allyPosition.X = tmpX;
+                allyPosition.Y = tmpY;
+
+                Grid.SetColumn(ally, (int)allyPosition.X);
+                Grid.SetRow(ally, (int)allyPosition.Y);
+            }
+
+            if(enemy != null && enemy != ally && enemy != tile)
             {
                 var res = MessageBox.Show("Enemy " + enemy.Content + " encountered!", "Battle", MessageBoxButton.OK);
                 if (res == MessageBoxResult.OK)

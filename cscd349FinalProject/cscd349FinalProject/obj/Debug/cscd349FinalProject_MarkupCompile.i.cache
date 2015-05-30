@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\App.xaml
-11312337092
+121155869061
 
-601300015455
-12-1401562060
-ControlInventoryBattleDisplay.xaml;Displays\ControlCharacterBattleDisplay.xaml;Displays\ControlIItemCharacterSelectionDisplay.xaml;Scenes\ControlBattle.xaml;Scenes\ControlCharacter.xaml;Scenes\ControlCharacterSetup.xaml;Scenes\ControlGamePlay.xaml;Scenes\ControlLose.xaml;Scenes\ControlMain.xaml;Scenes\ControlWin.xaml;Windows\MainWindow.xaml;
+61-239987430
+141012385901
+ControlInventoryBattleDisplay.xaml;Displays\ControlCharacterBattleDisplay.xaml;Displays\ControlGridTile.xaml;Displays\ControlIItemCharacterSelectionDisplay.xaml;Scenes\ControlBattle.xaml;Scenes\ControlCharacter.xaml;Scenes\ControlCharacterSetup.xaml;Scenes\ControlGamePlay.xaml;Scenes\ControlLose.xaml;Scenes\ControlMain.xaml;Scenes\ControlWin.xaml;Windows\MainWindow.xaml;
 
 False
 

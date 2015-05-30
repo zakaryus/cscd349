@@ -180,6 +180,7 @@ C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.pdb
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlInventoryBattleDisplay.baml
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Displays\ControlCharacterBattleDisplay.baml
+C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Displays\ControlGridTile.baml
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Displays\ControlIItemCharacterSelectionDisplay.baml
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Scenes\ControlBattle.baml
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Scenes\ControlCharacter.baml
@@ -191,6 +192,7 @@ C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Windows\MainWindow.baml
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlInventoryBattleDisplay.g.cs
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Displays\ControlCharacterBattleDisplay.g.cs
+C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Displays\ControlGridTile.g.cs
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Displays\ControlIItemCharacterSelectionDisplay.g.cs
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Scenes\ControlBattle.g.cs
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Scenes\ControlCharacter.g.cs
@@ -207,3 +209,4 @@ C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.csproj.GenerateResource.Cache
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.exe
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.pdb
+C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.csprojResolveAssemblyReference.cache
