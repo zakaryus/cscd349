@@ -172,6 +172,7 @@
     <Compile Include="Interfaces\IInventory.cs" />
     <Compile Include="Interfaces\IItem.cs" />
     <Compile Include="Interfaces\IWeapon.cs" />
+    <Compile Include="Scenes\mazecreator.cs" />
     <Compile Include="Utilities\CharacterFactory.cs" />
     <Compile Include="Utilities\HelperImages.cs" />
     <Compile Include="Item Managers\WeaponManager.cs" />

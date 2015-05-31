@@ -28,40 +28,26 @@ namespace cscd349FinalProject
         {
             InitializeComponent();
 
+            MazeCreator mc = new MazeCreator(16, 33);
+            Byte[,] maze = mc.CreateMaze();
+
             Random r = new Random();
             int enemyNum = 0;
             for (int i = 0; i < grdBattleGround.RowDefinitions.Count; i++)
             {
                 for (int j = 0; j < grdBattleGround.ColumnDefinitions.Count; j++)
-                {
-                    //Image img = new Image();
-                    //img.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Images/Backgrounds/grass.png");
-                    //img.SetValue(Grid.ColumnProperty, j);
-                    //img.SetValue(Grid.RowProperty, i);
-                    //img.Stretch = Stretch.UniformToFill;
-                    //grdBattleGround.Children.Add(img);
-                    
+                {           
                     int n = r.Next();
+                    TileType type = maze[i, j] == 0 ? TileType.Floor : TileType.Wall;
 
-                    if(i != 0 && j != 0)
-                    {
-                        TileType type = n % 2 == 0 ? TileType.Floor : TileType.Wall;
-                        ControlGridTile gt = new ControlGridTile(type);
-                        Grid.SetColumn(gt, j);
-                        Grid.SetRow(gt, i);
-                        grdBattleGround.Children.Add(gt);
-                    }
-                    else
-                    {
-                        TileType type = TileType.Floor;
-                        ControlGridTile gt = new ControlGridTile(type);
-                        Grid.SetColumn(gt, j);
-                        Grid.SetRow(gt, i);
-                        grdBattleGround.Children.Add(gt);
-                    }
+                    ControlGridTile gt = new ControlGridTile(type);
+                    Grid.SetColumn(gt, j);
+                    Grid.SetRow(gt, i);
+                    grdBattleGround.Children.Add(gt);
 
-                    if (n % 43 == 0)
+                    if (n % 23 == 0 && type == TileType.Floor)
                     {
+                        //TODO: Create a user control representing an enemy on the board
                         UserControl uc = new UserControl();
                         uc.Content = enemyNum++.ToString();
                         Grid.SetColumn(uc, j);
@@ -71,13 +57,20 @@ namespace cscd349FinalProject
                 }
             }
 
-            allyPosition = new Point(0, 0);
+            //TODO: Create a user control representing an ally on the board
+            allyPosition = new Point(1, 1);
             ally = new UserControl();
             ally.Content = "x";
             Grid.SetColumn(ally, (int)allyPosition.X);
             Grid.SetRow(ally, (int)allyPosition.Y);
             grdBattleGround.Children.Add(ally);
 
+            //TODO: Create a user control representing the exit on the board
+            UserControl exit = new UserControl();
+            exit.Content = "EX\nIT";
+            Grid.SetColumn(exit, grdBattleGround.ColumnDefinitions.Count - 2);
+            Grid.SetRow(exit, grdBattleGround.RowDefinitions.Count - 2);
+            grdBattleGround.Children.Add(exit);
         }
 
         private void btnBattle_Click(object sender, RoutedEventArgs e)

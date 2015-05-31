@@ -69,6 +69,10 @@ namespace cscd349FinalProject
             ToolTip tt2 = new ToolTip();
             tt2.Content = String.Format("Protects: {0}", Character.Equipment.HitPoints.Value.ToString());
             imgEquipment.ToolTip = tt2;
+
+            ToolTip tt3 = new ToolTip();
+            tt3.Content = Character.Description;
+            imgFace.ToolTip = tt3;
         }
 
         protected override void OnRender(System.Windows.Media.DrawingContext drawingContext)
@@ -121,7 +125,7 @@ namespace cscd349FinalProject
                         if (Computer.GetInstance().Enemies.Contains(character))
                             return;
 
-                        var data = new DataObject(typeof (UserControl), source);
+                        var data = new DataObject(typeof(UserControl), source);
 
                         // Inititate the drag-and-drop operation.
                         DragDrop.DoDragDrop(this, data, DragDropEffects.Move);

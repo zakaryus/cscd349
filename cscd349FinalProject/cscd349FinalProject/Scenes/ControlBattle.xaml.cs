@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -13,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Point = System.Windows.Point;
+using Pen = System.Windows.Media.Pen;
 
 namespace cscd349FinalProject
 {
@@ -48,7 +51,6 @@ namespace cscd349FinalProject
             AddInventoryToScene(InventoryManager.getInstance());
 
             _battleState = BattleState.PlayerTurn;
-
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -124,7 +126,6 @@ namespace cscd349FinalProject
         {
             DoBattle();
         }
-
 
         private void lbItemList_MouseMove(object sender, MouseEventArgs e)
         {
