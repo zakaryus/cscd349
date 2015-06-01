@@ -63,9 +63,9 @@ namespace cscd349FinalProject
                    {
                        {Scene.Main, main},
                        {Scene.Character, character},
-                       {Scene.CharacterSetup, null},
+                       {Scene.CharacterSetup, null},    //null for a new character setup on every scene change
                        {Scene.GamePlay, gameplay},
-                       {Scene.Battle, null},
+                       {Scene.Battle, null},    //null for a new battle on every scene change
                        {Scene.Win, win},
                        {Scene.Lose, lose}
                    };
@@ -78,6 +78,10 @@ namespace cscd349FinalProject
 
             if (_scenes.ContainsKey(scene))
             {
+                //reset the maze after win/lose
+                if(scene == Scene.Win || scene == Scene.Lose)
+                    _scenes[Scene.GamePlay] = new ControlGamePlay();
+
                 if (scene == Scene.CharacterSetup)
                     _instance.cctrlMain.Content = new ControlCharacterSetup();
                 else if (scene == Scene.Battle)
