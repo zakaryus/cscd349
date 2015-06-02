@@ -246,3 +246,4 @@ C:\Users\gbui_000\Documents\cscd349\cscd349FinalProject\cscd349FinalProject\obj\
 C:\Users\gbui_000\Documents\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.csproj.GenerateResource.Cache
 C:\Users\gbui_000\Documents\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.exe
 C:\Users\gbui_000\Documents\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.pdb
+C:\Users\gbui_000\Documents\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.csprojResolveAssemblyReference.cache
