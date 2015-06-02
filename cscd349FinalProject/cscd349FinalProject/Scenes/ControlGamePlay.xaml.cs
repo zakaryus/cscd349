@@ -82,7 +82,7 @@ namespace cscd349FinalProject
 
         private void grdBattleGround_KeyDown(object sender, KeyEventArgs e)
         {
-            ICharacter leader = new CharacterKnightFemale();
+            ICharacter leader = new CharacterSoldierFemale();
             int num = Player.GetInstance().Allies.Count;
             //if (num > 0)
             //{

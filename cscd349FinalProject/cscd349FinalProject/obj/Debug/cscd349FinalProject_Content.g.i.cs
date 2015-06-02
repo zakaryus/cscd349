@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sprites/femaleknight/knightfemaleback.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sprites/femaleknight/knightfemalefront.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sprites/femaleknight/knightfemaleleft.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sprites/femaleknight/knightfemaleright.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sprites/femalesoldier/soldierfemaleback.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sprites/femalesoldier/soldierfemalefront.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sprites/femalesoldier/soldierfemaleleft.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sprites/femalesoldier/soldierfemaleright.png")]
 
 

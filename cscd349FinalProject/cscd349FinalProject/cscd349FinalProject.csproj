@@ -353,6 +353,13 @@
     <Resource Include="Sprites\FemaleKnight\KnightFemaleLeft.png" />
     <Resource Include="Sprites\FemaleKnight\KnightFemaleRight.png" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Sprites\FemaleSoldier\SoldierFemaleBack.png" />
+    <Resource Include="Sprites\FemaleSoldier\SoldierFemaleFront.png" />
+    <Resource Include="Sprites\FemaleSoldier\SoldierFemaleLeft.png" />
+    <Resource Include="Sprites\FemaleSoldier\SoldierFemaleRight.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
