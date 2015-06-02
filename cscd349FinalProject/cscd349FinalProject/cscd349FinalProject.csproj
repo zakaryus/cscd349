@@ -318,12 +318,6 @@
     <Resource Include="Sprites\DarkElf\DarkElfRight.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Sprites\FemaleMagician\MagicianFemaleBack.png" />
-    <Resource Include="Sprites\FemaleMagician\MagicianFemaleFront.png" />
-    <Resource Include="Sprites\FemaleMagician\MagicianFemaleLeft.png" />
-    <Resource Include="Sprites\FemaleMagician\MagicianFemaleRight.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Sprites\EarthElf\EarthElfBack.png" />
     <Resource Include="Sprites\EarthElf\EarthElfFront.png" />
     <Resource Include="Sprites\EarthElf\EarthElfLeft.png" />
@@ -353,12 +347,42 @@
     <Resource Include="Sprites\FemaleKnight\KnightFemaleLeft.png" />
     <Resource Include="Sprites\FemaleKnight\KnightFemaleRight.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Sprites\FemaleMagician\MagicianFemaleBack.png" />
+    <Resource Include="Sprites\FemaleMagician\MagicianFemaleFront.png" />
+    <Resource Include="Sprites\FemaleMagician\MagicianFemaleLeft.png" />
+    <Resource Include="Sprites\FemaleMagician\MagicianFemaleRight.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Sprites\FemaleSoldier\SoldierFemaleBack.png" />
     <Resource Include="Sprites\FemaleSoldier\SoldierFemaleFront.png" />
     <Resource Include="Sprites\FemaleSoldier\SoldierFemaleLeft.png" />
     <Resource Include="Sprites\FemaleSoldier\SoldierFemaleRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\MagicianMale\MagicianBack.png" />
+    <Resource Include="Sprites\MagicianMale\MagicianFront.png" />
+    <Resource Include="Sprites\MagicianMale\MagicianLeft.png" />
+    <Resource Include="Sprites\MagicianMale\MagicianRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\FemaleNinja\NinjaFemaleBack.png" />
+    <Resource Include="Sprites\FemaleNinja\NinjaFemaleFront.png" />
+    <Resource Include="Sprites\FemaleNinja\NinjaFemaleLeft.png" />
+    <Resource Include="Sprites\FemaleNinja\NinjaFemaleRight.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Sprites\NinjaMale\NinjaBack.png" />
+    <Resource Include="Sprites\NinjaMale\NinjaFront.png" />
+    <Resource Include="Sprites\NinjaMale\NinjaLeft.png" />
+    <Resource Include="Sprites\NinjaMale\NinjaRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\SoldierMale\SoldierBack.png" />
+    <Resource Include="Sprites\SoldierMale\SoldierFront.png" />
+    <Resource Include="Sprites\SoldierMale\SoldierLeft.png" />
+    <Resource Include="Sprites\SoldierMale\SoldierRight.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

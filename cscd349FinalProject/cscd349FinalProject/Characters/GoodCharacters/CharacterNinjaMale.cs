@@ -115,13 +115,13 @@ namespace cscd349FinalProject
             Face.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Images/Faces/GoodFaces/CharacterNinjaMaleFace.png");
 
             Front = new Image();
-            Front.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Sprites/KnightMale/KnightFront.png");
+            Front.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Sprites/NinjaMale/NinjaFront.png");
             Back = new Image();
-            Back.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Sprites/KnightMale/KnightBack.png");
+            Back.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Sprites/NinjaMale/NinjaBack.png");
             Left = new Image();
-            Left.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Sprites/KnightMale/KnightLeft.png");
+            Left.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Sprites/NinjaMale/NinjaLeft.png");
             Right = new Image();
-            Right.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Sprites/KnightMale/KnightRight.png");
+            Right.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Sprites/NinjaMale/NinjaRight.png");
         
         }
         #endregion Constructor
