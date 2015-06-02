@@ -303,6 +303,50 @@
   <ItemGroup>
     <Resource Include="Images\Backgrounds\brick.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\KnightMale\KnightFront.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\KnightMale\KnightBack.png" />
+    <Resource Include="Sprites\KnightMale\KnightLeft.png" />
+    <Resource Include="Sprites\KnightMale\KnightRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\DarkElf\DarkElfBack.png" />
+    <Resource Include="Sprites\DarkElf\DarkElfFront.png" />
+    <Resource Include="Sprites\DarkElf\DarkElfLeft.png" />
+    <Resource Include="Sprites\DarkElf\DarkElfRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\FemaleMagician\MagicianFemaleBack.png" />
+    <Resource Include="Sprites\FemaleMagician\MagicianFemaleFront.png" />
+    <Resource Include="Sprites\FemaleMagician\MagicianFemaleLeft.png" />
+    <Resource Include="Sprites\FemaleMagician\MagicianFemaleRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\EarthElf\EarthElfBack.png" />
+    <Resource Include="Sprites\EarthElf\EarthElfFront.png" />
+    <Resource Include="Sprites\EarthElf\EarthElfLeft.png" />
+    <Resource Include="Sprites\EarthElf\EarthElfRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\FireElf\FireElfBack.png" />
+    <Resource Include="Sprites\FireElf\FireElfFront.png" />
+    <Resource Include="Sprites\FireElf\FireElfRight.png" />
+    <Resource Include="Sprites\FireElf\FireLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\WaterElf\WaterElfBack.png" />
+    <Resource Include="Sprites\WaterElf\WaterElfFront.png" />
+    <Resource Include="Sprites\WaterElf\WaterElfLeft.png" />
+    <Resource Include="Sprites\WaterElf\WaterElfRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\WindElf\WindElfBack.png" />
+    <Resource Include="Sprites\WindElf\WindElfFront.png" />
+    <Resource Include="Sprites\WindElf\WindElfLeft.png" />
+    <Resource Include="Sprites\WindElf\WindElfRight.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

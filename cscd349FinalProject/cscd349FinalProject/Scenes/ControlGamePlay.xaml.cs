@@ -57,9 +57,14 @@ namespace cscd349FinalProject
             }
 
             //TODO: Create a user control representing an ally on the board
+            
+    
             _allyPosition = new Point(1, 1);
             _ally = new UserControl();
-            _ally.Content = "x";
+           Image rep = new Image();
+           rep.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Sprites/KnightMale/KnightFront.png");
+           _ally.Content = rep;
+
             addControlToGridAtPoint(_ally, (int)_allyPosition.X, (int)_allyPosition.Y);
 
             //TODO: Create a user control representing the exit on the board
@@ -77,24 +82,36 @@ namespace cscd349FinalProject
 
         private void grdBattleGround_KeyDown(object sender, KeyEventArgs e)
         {
+            ICharacter leader = new CharacterMagicianFemale();
+            int num = Player.GetInstance().Allies.Count;
+            //if (num > 0)
+            //{
+            //    MessageBox.Show("num is" + num);
+            //    leader = Player.GetInstance().Allies[0];
+            //    MessageBox.Show(leader.Name);
+            //}
             int tmpX = (int)_allyPosition.X;
             int tmpY = (int)_allyPosition.Y;
 
             if (/*e.Key == Key.Up ||*/ e.Key == Key.W)
             {
                 tmpY -= (int)_allyPosition.Y == 0 ? 0 : 1;
+                _ally.Content = leader.Back;
             }
             else if (/*e.Key == Key.Down ||*/ e.Key == Key.S)
             {
                 tmpY += (int)_allyPosition.Y == grdBattleGround.RowDefinitions.Count - 1 ? 0 : 1;
+                _ally.Content = leader.Front;
             }
             else if (/*e.Key == Key.Left ||*/ e.Key == Key.A)
             {
                 tmpX -= (int)_allyPosition.X == 0 ? 0 : 1;
+                _ally.Content = leader.Left;
             }
             else if (/*e.Key == Key.Right ||*/ e.Key == Key.D)
             {
                 tmpX += (int)_allyPosition.X == grdBattleGround.ColumnDefinitions.Count - 1 ? 0 : 1;
+                _ally.Content = leader.Right;
             }
 
             var children = grdBattleGround.Children.Cast<UIElement>().ToList();

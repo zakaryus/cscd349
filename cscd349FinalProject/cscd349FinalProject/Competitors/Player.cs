@@ -44,5 +44,7 @@ namespace cscd349FinalProject
         {
             _inventory.Add(item);
         }
+
+ 
     }
 }

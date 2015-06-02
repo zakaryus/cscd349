@@ -18,6 +18,11 @@ namespace cscd349FinalProject
         IEquipment Equipment { get; set; }
 
         Image Face { get; }
+        Image Front { get; }
+        Image Back { get; }
+        Image Left { get; }
+        Image Right { get; }
+
 
         //Methods
         HitPoint Attack();

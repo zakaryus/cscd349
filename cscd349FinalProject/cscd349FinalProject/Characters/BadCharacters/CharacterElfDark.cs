@@ -19,6 +19,12 @@ namespace cscd349FinalProject
         private IWeapon _weapon;
         private IEquipment _equipment;
         private Image _face;
+
+        private Image _back;
+        private Image _front;
+        private Image _left;
+        private Image _right;
+
         private int _minDamage;
         private int _maxDamage;
         #endregion Fields
@@ -73,6 +79,32 @@ namespace cscd349FinalProject
             get { return _face; }
             private set { _face = value; }
         }
+
+
+        public System.Windows.Controls.Image Front
+        {
+            get { return _front; }
+            private set { _front = value; }
+        }
+
+        public System.Windows.Controls.Image Back
+        {
+            get { return _back; }
+            private set { _back = value; }
+        }
+
+        public System.Windows.Controls.Image Right
+        {
+            get { return _right; }
+            private set { _right = value; }
+        }
+
+        public System.Windows.Controls.Image Left
+        {
+            get { return _left; }
+            private set { _left = value; }
+        }
+
         #endregion Properties
 
         #region Constructor
@@ -88,6 +120,16 @@ namespace cscd349FinalProject
             _minDamage = 20;
             _maxDamage = 45;
             Face.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Images/Faces/BadFaces/CharacterElfDarkFace.png");
+
+            Front = new Image();
+            Front.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Sprites/DarkElf/DarkElfFront.png");
+            Back = new Image();
+            Back.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Sprites/DarkElf/DarkElfBack.png");
+            Left = new Image();
+            Left.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Sprites/DarkElf/DarkElfLeft.png");
+            Right = new Image();
+            Right.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Sprites/DarkElf/DarkElfRight.png");
+        
         }
         #endregion Constructor
 
