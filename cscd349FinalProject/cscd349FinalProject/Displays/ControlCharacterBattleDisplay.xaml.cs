@@ -23,7 +23,7 @@ namespace cscd349FinalProject
     /// <summary>
     /// Interaction logic for ControlCharacterBattleDisplay.xaml
     /// </summary>
-    public partial class ControlCharacterBattleDisplay : UserControl
+    public partial class ControlCharacterBattleDisplay : UserControl, IWatcher
     {
         private ICharacter _character;
         private HitPoint _tmpMaxHitPoints;
@@ -40,6 +40,7 @@ namespace cscd349FinalProject
             InitializeComponent();
 
             Character = ichar;
+            Character.Register(this);
             imgFace.Source = Character.Face.Source;
 
             lblName.Content = Character.Name;
@@ -175,9 +176,13 @@ namespace cscd349FinalProject
                         HitPoint hit = attacker.Attack();
                         victim.HitPoints -= hit;
 
-                        lblDamageTaken.Content = String.Format("- {0}", hit.Value.ToString());
-                        _tmrLblDamage = new Timer(ClearLabel, lblDamageTaken, 2000, 0);
-                        
+                        //if the hitpoints are 0 we will display "KO'd"
+                        if (victim.HitPoints.Value != 0)
+                        {
+                            lblDamageTaken.Content = String.Format("- {0}", hit.Value.ToString());
+                            _tmrLblDamage = new Timer(ClearLabel, lblDamageTaken, 2000, 0);
+                        }
+
                         display.InvalidateVisual();
                     }
                 }
@@ -309,6 +314,23 @@ namespace cscd349FinalProject
             }
 
             return null;
+        }
+
+        public void BeNotified(IWatchee i)
+        {
+            var ally = i as ICharacter;
+            if (ally != null)
+            {
+                //if a battledisplay is notified by a character, 
+                //and it is the same as the character contained
+                //in the display, the character has died
+                if (ally == _character)
+                {
+                    lblDamageTaken.Content = "KO'd";
+                    IsEnabled = false;
+                    InvalidateVisual();
+                }
+            }
         }
     }
 }

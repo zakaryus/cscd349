@@ -53,6 +53,11 @@ namespace cscd349FinalProject
                     _hitpoints = value;
                 else if (value > _maxHitpoints)
                     _hitpoints = _maxHitpoints;
+                else if (value.Value <= 0)
+                {
+                    _hitpoints.Value = 0;
+                    Die();
+                }
                 else
                     _hitpoints = value;
             }
@@ -149,6 +154,7 @@ namespace cscd349FinalProject
         {
             //I'm dead
             //do something
+            Notify();
         }
         #endregion Methods
 
