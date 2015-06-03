@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 
-namespace cscd349FinalProject
+namespace cscd349FinalProject.Interfaces
 {
-    public interface ICharacter
+    public interface ICharacter: IWatchee
     {
         //Properties
         string Name { get; }

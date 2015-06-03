@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using cscd349FinalProject.Interfaces;
 using cscd349FinalProject.Utilities;
 
 namespace cscd349FinalProject
@@ -25,15 +26,8 @@ namespace cscd349FinalProject
     public partial class ControlCharacterBattleDisplay : UserControl
     {
         private ICharacter _character;
-        private bool _highlighted;
-        Brush _highlightedColor, _unhighlightedColor;
         private HitPoint _tmpMaxHitPoints;
-
-        public bool Highlighted
-        {
-            get { return _highlighted; }
-            private set { _highlighted = value; }
-        }
+        private Timer _tmrLblDamage, _tmrBdrAttacker, _tmrBdrVictim;
 
         public ICharacter Character
         {
@@ -44,10 +38,6 @@ namespace cscd349FinalProject
         public ControlCharacterBattleDisplay(ICharacter ichar)
         {
             InitializeComponent();
-
-            _highlighted = false;
-            _highlightedColor = new SolidColorBrush(Color.FromArgb(128, 0, 0, 255));
-            _unhighlightedColor = new SolidColorBrush(Color.FromArgb(0, 0, 0, 0));
 
             Character = ichar;
             imgFace.Source = Character.Face.Source;
@@ -99,12 +89,6 @@ namespace cscd349FinalProject
         private string GetFormattedHitPointFraction()
         {
             return String.Format("{0} / {1}", Character.HitPoints.Value, Character.MaxHitPoints.Value);
-        }
-
-        private void UserControl_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            grdBattleDisplay.Background = Highlighted ? _unhighlightedColor : _highlightedColor;
-            Highlighted = !Highlighted;
         }
 
         private void UserControl_MouseMove(object sender, MouseEventArgs e)
@@ -182,11 +166,17 @@ namespace cscd349FinalProject
                             Player.GetInstance().Allies.Contains(victim))
                             return;
 
+                        SetBorder(control, true);
+                        SetBorder(display, false);
+
+                        _tmrBdrAttacker = new Timer(ClearBorder, control, 2020, 0);
+                        _tmrBdrVictim = new Timer(ClearBorder, display, 2010, 0);
+
                         HitPoint hit = attacker.Attack();
                         victim.HitPoints -= hit;
 
-                        Timer t = new Timer(ClearLabel, lblDamageTaken, 2000, 0);
                         lblDamageTaken.Content = String.Format("- {0}", hit.Value.ToString());
+                        _tmrLblDamage = new Timer(ClearLabel, lblDamageTaken, 2000, 0);
                         
                         display.InvalidateVisual();
                     }
@@ -198,11 +188,27 @@ namespace cscd349FinalProject
         {
             var lbl = o as Label;
             if (lbl != null)
+                Dispatcher.BeginInvoke((Action)(() => { lbl.Content = String.Empty; }));
+        }
+
+        private void ClearBorder(Object o)
+        {
+            var disp = o as ControlCharacterBattleDisplay;
+            if(disp != null)
+                Dispatcher.BeginInvoke((Action)(() => { disp.BorderBrush = Brushes.Transparent; }));
+        }
+
+        private void SetBorder(Object o, bool isAttacker)
+        {
+            var disp = o as ControlCharacterBattleDisplay;
+            if (disp != null)
             {
-                if (!Dispatcher.CheckAccess())
-                    Dispatcher.Invoke(() => lbl.Content = String.Empty, DispatcherPriority.Normal);
+                if (isAttacker)
+                    disp.BorderBrush = Brushes.Green;
                 else
-                    lbl.Content = String.Empty;
+                    disp.BorderBrush = Brushes.Red;
+
+                disp.BorderThickness = new Thickness(3);
             }
         }
 

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using cscd349FinalProject.Interfaces;
 using cscd349FinalProject.Weapons;
 
 namespace cscd349FinalProject.Scenes

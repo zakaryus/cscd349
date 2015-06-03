@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using cscd349FinalProject.Displays;
+using cscd349FinalProject.Interfaces;
 
 namespace cscd349FinalProject
 {
@@ -64,6 +65,8 @@ namespace cscd349FinalProject
            Image rep = new Image();
            rep.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Sprites/KnightMale/KnightFront.png");
            _ally.Content = rep;
+
+            var l = Player.GetInstance().Allies;
 
             addControlToGridAtPoint(_ally, (int)_allyPosition.X, (int)_allyPosition.Y);
 

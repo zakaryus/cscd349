@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using cscd349FinalProject.Equipment;
+using cscd349FinalProject.Interfaces;
 using cscd349FinalProject.Weapons;
 
 namespace cscd349FinalProject
@@ -23,6 +24,8 @@ namespace cscd349FinalProject
         private Image _front;
         private Image _left;
         private Image _right;
+
+        private List<IWatcher> _watchers; 
         #endregion Fields
 
         #region Properties
@@ -122,7 +125,8 @@ namespace cscd349FinalProject
             Left.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Sprites/NinjaMale/NinjaLeft.png");
             Right = new Image();
             Right.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Sprites/NinjaMale/NinjaRight.png");
-        
+
+            _watchers = new List<IWatcher>();
         }
         #endregion Constructor
 
@@ -138,5 +142,23 @@ namespace cscd349FinalProject
             //do something
         }
         #endregion Methods
+
+        public void Register(IWatcher i)
+        {
+            if (!_watchers.Contains(i))
+                _watchers.Add(i);
+        }
+
+        public void Unregister(IWatcher i)
+        {
+            if (_watchers.Contains(i))
+                _watchers.Remove(i);
+        }
+
+        public void Notify()
+        {
+            foreach (IWatcher i in _watchers)
+                i.BeNotified(this);
+        }
     }
 }

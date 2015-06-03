@@ -140,6 +140,8 @@
     <Compile Include="Equipment\EquipmentNull.cs" />
     <Compile Include="Equipment\EquipmentPlatinumArmor.cs" />
     <Compile Include="Equipment\EquipmentSilverArmor.cs" />
+    <Compile Include="Interfaces\IWatchee.cs" />
+    <Compile Include="Interfaces\IWatcher.cs" />
     <Compile Include="Item Managers\InventoryManager.cs" />
     <Compile Include="Item Managers\EquipmentManager.cs" />
     <Compile Include="Items\ItemHealthPotionBig.cs" />
