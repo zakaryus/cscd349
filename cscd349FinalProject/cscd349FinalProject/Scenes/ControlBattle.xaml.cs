@@ -48,13 +48,14 @@ namespace cscd349FinalProject
             _computer.UpdateEnemies();
             AddComputerEnemiesToScene(_computer);
 
-            AddInventoryToScene(InventoryManager.getInstance());
+            AddInventoryToScene(Player.GetInstance());
 
             _battleState = BattleState.PlayerTurn;
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
+            
             MainWindow.GetInstance().ChangeScene(Scene.GamePlay);
         }
 
@@ -87,13 +88,16 @@ namespace cscd349FinalProject
             }
         }
 
-        private void AddInventoryToScene(InventoryManager im)
+        private void AddInventoryToScene(Player play)
         {
-            foreach (IInventory inventory in im.AllInventory)
+
+            for (int i = 0; i < play.Inventory.Count; i++)
             {
-                var ccbd = new ControlIItemCharacterSelectionDisplay(inventory);
+                var ccbd = new ControlIItemCharacterSelectionDisplay(play.Inventory[i]);
                 lbInventoryList.Items.Add(ccbd);
+
             }
+        
         }
 
         private void DoBattle()

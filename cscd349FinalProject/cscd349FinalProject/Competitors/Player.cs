@@ -35,9 +35,11 @@ namespace cscd349FinalProject
 
         public static Player GetInstance()
         {
-            if(_instance == null)
+            if (_instance == null)
+            {
                 _instance = new Player();
-
+                _inventory = new List<IInventory>();
+            }
             return _instance;
         }
 

@@ -162,9 +162,9 @@ namespace cscd349FinalProject
                             return;
 
                         //no backstabbing
-                        if (Player.GetInstance().Allies.Contains(attacker) &&
-                            Player.GetInstance().Allies.Contains(victim))
-                            return;
+                        //if (Player.GetInstance().Allies.Contains(attacker) &&
+                        //    Player.GetInstance().Allies.Contains(victim))
+                        //    return;
 
                         SetBorder(control, true);
                         SetBorder(display, false);

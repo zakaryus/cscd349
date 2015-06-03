@@ -82,10 +82,7 @@ namespace cscd349FinalProject
             {
                 //reset the maze after win/lose
                 if (scene == Scene.Win || scene == Scene.Lose)
-                {
-                    _scenes[Scene.GamePlay] = new ControlGamePlay();
                     _newGame = true;
-                }
 
                 if (scene == Scene.CharacterSetup)
                     _instance.cctrlMain.Content = new ControlCharacterSetup();

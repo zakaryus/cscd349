@@ -63,11 +63,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Displays\ControlCharacterMapDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Displays\ControlGridTile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Displays\ControlIItemCharacterSelectionDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Displays\ControlItemMapDisplay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -128,11 +136,17 @@
     <Compile Include="Displays\ControlCharacterBattleDisplay.xaml.cs">
       <DependentUpon>ControlCharacterBattleDisplay.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Displays\ControlCharacterMapDisplay.xaml.cs">
+      <DependentUpon>ControlCharacterMapDisplay.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Displays\ControlGridTile.xaml.cs">
       <DependentUpon>ControlGridTile.xaml</DependentUpon>
     </Compile>
     <Compile Include="Displays\ControlIItemCharacterSelectionDisplay.xaml.cs">
       <DependentUpon>ControlIItemCharacterSelectionDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Displays\ControlItemMapDisplay.xaml.cs">
+      <DependentUpon>ControlItemMapDisplay.xaml</DependentUpon>
     </Compile>
     <Compile Include="Equipment\EquipmentGoldArmor.cs" />
     <Compile Include="Equipment\EquipmentLeatherArmor.cs" />
@@ -175,7 +189,7 @@
     <Compile Include="Interfaces\IItem.cs" />
     <Compile Include="Interfaces\IWeapon.cs" />
     <Compile Include="Scenes\mazecreator.cs" />
-    <Compile Include="Utilities\CharacterFactory.cs" />
+    <Compile Include="Utilities\Factory.cs" />
     <Compile Include="Utilities\HelperImages.cs" />
     <Compile Include="Item Managers\WeaponManager.cs" />
     <Compile Include="Weapons\WeaponElfBow.cs" />

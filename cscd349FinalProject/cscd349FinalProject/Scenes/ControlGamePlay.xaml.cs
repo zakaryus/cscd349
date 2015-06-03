@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using cscd349FinalProject.Displays;
 using cscd349FinalProject.Interfaces;
+using cscd349FinalProject.Items;
+using cscd349FinalProject.Utilities;
 
 namespace cscd349FinalProject
 {
@@ -22,8 +24,9 @@ namespace cscd349FinalProject
     /// </summary>
     public partial class ControlGamePlay : UserControl
     {
-        private UserControl _ally;
+        private ControlCharacterMapDisplay _ally;
         private Point _allyPosition;
+        private ICharacter leader;
 
         public ControlGamePlay()
         {
@@ -39,19 +42,28 @@ namespace cscd349FinalProject
                 for (int j = 0; j < grdBattleGround.ColumnDefinitions.Count; j++)
                 {           
                     int n = r.Next();
-                    if (i == 15)
-                        continue;
-
                     TileType type = maze[i, j] == 0 ? TileType.Floor : TileType.Wall;
 
                     ControlGridTile gt = new ControlGridTile(type);
                     addControlToGridAtPoint(gt, i, j);
+                    if (i == 1 && j == 1)
+                        continue;
+
+                   
 
                     if (n % 23 == 0 && type == TileType.Floor)
                     {
                         //TODO: Create a user control representing an enemy on the board
-                        UserControl uc = new UserControl();
-                        uc.Content = enemyNum++.ToString();
+                       // UserControl uc = new UserControl();
+                        var uc = new ControlCharacterMapDisplay(Factory.CreateRandomEnemy());
+                        addControlToGridAtPoint(uc, i, j);
+                    }
+
+                    if (n % 31 == 0 && type == TileType.Floor)
+                    {
+                        //TODO: Create a user control representing an enemy on the board
+                        // UserControl uc = new UserControl();
+                        var uc = new ControlItemMapDisplay(Factory.CreateRandomInventory());
                         addControlToGridAtPoint(uc, i, j);
                     }
                 }
@@ -60,13 +72,12 @@ namespace cscd349FinalProject
             //TODO: Create a user control representing an ally on the board
             
     
-            _allyPosition = new Point(1, 1);
-            _ally = new UserControl();
-           Image rep = new Image();
-           rep.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Sprites/KnightMale/KnightFront.png");
-           _ally.Content = rep;
-
-            var l = Player.GetInstance().Allies;
+           _allyPosition = new Point(1, 1);
+         
+           
+           _ally = new ControlCharacterMapDisplay(GetLeader());
+      
+           
 
             addControlToGridAtPoint(_ally, (int)_allyPosition.X, (int)_allyPosition.Y);
 
@@ -83,44 +94,59 @@ namespace cscd349FinalProject
             grdBattleGround.Children.Add(uc);
         }
 
+        private ICharacter GetLeader()
+        {  
+            if (Player.GetInstance().Allies.Count > 0)
+            {
+                foreach (ICharacter c in Player.GetInstance().Allies)
+                {
+                    if (c.HitPoints.Value > 0)
+                    {
+                        leader = c;
+                        return leader;
+                    }
+                }
+            }
+
+            MainWindow.GetInstance().ChangeScene(Scene.Lose);
+ 
+            return null;
+
+        }
+        
         private void grdBattleGround_KeyDown(object sender, KeyEventArgs e)
         {
-            ICharacter leader = new CharacterSoldierMale();
-            int num = Player.GetInstance().Allies.Count;
-            //if (num > 0)
-            //{
-            //    MessageBox.Show("num is" + num);
-            //    leader = Player.GetInstance().Allies[0];
-            //    MessageBox.Show(leader.Name);
-            //}
+
+            
             int tmpX = (int)_allyPosition.X;
             int tmpY = (int)_allyPosition.Y;
 
             if (/*e.Key == Key.Up ||*/ e.Key == Key.W)
             {
                 tmpY -= (int)_allyPosition.Y == 0 ? 0 : 1;
-                _ally.Content = leader.Back;
+                _ally.MoveUp();
+
             }
             else if (/*e.Key == Key.Down ||*/ e.Key == Key.S)
             {
                 tmpY += (int)_allyPosition.Y == grdBattleGround.RowDefinitions.Count - 1 ? 0 : 1;
-                _ally.Content = leader.Front;
+                _ally.MoveDown();
             }
             else if (/*e.Key == Key.Left ||*/ e.Key == Key.A)
             {
                 tmpX -= (int)_allyPosition.X == 0 ? 0 : 1;
-                _ally.Content = leader.Left;
+                _ally.MoveLeft();
             }
             else if (/*e.Key == Key.Right ||*/ e.Key == Key.D)
             {
                 tmpX += (int)_allyPosition.X == grdBattleGround.ColumnDefinitions.Count - 1 ? 0 : 1;
-                _ally.Content = leader.Right;
+                _ally.MoveRight();
             }
 
             var children = grdBattleGround.Children.Cast<UIElement>().ToList();
-            UserControl enemy = null;
+            ControlCharacterMapDisplay enemy = null;
             ControlGridTile tile = null;
-
+            ControlItemMapDisplay item = null;
             foreach(var child in children)
             {
                 if(Grid.GetRow(child) == tmpY && Grid.GetColumn(child) == tmpX && child != _ally)
@@ -128,7 +154,8 @@ namespace cscd349FinalProject
                     try
                     {
                         //find the tile we attempting to move to
-                        tile = child as ControlGridTile;
+                        if(tile == null)
+                            tile = child as ControlGridTile;
                     }
                     catch (InvalidCastException ex)
                     {
@@ -139,13 +166,27 @@ namespace cscd349FinalProject
                     try
                     {
                         //find the enemy where we are attempting to move, if there is one
-                        enemy = child as UserControl;
+                        if(enemy == null)
+                            enemy = child as ControlCharacterMapDisplay;
                     }
                     catch(InvalidCastException ex)
                     {
                         Console.WriteLine(ex.Message);
                         enemy = null;
                     }
+
+                    try
+                    {
+                        //find the enemy where we are attempting to move, if there is one
+                        if(item == null)
+                            item = child as ControlItemMapDisplay;
+                    }
+                    catch (InvalidCastException ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                       item = null;
+                    }
+
                 }
             }
 
@@ -159,9 +200,15 @@ namespace cscd349FinalProject
                 Grid.SetRow(_ally, (int)_allyPosition.Y);
             }
 
-            if(enemy != null && enemy != _ally && enemy != tile)
+            if (item != null)
             {
-                var res = MessageBox.Show("Enemy " + enemy.Content + " encountered!", "Battle", MessageBoxButton.OK);
+                Player.GetInstance().Inventory.Add(item.Item);
+                grdBattleGround.Children.Remove(item);
+            }
+
+            if(enemy != null && enemy != _ally )
+            {
+                var res = MessageBox.Show("Enemy Encountered!", "Battle", MessageBoxButton.OK);
                 if (res == MessageBoxResult.OK)
                 {
                     grdBattleGround.Children.Remove(enemy);
@@ -176,6 +223,23 @@ namespace cscd349FinalProject
         {
             if (!grdBattleGround.IsFocused)
                 grdBattleGround.Focus();
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (leader.HitPoints.Value < 0)
+            {
+                _ally.Character = GetLeader();
+                InvalidateVisual();
+            }
+           
+        }
+
+        protected override void OnRender(DrawingContext drawingContext)
+        {
+            base.OnRender(drawingContext);
+            _ally.Character = GetLeader();
+            _ally.MoveDown();
         }
     }
 }

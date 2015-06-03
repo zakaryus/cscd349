@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\
+C:\Users\gbui\Desktop\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\
 cscd349FinalProject
 none
 false
 DEBUG;TRACE
-C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\App.xaml
-121155869061
+C:\Users\gbui\Desktop\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\App.xaml
+14106275238
 
-60245730981
+62-938430167
 141012385901
-ControlInventoryBattleDisplay.xaml;Displays\ControlCharacterBattleDisplay.xaml;Displays\ControlGridTile.xaml;Displays\ControlIItemCharacterSelectionDisplay.xaml;Scenes\ControlBattle.xaml;Scenes\ControlCharacter.xaml;Scenes\ControlCharacterSetup.xaml;Scenes\ControlGamePlay.xaml;Scenes\ControlLose.xaml;Scenes\ControlMain.xaml;Scenes\ControlWin.xaml;Windows\MainWindow.xaml;
+ControlInventoryBattleDisplay.xaml;Displays\ControlCharacterBattleDisplay.xaml;Displays\ControlCharacterMapDisplay.xaml;Displays\ControlGridTile.xaml;Displays\ControlIItemCharacterSelectionDisplay.xaml;Displays\ControlItemMapDisplay.xaml;Scenes\ControlBattle.xaml;Scenes\ControlCharacter.xaml;Scenes\ControlCharacterSetup.xaml;Scenes\ControlGamePlay.xaml;Scenes\ControlLose.xaml;Scenes\ControlMain.xaml;Scenes\ControlWin.xaml;Windows\MainWindow.xaml;
 
 False
 

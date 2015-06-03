@@ -60,7 +60,7 @@ namespace cscd349FinalProject
             for(int i = 0; i < numEnemies; i++)
             {
                 enemyType = rand.Next(0, enemyTypes.Count); //an index
-                ICharacter ichar = CharacterFactory.CreateCharacter(enemyTypes[enemyType]);
+                ICharacter ichar = Factory.CreateCharacter(enemyTypes[enemyType]);
                 rtn.Add(ichar);
             }
 

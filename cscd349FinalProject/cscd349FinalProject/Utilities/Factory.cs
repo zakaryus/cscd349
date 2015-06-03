@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using cscd349FinalProject.Interfaces;
+using cscd349FinalProject.Items;
 
 namespace cscd349FinalProject.Utilities
 {
@@ -17,7 +18,7 @@ namespace cscd349FinalProject.Utilities
         ElfLight, ElfWater, ElfWind
     }
 
-    static class CharacterFactory
+    static class Factory
     {
         //Factory Method
         public static ICharacter CreateCharacter(CharacterType ct)
@@ -67,6 +68,28 @@ namespace cscd349FinalProject.Utilities
                 character = new CharacterElfWind();
             
             return character;
+        }
+
+        public static ICharacter CreateRandomEnemy()
+        {
+            List <ICharacter> enemies = new List<ICharacter>
+                                        {
+                                            new CharacterElfDark(), new CharacterElfEarth(), new CharacterElfFire(), new CharacterElfLight(), new CharacterElfWater(), new CharacterElfWind()
+                                        };
+
+            Random rand = new Random();
+            return enemies[rand.Next()%enemies.Count];
+        }
+
+        public static IInventory CreateRandomInventory()
+        {
+            List<IInventory> inventories= new List<IInventory>
+                                        {
+                                            new ItemHealthPotionBig(), new ItemHealthPotionSmall()
+                                        };
+
+            Random rand = new Random();
+            return inventories[rand.Next() % inventories.Count];
         }
     }
 }

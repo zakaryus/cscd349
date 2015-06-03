@@ -80,7 +80,7 @@ namespace cscd349FinalProject
             foreach (CheckBox cb in selected)
                 //index into the cbDictonary and use the character type to
                 //create a character using the factory and add to the list
-                characters.Add(CharacterFactory.CreateCharacter(cbDictionary[cb]));
+                characters.Add(Factory.CreateCharacter(cbDictionary[cb]));
 
             return characters;
         }
