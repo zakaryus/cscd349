@@ -161,9 +161,12 @@
     <Compile Include="Interfaces\IWatcher.cs" />
     <Compile Include="Item Managers\InventoryManager.cs" />
     <Compile Include="Item Managers\EquipmentManager.cs" />
+    <Compile Include="Items\ItemHealthBread.cs" />
+    <Compile Include="Items\ItemHealthCheese.cs" />
     <Compile Include="Items\ItemHealthPotionBig.cs" />
     <Compile Include="Items\ItemHealthPotionSmall.cs" />
     <Compile Include="Competitors\Player.cs" />
+    <Compile Include="Items\ItemHealthWatermelon.cs" />
     <Compile Include="Scenes\ControlBattle.xaml.cs">
       <DependentUpon>ControlBattle.xaml</DependentUpon>
     </Compile>
@@ -390,7 +393,10 @@
     <Resource Include="Sprites\FemaleNinja\NinjaFemaleLeft.png" />
     <Resource Include="Sprites\FemaleNinja\NinjaFemaleRight.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Item Icons\Item_Bread.png" />
+    <Resource Include="Item Icons\Item_Cheese.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Sprites\NinjaMale\NinjaBack.png" />
     <Resource Include="Sprites\NinjaMale\NinjaFront.png" />
@@ -402,6 +408,9 @@
     <Resource Include="Sprites\SoldierMale\SoldierFront.png" />
     <Resource Include="Sprites\SoldierMale\SoldierLeft.png" />
     <Resource Include="Sprites\SoldierMale\SoldierRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Item Icons\I_C_Watermellon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

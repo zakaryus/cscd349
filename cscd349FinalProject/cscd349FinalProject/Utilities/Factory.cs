@@ -85,7 +85,8 @@ namespace cscd349FinalProject.Utilities
         {
             List<IInventory> inventories= new List<IInventory>
                                         {
-                                            new ItemHealthPotionBig(), new ItemHealthPotionSmall()
+                                            new ItemHealthPotionBig(), new ItemHealthPotionSmall(), new ItemHealthCheese(), new ItemHealthBread(),
+                                            new ItemHealthWatermelon()
                                         };
 
             Random rand = new Random();

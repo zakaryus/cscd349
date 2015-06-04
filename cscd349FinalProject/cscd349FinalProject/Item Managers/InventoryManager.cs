@@ -31,7 +31,9 @@ namespace cscd349FinalProject
             AllInventory = new List<IInventory>
                             {
                                 new ItemHealthPotionBig(),
-                                new ItemHealthPotionSmall()
+                                new ItemHealthPotionSmall(),
+                                new ItemHealthBread(),
+                                new ItemHealthCheese()
                             };
         }
     }

@@ -8,9 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sprites/soldiermale/soldierback.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sprites/soldiermale/soldierfront.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sprites/soldiermale/soldierleft.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sprites/soldiermale/soldierright.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("item%20icons/i_c_watermellon.png")]
 
 

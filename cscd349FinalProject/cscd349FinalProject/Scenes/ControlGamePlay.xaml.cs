@@ -59,7 +59,7 @@ namespace cscd349FinalProject
                         addControlToGridAtPoint(uc, i, j);
                     }
 
-                    if (n % 31 == 0 && type == TileType.Floor)
+                    if (n % 19 == 0 && type == TileType.Floor)
                     {
                         //TODO: Create a user control representing an enemy on the board
                         // UserControl uc = new UserControl();
