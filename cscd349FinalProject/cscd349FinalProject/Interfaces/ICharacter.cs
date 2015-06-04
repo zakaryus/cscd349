@@ -7,6 +7,7 @@ namespace cscd349FinalProject.Interfaces
         //Properties
         string Name { get; }
         string Description { get; }
+        bool Dead { get; }
         HitPoint HitPoints { get; set; }
         HitPoint MaxHitPoints { get; set; }
         IWeapon Weapon { get; set; }

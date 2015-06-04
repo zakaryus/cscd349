@@ -115,6 +115,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Characters\ACharacter.cs" />
+    <Compile Include="Characters\ACharacterComputer.cs" />
+    <Compile Include="Characters\ACharacterPlayer.cs" />
     <Compile Include="Characters\BadCharacters\CharacterElfDark.cs" />
     <Compile Include="Characters\BadCharacters\CharacterElfEarth.cs" />
     <Compile Include="Characters\BadCharacters\CharacterElfFire.cs" />

@@ -8,6 +8,7 @@ namespace cscd349FinalProject.Interfaces
 {
     public interface IWatchee
     {
+        List<IWatcher> Watchers { get; } 
         void Register(IWatcher i);
         void Unregister(IWatcher i);
         void Notify();
