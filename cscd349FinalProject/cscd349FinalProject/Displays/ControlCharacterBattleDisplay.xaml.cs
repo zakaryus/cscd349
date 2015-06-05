@@ -159,8 +159,8 @@ namespace cscd349FinalProject
                         var victim = display.Character;
 
                         //no suicide
-                        if(attacker == victim)
-                            return;
+                    //    if(attacker == victim)
+                         //   return;
 
                         //no backstabbing
                         //if (Player.GetInstance().Allies.Contains(attacker) &&

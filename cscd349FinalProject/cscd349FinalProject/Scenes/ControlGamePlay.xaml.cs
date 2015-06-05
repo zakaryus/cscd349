@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -16,6 +17,9 @@ using cscd349FinalProject.Displays;
 using cscd349FinalProject.Interfaces;
 using cscd349FinalProject.Items;
 using cscd349FinalProject.Utilities;
+using KeyEventArgs = System.Windows.Input.KeyEventArgs;
+using MessageBox = System.Windows.MessageBox;
+using UserControl = System.Windows.Controls.UserControl;
 
 namespace cscd349FinalProject
 {
@@ -82,8 +86,8 @@ namespace cscd349FinalProject
             addControlToGridAtPoint(_ally, (int)_allyPosition.X, (int)_allyPosition.Y);
 
             //TODO: Create a user control representing the exit on the board
-            UserControl exit = new UserControl();
-            exit.Content = "EX\nIT";
+            ControlExitDisplay exit = new ControlExitDisplay();
+            //exit.Content = exit.imgExitDisplay.Source;
             addControlToGridAtPoint(exit, grdBattleGround.RowDefinitions.Count - 2, grdBattleGround.ColumnDefinitions.Count - 2);
         }
 
@@ -147,6 +151,7 @@ namespace cscd349FinalProject
             ControlCharacterMapDisplay enemy = null;
             ControlGridTile tile = null;
             ControlItemMapDisplay item = null;
+            ControlExitDisplay door = null;
             foreach(var child in children)
             {
                 if(Grid.GetRow(child) == tmpY && Grid.GetColumn(child) == tmpX && child != _ally)
@@ -187,6 +192,18 @@ namespace cscd349FinalProject
                        item = null;
                     }
 
+                    try
+                    {
+                        //find the enemy where we are attempting to move, if there is one
+                        if (door == null)
+                            door = child as ControlExitDisplay;
+                    }
+                    catch (InvalidCastException ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        door = null;
+                    }
+
                 }
             }
 
@@ -214,6 +231,12 @@ namespace cscd349FinalProject
                     grdBattleGround.Children.Remove(enemy);
                     MainWindow.GetInstance().ChangeScene(Scene.Battle);
                 }
+            }
+
+            if (door != null)
+            {
+                MessageBox.Show("Congratulations! You have defeated the enemy!");
+                MainWindow.GetInstance().ChangeScene(Scene.Win);
             }
 
             grdBattleGround.Focus();
