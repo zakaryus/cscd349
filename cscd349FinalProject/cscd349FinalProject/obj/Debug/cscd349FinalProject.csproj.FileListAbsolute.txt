@@ -265,8 +265,8 @@ C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\bin\Deb
 C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.pdb
 C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.exe
 C:\Users\zsteele\Desktop\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.pdb
-C:\Users\Steve\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.exe.config
 C:\Users\Steve\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.exe
+C:\Users\Steve\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.exe.config
 C:\Users\Steve\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.pdb
 C:\Users\Steve\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlInventoryBattleDisplay.baml
 C:\Users\Steve\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Displays\ControlCharacterBattleDisplay.baml
@@ -303,3 +303,4 @@ C:\Users\Steve\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\
 C:\Users\Steve\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.csproj.GenerateResource.Cache
 C:\Users\Steve\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.exe
 C:\Users\Steve\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.pdb
+C:\Users\Steve\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.csprojResolveAssemblyReference.cache
