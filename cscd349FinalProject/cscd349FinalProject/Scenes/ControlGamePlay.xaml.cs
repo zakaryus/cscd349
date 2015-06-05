@@ -26,7 +26,7 @@ namespace cscd349FinalProject
     {
         private ControlCharacterMapDisplay _ally;
         private Point _allyPosition;
-        private ICharacter leader;
+        private ICharacter _leader;
 
         public ControlGamePlay()
         {
@@ -53,32 +53,21 @@ namespace cscd349FinalProject
 
                     if (n % 23 == 0 && type == TileType.Floor)
                     {
-                        //TODO: Create a user control representing an enemy on the board
-                       // UserControl uc = new UserControl();
                         var uc = new ControlCharacterMapDisplay(Factory.CreateRandomEnemy());
                         addControlToGridAtPoint(uc, i, j);
+                        continue;
                     }
 
                     if (n % 19 == 0 && type == TileType.Floor)
                     {
-                        //TODO: Create a user control representing an enemy on the board
-                        // UserControl uc = new UserControl();
                         var uc = new ControlItemMapDisplay(Factory.CreateRandomInventory());
                         addControlToGridAtPoint(uc, i, j);
                     }
                 }
-            }
-
-            //TODO: Create a user control representing an ally on the board
-            
+            }            
     
            _allyPosition = new Point(1, 1);
-         
-           
            _ally = new ControlCharacterMapDisplay(GetLeader());
-      
-           
-
             addControlToGridAtPoint(_ally, (int)_allyPosition.X, (int)_allyPosition.Y);
 
             //TODO: Create a user control representing the exit on the board
@@ -102,8 +91,8 @@ namespace cscd349FinalProject
                 {
                     if (c.HitPoints.Value > 0)
                     {
-                        leader = c;
-                        return leader;
+                        _leader = c;
+                        return _leader;
                     }
                 }
             }
@@ -116,8 +105,6 @@ namespace cscd349FinalProject
         
         private void grdBattleGround_KeyDown(object sender, KeyEventArgs e)
         {
-
-            
             int tmpX = (int)_allyPosition.X;
             int tmpY = (int)_allyPosition.Y;
 
@@ -227,12 +214,11 @@ namespace cscd349FinalProject
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            if (leader.HitPoints.Value < 0)
+            if (_leader.HitPoints.Value < 0)
             {
                 _ally.Character = GetLeader();
                 InvalidateVisual();
-            }
-           
+            }   
         }
 
         protected override void OnRender(DrawingContext drawingContext)

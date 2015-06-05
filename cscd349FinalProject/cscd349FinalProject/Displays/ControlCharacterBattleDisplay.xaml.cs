@@ -23,11 +23,14 @@ namespace cscd349FinalProject
     /// <summary>
     /// Interaction logic for ControlCharacterBattleDisplay.xaml
     /// </summary>
-    public partial class ControlCharacterBattleDisplay : UserControl, IWatcher
+    public partial class ControlCharacterBattleDisplay : UserControl, IWatcher, IWatchee
     {
         private ICharacter _character;
         private HitPoint _tmpMaxHitPoints;
         private Timer _tmrLblDamage, _tmrBdrAttacker, _tmrBdrVictim;
+        private List<IWatcher> _watchers; 
+        
+        public bool Draggable { get; set; }
 
         public ICharacter Character
         {
@@ -64,6 +67,10 @@ namespace cscd349FinalProject
             ToolTip tt3 = new ToolTip();
             tt3.Content = Character.Description;
             imgFace.ToolTip = tt3;
+
+            Watchers = new List<IWatcher>();
+            Draggable = true;
+            this.IsEnabled = true;
         }
 
         protected override void OnRender(System.Windows.Media.DrawingContext drawingContext)
@@ -95,6 +102,10 @@ namespace cscd349FinalProject
         private void UserControl_MouseMove(object sender, MouseEventArgs e)
         {
             base.OnMouseMove(e);
+
+            if (!Draggable)
+                return;
+
             if (e.LeftButton == MouseButtonState.Pressed)
             {
                 var source = sender as UserControl;
@@ -107,19 +118,23 @@ namespace cscd349FinalProject
                     {
                         var character = display.Character;
 
-                        if (Computer.GetInstance().Enemies.Contains(character))
-                            return;
+                        //if (Computer.GetInstance().Enemies.Contains(character))
+                        //    return;
 
                         var data = new DataObject(typeof(UserControl), source);
 
                         // Inititate the drag-and-drop operation.
-                        DragDrop.DoDragDrop(this, data, DragDropEffects.Move);
+                        var result = DragDrop.DoDragDrop(this, data, DragDropEffects.Move);
+
+                        // If successfull attack, notify watchers
+                        if (result == DragDropEffects.Move)
+                            Notify();
                     }
                 }
             }
         }
 
-        private void UserControl_Drop(object sender, DragEventArgs e)
+        public void UserControl_Drop(object sender, DragEventArgs e)
         {
             base.OnDrop(e);
 
@@ -154,39 +169,44 @@ namespace cscd349FinalProject
                     }
                     else if (TryDataToCharacter(control))
                     {
-                        //battle is happening
-                        var attacker = DataToCharacter(control);
-                        var victim = display.Character;
-
-                        //no suicide
-                        if(attacker == victim)
-                            return;
-
-                        //no backstabbing
-                        //if (Player.GetInstance().Allies.Contains(attacker) &&
-                        //    Player.GetInstance().Allies.Contains(victim))
-                        //    return;
-
-                        SetBorder(control, true);
-                        SetBorder(display, false);
-
-                        _tmrBdrAttacker = new Timer(ClearBorder, control, 2020, 0);
-                        _tmrBdrVictim = new Timer(ClearBorder, display, 2010, 0);
-
-                        HitPoint hit = attacker.Attack();
-                        victim.HitPoints -= hit;
-
-                        //if the hitpoints are 0 we will display "KO'd"
-                        if (victim.HitPoints.Value != 0)
-                        {
-                            lblDamageTaken.Content = String.Format("- {0}", hit.Value.ToString());
-                            _tmrLblDamage = new Timer(ClearLabel, lblDamageTaken, 2000, 0);
-                        }
-
-                        display.InvalidateVisual();
+                        Battle(control as ControlCharacterBattleDisplay);
                     }
                 }
             }
+        }
+
+        public void Battle(ControlCharacterBattleDisplay attackerDisp)
+        {
+            //battle is happening
+            var attacker = DataToCharacter(attackerDisp);
+            var victim = this.Character;
+
+            //no suicide
+            if (attacker == victim)
+                return;
+
+            //no backstabbing
+            if (Player.GetInstance().Allies.Contains(attacker) &&
+                Player.GetInstance().Allies.Contains(victim))
+                return;
+
+            SetBorder(attackerDisp, true);
+            SetBorder(this, false);
+
+            _tmrBdrAttacker = new Timer(ClearBorder, attackerDisp, 2020, 0);
+            _tmrBdrVictim = new Timer(ClearBorder, this, 2010, 0);
+
+            HitPoint hit = attacker.Attack();
+            victim.HitPoints -= hit;
+
+            //if the hitpoints are 0 we will display "KO'd"
+            if (victim.HitPoints.Value != 0)
+            {
+                lblDamageTaken.Content = String.Format("- {0}", hit.Value.ToString());
+                _tmrLblDamage = new Timer(ClearLabel, lblDamageTaken, 2000, 0);
+            }
+
+            this.InvalidateVisual();
         }
 
         private void ClearLabel(Object o)
@@ -253,6 +273,7 @@ namespace cscd349FinalProject
                 return false;
             }
         }
+        
         private bool TryDataToInventory(UserControl control)
         {
             try
@@ -331,6 +352,39 @@ namespace cscd349FinalProject
                     InvalidateVisual();
                 }
             }
+        }
+
+        public List<IWatcher> Watchers
+        {
+            get { return _watchers; }
+            private set { _watchers = value; }
+        }
+
+        public void Register(IWatcher i)
+        {
+            if (Watchers == null)
+                throw new NullReferenceException();
+
+            if (!Watchers.Contains(i))
+                _watchers.Add(i);
+        }
+
+        public void Unregister(IWatcher i)
+        {
+            if (Watchers == null)
+                throw new NullReferenceException();
+
+            if (_watchers.Contains(i))
+                _watchers.Remove(i);
+        }
+
+        public void Notify()
+        {
+            if (Watchers == null)
+                throw new NullReferenceException();
+
+            foreach (IWatcher i in Watchers)
+                i.BeNotified(this);
         }
     }
 }

@@ -74,7 +74,12 @@ namespace cscd349FinalProject.Utilities
         {
             List <ICharacter> enemies = new List<ICharacter>
                                         {
-                                            new CharacterElfDark(), new CharacterElfEarth(), new CharacterElfFire(), new CharacterElfLight(), new CharacterElfWater(), new CharacterElfWind()
+                                            new CharacterElfDark(), 
+                                            new CharacterElfEarth(), 
+                                            new CharacterElfFire(), 
+                                            new CharacterElfLight(), 
+                                            new CharacterElfWater(), 
+                                            new CharacterElfWind()
                                         };
 
             Random rand = new Random();
@@ -85,7 +90,10 @@ namespace cscd349FinalProject.Utilities
         {
             List<IInventory> inventories= new List<IInventory>
                                         {
-                                            new ItemHealthPotionBig(), new ItemHealthPotionSmall(), new ItemHealthCheese(), new ItemHealthBread(),
+                                            new ItemHealthPotionBig(), 
+                                            new ItemHealthPotionSmall(), 
+                                            new ItemHealthCheese(), 
+                                            new ItemHealthBread(),
                                             new ItemHealthWatermelon()
                                         };
 
