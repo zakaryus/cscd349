@@ -233,6 +233,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Faces\Thumbs.db" />
@@ -420,7 +421,6 @@
     <Resource Include="Item Icons\I_C_Watermellon.png" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Resource Include="Images\Backgrounds\main_title.png" />
   </ItemGroup>
   <ItemGroup>
@@ -428,9 +428,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Backgrounds\main_header_title.png" />
-=======
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Item Icons\door.png" />
->>>>>>> exit
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

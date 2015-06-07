@@ -154,6 +154,7 @@ namespace cscd349FinalProject
                     {
                         Character.Weapon = DataToWeapon(control);
                         imgWeapon.Source = Character.Weapon.Icon.Source;
+                        e.Effects = DragDropEffects.Move;
                     }
                     else if (TryDataToEquipment(control))
                     {
@@ -164,11 +165,13 @@ namespace cscd349FinalProject
                         Character.HitPoints = _tmpMaxHitPoints + Character.Equipment.HitPoints;
 
                         display.InvalidateVisual();
+                        e.Effects = DragDropEffects.Move;
                     }
                     else if (TryDataToInventory(control))
                     {
                         Character.HitPoints += DataToInventory(control).UseInventory();
                         display.InvalidateVisual();
+                        e.Effects = DragDropEffects.Move;
                     }
                     else if (TryDataToCharacter(control))
                     {
@@ -178,17 +181,11 @@ namespace cscd349FinalProject
             }
         }
 
-<<<<<<< HEAD
         public void Battle(ControlCharacterBattleDisplay attackerDisp, DragEventArgs e = null)
         {
             //battle is happening
             var attacker = DataToCharacter(attackerDisp);
             var victim = this.Character;
-=======
-                        //no suicide
-                    //    if(attacker == victim)
-                         //   return;
->>>>>>> exit
 
             //no suicide
             if (attacker == victim)
