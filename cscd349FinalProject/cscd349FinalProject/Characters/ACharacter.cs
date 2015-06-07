@@ -61,8 +61,11 @@ namespace cscd349FinalProject.Characters
                     _hitpoints = _maxHitpoints;
                 else if (value.Value <= 0)
                 {
-                    _hitpoints.Value = 0;
-                    Die();
+                    if (_hitpoints.Value > 0)
+                    {
+                        _hitpoints.Value = 0;
+                        Die();
+                    }
                 }
                 else
                     _hitpoints = value;

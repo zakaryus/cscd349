@@ -19,6 +19,7 @@ using System.Windows.Shapes;
 using cscd349FinalProject.Interfaces;
 using Point = System.Windows.Point;
 using Pen = System.Windows.Media.Pen;
+using System.Windows.Threading;
 
 namespace cscd349FinalProject
 {
@@ -103,26 +104,39 @@ namespace cscd349FinalProject
 
         private void AddInventoryToScene(Player play)
         {
-
             for (int i = 0; i < play.Inventory.Count; i++)
             {
                 var ccbd = new ControlIItemCharacterSelectionDisplay(play.Inventory[i]);
                 lbInventoryList.Items.Add(ccbd);
-
             }
-        
         }
 
         private void PlayerTurn()
         {
             lblPlayerTurn.Content = "Your turn!";
             lblComputerTurn.Content = String.Empty;
+
+            foreach (var disp in _allyDisplays)
+                disp.Draggable = true;
+
+            foreach (var disp in _enemyDisplays)
+                disp.Draggable = false;
+
+            lbInventoryList.IsEnabled = true;
         }
 
         private void ComputerTurn()
         {
             lblPlayerTurn.Content = String.Empty;
             lblComputerTurn.Content = "Computer's turn!";
+
+            foreach (var disp in _allyDisplays)
+                disp.Draggable = false;
+
+            foreach (var disp in _enemyDisplays)
+                disp.Draggable = true;
+
+            lbInventoryList.IsEnabled = false;
         }
 
         private void btnAttack_Click(object sender, RoutedEventArgs e)
@@ -220,40 +234,58 @@ namespace cscd349FinalProject
             if (_battleState == BattleState.PlayerTurn && prior != BattleState.PlayerTurn)
             {
                 PlayerTurn();
-
-                foreach (var disp in _allyDisplays)
-                    disp.Draggable = true;
             }
             else if (_battleState == BattleState.ComputerTurn && prior != BattleState.ComputerTurn)
             {
                 ComputerTurn();
 
+                foreach (var disp in _allyDisplays)
+                    disp.Draggable = false;
+
+                Random rand = new Random();
+                int delay = 0;
                 foreach (var disp in _enemyDisplays)
                 {
+                    if (!disp.IsEnabled)
+                        continue;
+
                     disp.Draggable = true;
 
-                    foreach (var d in _allyDisplays)
+                    var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(2.2 + (2.2 * delay++)) };
+                    timer.Start();
+                    timer.Tick += (sender, args) =>
                     {
-                        Console.WriteLine(d.IsEnabled);
-                    }
+                        timer.Stop();
+                        var victims = _allyDisplays.Where(d => !d.Character.Dead).ToList();
 
-                    var victims = _allyDisplays.Where(d => d.IsEnabled).ToList();
-
-                    Random rand = new Random();
-                    var victim = victims[rand.Next()%victims.Count];
-
-                    Thread.Sleep(1000);
-                    victim.Battle(disp);
-                    disp.Notify();
+                        if (victims.Count > 0)
+                        {
+                            var victim = victims[rand.Next() % victims.Count];
+                            victim.Battle(disp);
+                            disp.Notify();
+                        }
+                    };
                 }
             }
             else if (_battleState == BattleState.Lost)
             {
-                MainWindow.GetInstance().ChangeScene(Scene.Lose);
+                var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(3) };
+                timer.Start();
+                timer.Tick += (sender, args) =>
+                {
+                    timer.Stop();
+                    MainWindow.GetInstance().ChangeScene(Scene.Lose);
+                };
             }
             else if (_battleState == BattleState.Won)
             {
-                MainWindow.GetInstance().ChangeScene(Scene.GamePlay);   
+                var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(3) };
+                timer.Start();
+                timer.Tick += (sender, args) =>
+                {
+                    timer.Stop();
+                    MainWindow.GetInstance().ChangeScene(Scene.GamePlay);
+                };   
             }
         }
     }
