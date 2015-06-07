@@ -2,13 +2,16 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="#888888 http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
     <Grid>
-        <Label Content="Main Menu&#xD;&#xA;" Margin="111,68,111,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnQuit" Content="Quit" HorizontalAlignment="Left" Margin="191,207,0,0" VerticalAlignment="Top" Width="75" Click="btnQuit_Click"/>
-        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="46,207,0,0" VerticalAlignment="Top" Width="75" Click="btnStart_Click"/>
+        <Button x:Name="btnQuit" Content="Quit" HorizontalAlignment="Left" Margin="476,328,0,0" VerticalAlignment="Top" Width="75" Click="btnQuit_Click"/>
+        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="248,328,0,0" VerticalAlignment="Top" Width="75" Click="btnStart_Click"/>
+        
+            <Image x:Name="main_image" HorizontalAlignment="Left" Height="200" Margin="93,123,-93,0" VerticalAlignment="Top" Width="800" Stretch="Fill"/>
+        <Image x:Name="main_head_title" HorizontalAlignment="Left" Height="52" Margin="201,107,0,0" VerticalAlignment="Top" Width="400"/>
+
 
     </Grid>
 </UserControl>

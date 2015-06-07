@@ -412,6 +412,15 @@
   <ItemGroup>
     <Resource Include="Item Icons\I_C_Watermellon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Backgrounds\main_title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Backgrounds\main_title1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Backgrounds\main_header_title.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

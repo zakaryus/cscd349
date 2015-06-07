@@ -23,6 +23,8 @@ namespace cscd349FinalProject
         public ControlMain()
         {
             InitializeComponent();
+            main_image.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Images/Backgrounds/main_title1.png");
+            main_head_title.Source = HelperImages.UriStringToImageSource("pack://application:,,,/Images/Backgrounds/main_header_title.png");
         }
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
