@@ -103,11 +103,12 @@ namespace cscd349FinalProject
         {
             base.OnMouseMove(e);
 
-            if (!Draggable)
-                return;
-
             if (e.LeftButton == MouseButtonState.Pressed)
             {
+                Console.WriteLine(Draggable);
+                if (!Draggable)
+                    return;
+
                 var source = sender as UserControl;
 
                 if (source != null)
@@ -137,6 +138,8 @@ namespace cscd349FinalProject
         public void UserControl_Drop(object sender, DragEventArgs e)
         {
             base.OnDrop(e);
+
+            e.Effects = DragDropEffects.None;
 
             if (e.Handled == false)
             {
@@ -169,13 +172,13 @@ namespace cscd349FinalProject
                     }
                     else if (TryDataToCharacter(control))
                     {
-                        Battle(control as ControlCharacterBattleDisplay);
+                        Battle(control as ControlCharacterBattleDisplay, e);
                     }
                 }
             }
         }
 
-        public void Battle(ControlCharacterBattleDisplay attackerDisp)
+        public void Battle(ControlCharacterBattleDisplay attackerDisp, DragEventArgs e = null)
         {
             //battle is happening
             var attacker = DataToCharacter(attackerDisp);
@@ -183,12 +186,20 @@ namespace cscd349FinalProject
 
             //no suicide
             if (attacker == victim)
+            {
+                if(e != null)
+                    e.Effects = DragDropEffects.None;
                 return;
+            }
 
             //no backstabbing
             if (Player.GetInstance().Allies.Contains(attacker) &&
                 Player.GetInstance().Allies.Contains(victim))
+            {
+                if(e != null)
+                    e.Effects = DragDropEffects.None;
                 return;
+            }
 
             SetBorder(attackerDisp, true);
             SetBorder(this, false);
@@ -207,6 +218,9 @@ namespace cscd349FinalProject
             }
 
             this.InvalidateVisual();
+
+            if (e != null)
+                e.Effects = DragDropEffects.Move;
         }
 
         private void ClearLabel(Object o)
