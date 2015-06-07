@@ -67,6 +67,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Displays\ControlExitDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Displays\ControlGridTile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -141,6 +145,9 @@
     </Compile>
     <Compile Include="Displays\ControlCharacterMapDisplay.xaml.cs">
       <DependentUpon>ControlCharacterMapDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Displays\ControlExitDisplay.xaml.cs">
+      <DependentUpon>ControlExitDisplay.xaml</DependentUpon>
     </Compile>
     <Compile Include="Displays\ControlGridTile.xaml.cs">
       <DependentUpon>ControlGridTile.xaml</DependentUpon>
@@ -413,6 +420,7 @@
     <Resource Include="Item Icons\I_C_Watermellon.png" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Resource Include="Images\Backgrounds\main_title.png" />
   </ItemGroup>
   <ItemGroup>
@@ -420,6 +428,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Backgrounds\main_header_title.png" />
+=======
+    <Resource Include="Item Icons\door.png" />
+>>>>>>> exit
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

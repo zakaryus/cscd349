@@ -178,11 +178,17 @@ namespace cscd349FinalProject
             }
         }
 
+<<<<<<< HEAD
         public void Battle(ControlCharacterBattleDisplay attackerDisp, DragEventArgs e = null)
         {
             //battle is happening
             var attacker = DataToCharacter(attackerDisp);
             var victim = this.Character;
+=======
+                        //no suicide
+                    //    if(attacker == victim)
+                         //   return;
+>>>>>>> exit
 
             //no suicide
             if (attacker == victim)
