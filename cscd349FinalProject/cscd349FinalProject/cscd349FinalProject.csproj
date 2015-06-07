@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{923A7531-D96F-4801-BBAA-75E77208CF1B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cscd349FinalProject</RootNamespace>
+    <AssemblyName>cscd349FinalProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="ControlInventoryBattleDisplay.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Displays\ControlCharacterBattleDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Displays\ControlCharacterMapDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Displays\ControlGridTile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Displays\ControlIItemCharacterSelectionDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Displays\ControlItemMapDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\ControlBattle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\ControlCharacter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\ControlCharacterSetup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\ControlGamePlay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\ControlLose.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\ControlMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\ControlWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Characters\ACharacter.cs" />
+    <Compile Include="Characters\ACharacterComputer.cs" />
+    <Compile Include="Characters\ACharacterPlayer.cs" />
+    <Compile Include="Characters\BadCharacters\CharacterElfDark.cs" />
+    <Compile Include="Characters\BadCharacters\CharacterElfEarth.cs" />
+    <Compile Include="Characters\BadCharacters\CharacterElfFire.cs" />
+    <Compile Include="Characters\BadCharacters\CharacterElfLight.cs" />
+    <Compile Include="Characters\BadCharacters\CharacterElfWater.cs" />
+    <Compile Include="Characters\BadCharacters\CharacterElfWind.cs" />
+    <Compile Include="Characters\GoodCharacters\CharacterKnightFemale.cs" />
+    <Compile Include="Characters\GoodCharacters\CharacterKnightMale.cs" />
+    <Compile Include="Characters\GoodCharacters\CharacterMagicianFemale.cs" />
+    <Compile Include="Characters\GoodCharacters\CharacterMagicianMale.cs" />
+    <Compile Include="Characters\GoodCharacters\CharacterNinjaFemale.cs" />
+    <Compile Include="Characters\GoodCharacters\CharacterNinjaMale.cs" />
+    <Compile Include="Characters\GoodCharacters\CharacterSoldierFemale.cs" />
+    <Compile Include="Characters\GoodCharacters\CharacterSoldierMale.cs" />
+    <Compile Include="Competitors\Computer.cs" />
+    <Compile Include="ControlInventoryBattleDisplay.xaml.cs">
+      <DependentUpon>ControlInventoryBattleDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Displays\ControlCharacterBattleDisplay.xaml.cs">
+      <DependentUpon>ControlCharacterBattleDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Displays\ControlCharacterMapDisplay.xaml.cs">
+      <DependentUpon>ControlCharacterMapDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Displays\ControlGridTile.xaml.cs">
+      <DependentUpon>ControlGridTile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Displays\ControlIItemCharacterSelectionDisplay.xaml.cs">
+      <DependentUpon>ControlIItemCharacterSelectionDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Displays\ControlItemMapDisplay.xaml.cs">
+      <DependentUpon>ControlItemMapDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Equipment\EquipmentGoldArmor.cs" />
+    <Compile Include="Equipment\EquipmentLeatherArmor.cs" />
+    <Compile Include="Equipment\EquipmentBrownArmor.cs" />
+    <Compile Include="Equipment\EquipmentNull.cs" />
+    <Compile Include="Equipment\EquipmentPlatinumArmor.cs" />
+    <Compile Include="Equipment\EquipmentSilverArmor.cs" />
+    <Compile Include="Interfaces\IWatchee.cs" />
+    <Compile Include="Interfaces\IWatcher.cs" />
+    <Compile Include="Item Managers\InventoryManager.cs" />
+    <Compile Include="Item Managers\EquipmentManager.cs" />
+    <Compile Include="Items\ItemHealthBread.cs" />
+    <Compile Include="Items\ItemHealthCheese.cs" />
+    <Compile Include="Items\ItemHealthPotionBig.cs" />
+    <Compile Include="Items\ItemHealthPotionSmall.cs" />
+    <Compile Include="Competitors\Player.cs" />
+    <Compile Include="Items\ItemHealthWatermelon.cs" />
+    <Compile Include="Scenes\ControlBattle.xaml.cs">
+      <DependentUpon>ControlBattle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\ControlCharacter.xaml.cs">
+      <DependentUpon>ControlCharacter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\ControlCharacterSetup.xaml.cs">
+      <DependentUpon>ControlCharacterSetup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\ControlGamePlay.xaml.cs">
+      <DependentUpon>ControlGamePlay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\ControlLose.xaml.cs">
+      <DependentUpon>ControlLose.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\ControlMain.xaml.cs">
+      <DependentUpon>ControlMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\ControlWin.xaml.cs">
+      <DependentUpon>ControlWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HitPoint.cs" />
+    <Compile Include="Interfaces\ICharacter.cs" />
+    <Compile Include="Interfaces\IEquipment.cs" />
+    <Compile Include="Interfaces\IInventory.cs" />
+    <Compile Include="Interfaces\IItem.cs" />
+    <Compile Include="Interfaces\IWeapon.cs" />
+    <Compile Include="Scenes\mazecreator.cs" />
+    <Compile Include="Utilities\Factory.cs" />
+    <Compile Include="Utilities\HelperImages.cs" />
+    <Compile Include="Item Managers\WeaponManager.cs" />
+    <Compile Include="Weapons\WeaponElfBow.cs" />
+    <Compile Include="Weapons\WeaponHeavySword.cs" />
+    <Compile Include="Weapons\WeaponNull.cs" />
+    <Compile Include="Weapons\WeaponNunchucks.cs" />
+    <Compile Include="Weapons\WeaponStaff.cs" />
+    <Compile Include="Weapons\WeaponSword.cs" />
+    <Compile Include="Windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Faces\Thumbs.db" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Faces\darkElf.png" />
+    <Resource Include="Faces\earthElf.png" />
+    <Resource Include="Faces\fireElf.png" />
+    <Resource Include="Faces\girlKnight.png" />
+    <Resource Include="Faces\girlMagicianFace.png" />
+    <Resource Include="Faces\girlNinjaFace.png" />
+    <Resource Include="Faces\girlSoldierFace.png" />
+    <Resource Include="Faces\knightFace.png" />
+    <Resource Include="Faces\lightElf.png" />
+    <Resource Include="Faces\magicianFace.png" />
+    <Resource Include="Faces\ninjaFace.png" />
+    <Resource Include="Faces\soldierFace.png" />
+    <Resource Include="Faces\waterElf.png" />
+    <Resource Include="Faces\windElf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Weapon Icons\S_Bow13.png" />
+    <Resource Include="Weapon Icons\S_Sword09.png" />
+    <Resource Include="Weapon Icons\W_Axe012.png" />
+    <Resource Include="Weapon Icons\W_Mace008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Weapon Icons\W_Sword008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Item Icons\P_Green01.png" />
+    <Resource Include="Item Icons\P_Green02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Equipment Icons\A_Armor04.png" />
+    <Resource Include="Equipment Icons\A_Armor05.png" />
+    <Resource Include="Equipment Icons\A_Armour01.png" />
+    <Resource Include="Equipment Icons\A_Armour02.png" />
+    <Resource Include="Equipment Icons\A_Armour03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Backgrounds\bg1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\BadFaces\CharacterElfDarkFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\BadFaces\CharacterElfEarthFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\BadFaces\CharacterElfFireFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\BadFaces\CharacterElfLightFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\BadFaces\CharacterElfWaterFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\BadFaces\CharacterElfWindFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\GoodFaces\CharacterKnightFemaleFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\GoodFaces\CharacterKnightMaleFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\GoodFaces\CharacterMagicianFemaleFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\GoodFaces\CharacterMagicianMaleFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\GoodFaces\CharacterNinjaFemaleFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\GoodFaces\CharacterNinjaMaleFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\GoodFaces\CharacterSoldierFemaleFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Faces\GoodFaces\CharacterSoldierMaleFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Backgrounds\grass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Backgrounds\brick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\KnightMale\KnightFront.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\KnightMale\KnightBack.png" />
+    <Resource Include="Sprites\KnightMale\KnightLeft.png" />
+    <Resource Include="Sprites\KnightMale\KnightRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\DarkElf\DarkElfBack.png" />
+    <Resource Include="Sprites\DarkElf\DarkElfFront.png" />
+    <Resource Include="Sprites\DarkElf\DarkElfLeft.png" />
+    <Resource Include="Sprites\DarkElf\DarkElfRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\EarthElf\EarthElfBack.png" />
+    <Resource Include="Sprites\EarthElf\EarthElfFront.png" />
+    <Resource Include="Sprites\EarthElf\EarthElfLeft.png" />
+    <Resource Include="Sprites\EarthElf\EarthElfRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\FireElf\FireElfBack.png" />
+    <Resource Include="Sprites\FireElf\FireElfFront.png" />
+    <Resource Include="Sprites\FireElf\FireElfRight.png" />
+    <Resource Include="Sprites\FireElf\FireLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\WaterElf\WaterElfBack.png" />
+    <Resource Include="Sprites\WaterElf\WaterElfFront.png" />
+    <Resource Include="Sprites\WaterElf\WaterElfLeft.png" />
+    <Resource Include="Sprites\WaterElf\WaterElfRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\WindElf\WindElfBack.png" />
+    <Resource Include="Sprites\WindElf\WindElfFront.png" />
+    <Resource Include="Sprites\WindElf\WindElfLeft.png" />
+    <Resource Include="Sprites\WindElf\WindElfRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\FemaleKnight\KnightFemaleBack.png" />
+    <Resource Include="Sprites\FemaleKnight\KnightFemaleFront.png" />
+    <Resource Include="Sprites\FemaleKnight\KnightFemaleLeft.png" />
+    <Resource Include="Sprites\FemaleKnight\KnightFemaleRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\FemaleMagician\MagicianFemaleBack.png" />
+    <Resource Include="Sprites\FemaleMagician\MagicianFemaleFront.png" />
+    <Resource Include="Sprites\FemaleMagician\MagicianFemaleLeft.png" />
+    <Resource Include="Sprites\FemaleMagician\MagicianFemaleRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\FemaleSoldier\SoldierFemaleBack.png" />
+    <Resource Include="Sprites\FemaleSoldier\SoldierFemaleFront.png" />
+    <Resource Include="Sprites\FemaleSoldier\SoldierFemaleLeft.png" />
+    <Resource Include="Sprites\FemaleSoldier\SoldierFemaleRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\MagicianMale\MagicianBack.png" />
+    <Resource Include="Sprites\MagicianMale\MagicianFront.png" />
+    <Resource Include="Sprites\MagicianMale\MagicianLeft.png" />
+    <Resource Include="Sprites\MagicianMale\MagicianRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\FemaleNinja\NinjaFemaleBack.png" />
+    <Resource Include="Sprites\FemaleNinja\NinjaFemaleFront.png" />
+    <Resource Include="Sprites\FemaleNinja\NinjaFemaleLeft.png" />
+    <Resource Include="Sprites\FemaleNinja\NinjaFemaleRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Item Icons\Item_Bread.png" />
+    <Resource Include="Item Icons\Item_Cheese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\NinjaMale\NinjaBack.png" />
+    <Resource Include="Sprites\NinjaMale\NinjaFront.png" />
+    <Resource Include="Sprites\NinjaMale\NinjaLeft.png" />
+    <Resource Include="Sprites\NinjaMale\NinjaRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sprites\SoldierMale\SoldierBack.png" />
+    <Resource Include="Sprites\SoldierMale\SoldierFront.png" />
+    <Resource Include="Sprites\SoldierMale\SoldierLeft.png" />
+    <Resource Include="Sprites\SoldierMale\SoldierRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Item Icons\I_C_Watermellon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Backgrounds\main_title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Backgrounds\main_title1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Backgrounds\main_header_title.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
