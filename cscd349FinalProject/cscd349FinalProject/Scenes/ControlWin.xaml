@@ -6,8 +6,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
     <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Height="600" Width="800">
-        <Label Content="Win" Margin="384,46,385,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnMainMenu" Content="Main Menu" Margin="362,129,363,0" VerticalAlignment="Top" Click="btnMainMenu_Click" HorizontalContentAlignment="Center"/>
+        <Label Content="You Win!" Margin="10,46,10,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="/cscd349FinalProject;component/Fonts/#Triforce" FontSize="48"/>
+        <Button x:Name="btnMainMenu" Content="Main Menu" Margin="363,112,362,0" VerticalAlignment="Top" Click="btnMainMenu_Click" HorizontalContentAlignment="Center"/>
 
     </Grid>
 </UserControl>

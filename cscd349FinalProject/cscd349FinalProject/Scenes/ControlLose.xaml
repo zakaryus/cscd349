@@ -6,8 +6,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
     <Grid>
-        <Label Content="Lose" HorizontalAlignment="Left" Margin="127,50,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnMainMenu" Content="Main Menu" HorizontalAlignment="Left" Margin="109,149,0,0" VerticalAlignment="Top" Width="75" Click="btnMainMenu_Click"/>
+        <Label Content="You Lose!" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="780" HorizontalContentAlignment="Center" FontFamily="/cscd349FinalProject;component/Fonts/#Triforce" FontSize="48"/>
+        <Button x:Name="btnMainMenu" Content="Main Menu" Margin="362,116,363,0" VerticalAlignment="Top" Click="btnMainMenu_Click"/>
 
     </Grid>
 </UserControl>

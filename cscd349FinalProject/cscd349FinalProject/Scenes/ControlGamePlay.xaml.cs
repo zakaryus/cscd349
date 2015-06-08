@@ -50,10 +50,8 @@ namespace cscd349FinalProject
 
                     ControlGridTile gt = new ControlGridTile(type);
                     addControlToGridAtPoint(gt, i, j);
-                    if (i == 1 && j == 1)
+                    if ((i == 1 && j == 1) || (i == grdBattleGround.RowDefinitions.Count - 2 && j == grdBattleGround.ColumnDefinitions.Count - 2))
                         continue;
-
-                   
 
                     if (n % 23 == 0 && type == TileType.Floor)
                     {
@@ -212,7 +210,7 @@ namespace cscd349FinalProject
 
             if(enemy != null && enemy != _ally )
             {
-                var res = MessageBox.Show("Enemy Encountered!", "Battle", MessageBoxButton.OK);
+                var res = MessageBox.Show("Enemy encountered!", "Battle", MessageBoxButton.OK);
                 if (res == MessageBoxResult.OK)
                 {
                     grdBattleGround.Children.Remove(enemy);
@@ -222,7 +220,7 @@ namespace cscd349FinalProject
 
             if (door != null)
             {
-                MessageBox.Show("Congratulations! You have defeated the enemy!");
+                MessageBox.Show("Congratulations! You have completed the maze!", "You Win!", MessageBoxButton.OK);
                 MainWindow.GetInstance().ChangeScene(Scene.Win);
             }
 

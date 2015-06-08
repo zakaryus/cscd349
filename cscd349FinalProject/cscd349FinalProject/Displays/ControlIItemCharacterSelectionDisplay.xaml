@@ -7,10 +7,10 @@
              d:DesignHeight="110" d:DesignWidth="280" GiveFeedback="UserControl_GiveFeedback">
     <Grid>
         <Border x:Name="brdControl" BorderBrush="Black" BorderThickness="0 0 0 1"  HorizontalAlignment="Left" Height="110" VerticalAlignment="Bottom" Width="280"/>
-        <Label x:Name="lblName" Content="&lt;WeaponName&gt;" HorizontalAlignment="Left" Margin="58,10,0,0" VerticalAlignment="Top" Width="123"/>
-        <Label x:Name="lblHitPointsDefinition" Content="Hitpoints:" HorizontalAlignment="Left" Margin="58,36,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblHitPoints" Content="&lt;Hitpoints&gt;" HorizontalAlignment="Left" Margin="124,36,0,0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="tblkDescription" Margin="10,67,10,10" TextWrapping="Wrap" Text="&lt;WeaponDescription&gt;"/>
+        <Label x:Name="lblName" Content="&lt;WeaponName&gt;" HorizontalAlignment="Left" Margin="58,10,0,0" VerticalAlignment="Top" Width="123" FontFamily="/cscd349FinalProject;component/Fonts/#Triforce" FontSize="16"/>
+        <Label x:Name="lblHitPointsDefinition" Content="Hitpoints:" HorizontalAlignment="Left" Margin="58,36,0,0" VerticalAlignment="Top" FontFamily="/cscd349FinalProject;component/Fonts/#Triforce" FontSize="16"/>
+        <Label x:Name="lblHitPoints" Content="&lt;Hitpoints&gt;" HorizontalAlignment="Left" Margin="124,36,0,0" VerticalAlignment="Top" FontFamily="/cscd349FinalProject;component/Fonts/#Triforce" FontSize="16"/>
+        <TextBlock x:Name="tblkDescription" Margin="10,67,10,10" TextWrapping="Wrap" Text="&lt;WeaponDescription&gt;" FontFamily="/cscd349FinalProject;component/Fonts/#Triforce" FontSize="16"/>
         <Image x:Name="weaponIcon" HorizontalAlignment="Left" Height="48" Margin="10,10,0,0" VerticalAlignment="Top" Width="48"/>
 
     </Grid>

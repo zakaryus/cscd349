@@ -1,8 +1,23 @@
 ﻿<Window x:Name="frmMain" x:Class="cscd349FinalProject.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Team 1 - Dungeon" Height="628" Width="810">
+        Title="Team 1 - Dungeon" Height="660" Width="820" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="/cscd349FinalProject;component/Images/Backgrounds/main-background-2.jpg"/>
+    </Window.Background>
     <Grid>
-        <ContentControl x:Name="cctrlMain" Content="ContentControl" HorizontalAlignment="Center" VerticalAlignment="Center" Height="600" Width="800"/>
+        <Menu HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="814">
+            <MenuItem Header="_File">
+                <MenuItem x:Name="miNew" Header="_New..." Click="miNew_Click" />
+                <Separator />
+                <MenuItem x:Name="miQuit" Header="_Quit" Click="miQuit_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem x:Name="miInstructions" Header="_Instructions" Click="miInstructions_Click" />
+                <Separator />
+                <MenuItem x:Name="miAbout" Header="_About" Click="miAbout_Click" />
+            </MenuItem>
+        </Menu> 
+        <ContentControl x:Name="cctrlMain" Content="ContentControl" VerticalAlignment="Bottom" Height="600" Margin="0,0,4,0"/>
     </Grid>
 </Window>
