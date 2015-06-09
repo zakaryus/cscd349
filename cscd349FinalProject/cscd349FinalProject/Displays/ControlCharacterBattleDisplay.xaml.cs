@@ -169,9 +169,16 @@ namespace cscd349FinalProject
                     }
                     else if (TryDataToInventory(control))
                     {
-                        Character.HitPoints += DataToInventory(control).UseInventory();
-                        display.InvalidateVisual();
-                        e.Effects = DragDropEffects.Move;
+                        //Dont allow inventory to be used on computers or
+                        //on characters with full health
+                        if (Computer.GetInstance().Enemies.Contains(Character) || Character.HitPoints == Character.MaxHitPoints)
+                            e.Effects = DragDropEffects.None;
+                        else
+                        {
+                            Character.HitPoints += DataToInventory(control).UseInventory();
+                            display.InvalidateVisual();
+                            e.Effects = DragDropEffects.Move;
+                        }
                     }
                     else if (TryDataToCharacter(control))
                     {

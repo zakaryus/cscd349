@@ -81,6 +81,7 @@ namespace cscd349FinalProject
             for (int i = 0; i < play.Allies.Count; i++)
             {
                 var ccbd = new ControlCharacterBattleDisplay(play.Allies[i]);
+                ccbd.IsEnabled = !play.Allies[i].Dead;
                 ccbd.Register(this);
                 Grid.SetColumn(ccbd, 0);
                 Grid.SetRow(ccbd, i + 1);

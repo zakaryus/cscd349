@@ -1,7 +1,6 @@
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.exe.config
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.exe
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\bin\Debug\cscd349FinalProject.pdb
-C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\cscd349FinalProject.csprojResolveAssemblyReference.cache
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\ControlInventoryBattleDisplay.baml
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Displays\ControlCharacterBattleDisplay.baml
 C:\Users\Default.Default-PC\Documents\GitHub\cscd349\cscd349FinalProject\cscd349FinalProject\obj\Debug\Displays\ControlCharacterMapDisplay.baml
