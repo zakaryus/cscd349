@@ -32,7 +32,7 @@ namespace cscd349FinalProject
                          {
                              new WeaponElfBow(),
                              new WeaponHeavySword(),
-                             new WeaponNunchucks(),
+                             new WeaponIronBallMace(),
                              new WeaponStaff(),
                              new WeaponSword()
                          };

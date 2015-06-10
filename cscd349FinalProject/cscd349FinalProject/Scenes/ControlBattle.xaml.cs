@@ -65,16 +65,7 @@ namespace cscd349FinalProject
             _turnCounter = 0;
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
-        {
-            
-            MainWindow.GetInstance().ChangeScene(Scene.GamePlay);
-        }
-
-        private void btnLose_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow.GetInstance().ChangeScene(Scene.Lose);
-        }
+    
 
         private void AddPlayerAlliesToScene(Player play)
         {

@@ -208,7 +208,7 @@
     <Compile Include="Weapons\WeaponElfBow.cs" />
     <Compile Include="Weapons\WeaponHeavySword.cs" />
     <Compile Include="Weapons\WeaponNull.cs" />
-    <Compile Include="Weapons\WeaponNunchucks.cs" />
+    <Compile Include="Weapons\WeaponIronBallMace.cs" />
     <Compile Include="Weapons\WeaponStaff.cs" />
     <Compile Include="Weapons\WeaponSword.cs" />
     <Compile Include="Windows\MainWindow.xaml.cs">
@@ -445,6 +445,12 @@
     <Resource Include="Images\Backgrounds\main-background-3.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Item Icons\P_Orange02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Weapon Icons\ironBall.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,7 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 namespace cscd349FinalProject.Weapons
 {
-    class WeaponNunchucks : IWeapon
+    class WeaponIronBallMace : IWeapon
     {
 
         private int _minDamage;
@@ -17,14 +17,14 @@ namespace cscd349FinalProject.Weapons
         private Image _icon;
         private HitPoint _hitpoints;
 
-        public WeaponNunchucks()
+        public WeaponIronBallMace()
         {
             _minDamage = 35;
             _maxDamage = 65;
-            Name = "Nunchucks";
-            Description = "A fast, light weapon. Requires much skill to be used efficiently.";
+            Name = "Iron Ball";
+            Description = "A fast, powerful weapon. Requires much skill to be used efficiently.";
             Icon = new Image();
-            ImageBrush myBrush = HelperImages.UriStringToImageBrush("pack://application:,,,/Weapon Icons/S_Sword09.png");
+            ImageBrush myBrush = HelperImages.UriStringToImageBrush("pack://application:,,,/Weapon Icons/ironBall.png");
            Icon.Source = myBrush.ImageSource;
             HitPoints = new HitPoint((_maxDamage + _minDamage) / 2);
         }

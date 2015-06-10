@@ -21,7 +21,7 @@ namespace cscd349FinalProject.Items
             Name = "Health Potion";
             Description = "A potion that will increase your strength";
             Icon = new Image();
-            ImageBrush myBrush = HelperImages.UriStringToImageBrush("pack://application:,,,/Item Icons/P_Green02.png");
+            ImageBrush myBrush = HelperImages.UriStringToImageBrush("pack://application:,,,/Item Icons/P_Orange02.png");
             Icon.Source = myBrush.ImageSource;
             HitPoints = new HitPoint(50);
         }
