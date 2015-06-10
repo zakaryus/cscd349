@@ -40,7 +40,6 @@ namespace cscd349FinalProject
             Byte[,] maze = mc.CreateMaze();
 
             Random r = new Random();
-            int enemyNum = 0;
             for (int i = 0; i < grdBattleGround.RowDefinitions.Count; i++)
             {
                 for (int j = 0; j < grdBattleGround.ColumnDefinitions.Count; j++)
@@ -72,9 +71,7 @@ namespace cscd349FinalProject
            _ally = new ControlCharacterMapDisplay(GetLeader());
             addControlToGridAtPoint(_ally, (int)_allyPosition.X, (int)_allyPosition.Y);
 
-            //TODO: Create a user control representing the exit on the board
-            ControlExitDisplay exit = new ControlExitDisplay();
-            //exit.Content = exit.imgExitDisplay.Source;
+            var exit = new ControlExitDisplay();
             addControlToGridAtPoint(exit, grdBattleGround.RowDefinitions.Count - 2, grdBattleGround.ColumnDefinitions.Count - 2);
         }
 

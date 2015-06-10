@@ -161,7 +161,10 @@ namespace cscd349FinalProject
                             "Created by: \n" +
                             "\tGiang Bui\n" +
                             "\tTony Moua\n" +
-                            "\tZak Steele";
+                            "\tZak Steele\n\n" +
+                            "Notice:\n" +
+                            "\tArt by Charles Gabriel. Commissioned by OpenGameArt.org (http://opengameart.org)\n" +
+                            "\tArt by Antifarea. Commissioned by OpenGameArt.org (http://opengameart.org)";
             MessageBox.Show(msg, "About", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }

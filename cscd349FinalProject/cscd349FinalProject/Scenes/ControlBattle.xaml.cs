@@ -140,11 +140,6 @@ namespace cscd349FinalProject
             lbInventoryList.IsEnabled = false;
         }
 
-        private void btnAttack_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
         private void lbItemList_MouseMove(object sender, MouseEventArgs e)
         {
             base.OnMouseMove(e);
